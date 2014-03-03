@@ -6,5 +6,9 @@ int main()
 	   Multiline comment*/
 	std::cout << "Hello World!\n";
 
+	double b;
+	std::cin >> b;
+	
+
 	return 0;
 }

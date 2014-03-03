@@ -45,8 +45,8 @@ int main()
 		first =false;
 
 
-		float a = 12;
-		float b = 10;
+		double a = 12;
+		double b = 10;
 
 		std::cout << "Set first number" << std::endl << ": ";
 		std::cin >> a;
@@ -94,11 +94,11 @@ int main()
 		if (opperation == "+")
 		{
 			//addition
-			std::cout << "a + b = " << a+b <<std::endl;  
+			std::cout << "a + b = " << addition(a,b) <<std::endl;  
 		}else if (opperation == "-")
 		{
 			//subtraction
-			std::cout << "a - b = " << a-b <<std::endl; 
+			std::cout << "a - b = " << subtraction(a,b) <<std::endl; 
 		}else if (opperation == "/")
 		{
 			//division
@@ -108,11 +108,11 @@ int main()
 				err = 3;
 				continue;
 			}
-			std::cout << "a / b = " << a/b <<std::endl; 	
+			std::cout << "a / b = " << division(a,b) <<std::endl; 	
 		}else if (opperation == "*")
 		{
 			//multiplication
-			std::cout << "a * b = " << a*b <<std::endl; 
+			std::cout << "a * b = " << multiply(a,b) <<std::endl; 
 		}else{
 			std::cout << "Operator not recognised"<<std::endl;
 			err = 2;
@@ -122,4 +122,23 @@ int main()
 	}
 
 	return 0;
+}
+double multiply(double number1, double number2)
+{
+	return number1 * number2
+}
+
+double divide(double number1, double number2)
+{
+	return number1 / number2
+}
+
+double addition(double number1, double number2)
+{
+	return number1 + number2
+}
+
+double subtraction(double number1, double number2)
+{
+	return number1 - number2
 }

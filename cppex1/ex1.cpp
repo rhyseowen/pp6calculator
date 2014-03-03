@@ -91,6 +91,7 @@ void printHelp()
 	std::cout << "solveQuadratic : find the real roots of a quadratic equation" << std::endl;
 	std::cout << "3VectorLength : find the length of a 3 vector" << std::endl;
 	std::cout << "4VectorLength : find the length of a 4 vector" << std::endl;
+	std::cout << "invarientMass : find the invarient mass of a momentum 4 vector" << std::endl;
 }
 
 int main()
@@ -205,6 +206,13 @@ int main()
 			std::cout << "A = (a,b,c,d) : find |A|" << std::endl;
 			std::vector<double> number = readInNumbers(4);
 			std::cout << "A = (" << number[0] << "," << number[1] << "," << number[2] << "," << number[3] << ") : |A| = " << vectorDotProductSqrt4(number[0],number[1],number[2],number[3],number[0],number[1],number[2],number[3]) <<std::endl;
+		}else if (opperation == "invarientMass")
+		{
+			std::cout << "m^2 = A1*A2 = (a,b,c,d)*(e,f,g,h) : find |m|" << std::endl;
+			std::vector<double> number = readInNumbers(8);
+			std::cout << "A1 = (" << number[0] << "," << number[1] << "," << number[2] << "," << number[3] << ")" << std::endl;
+			std::cout << "A2 = (" << number[4] << "," << number[5] << "," << number[6] << "," << number[7] << ")" << std::endl;
+			std::cout << "m = " << vectorDotProductSqrt4(number[0],number[1],number[2],number[3],number[4],number[5],number[6],number[7]) << std::endl;
 		}else if (opperation == "help")
 		{
 			//help statement

@@ -6,9 +6,27 @@ int main()
 	// comment
 	/* This is a 
 	   Multiline comment*/
-
 	float a = 12;
 	float b = 10;
+
+	std::cout << "Set first number" << std::endl << ": ";
+	std::cin >> a;
+
+	if (!std::cin)
+	{
+		std::cout << "Number not recognised" << std::endl;
+		return 1;
+	}
+
+	std::cout << "Set second number" << std::endl << ": ";
+	std::cin >> b;
+	
+	if (!std::cin)
+	{
+		std::cout << "Number not recognised" << std::endl;
+		return 1;
+	}
+
 
 	std::cout << "a = " << a << std::endl;
 	std::cout << "b = " << b << std::endl;
@@ -36,6 +54,11 @@ int main()
 	}else if (opperation == "/")
 	{
 		//division
+		if (b == 0)
+		{
+			std::cout << "Cannot divide by 0!" << std::endl;
+			return 3;
+		}
 		std::cout << "a / b = " << a/b <<std::endl; 	
 	}else if (opperation == "*")
 	{
@@ -43,7 +66,7 @@ int main()
 		std::cout << "a * b = " << a*b <<std::endl; 
 	}else{
 		std::cout << "Operator not recognised"<<std::endl;
-		return 1;
+		return 2;
 	}
 
 

@@ -48,6 +48,12 @@ double vectorLength3(double i, double j, double k)
 	return sqrt(i*i+j*j+k*k);
 }
 
+double vectorDotProductSqrt4(double a0, double a1, double a2, double a3, double b0, double b1, double b2, double b3)
+{
+	//calculate the dot product between two four vectors a and b then square root it
+	return sqrt(std::abs( a0*b0 - a1*b1 -a2*b2 - a3*b3));
+}
+
 std::vector<double> readInNumbers(int numbers)
 {
 	std::vector<double> in_numbers;
@@ -84,6 +90,7 @@ void printHelp()
 	std::cout << "solveAxis : Find the x-intercept of a straigt line" << std::endl;
 	std::cout << "solveQuadratic : find the real roots of a quadratic equation" << std::endl;
 	std::cout << "3VectorLength : find the length of a 3 vector" << std::endl;
+	std::cout << "4VectorLength : find the length of a 4 vector" << std::endl;
 }
 
 int main()
@@ -193,10 +200,16 @@ int main()
 			std::cout << "v = ai + bj + ck : calculate |v|" << std::endl;
 			std::vector<double> number = readInNumbers(3);
 			std::cout << "v = " << number[0] << "i + " << number[1] << "j + " << number[2] << "k : |v| = " << vectorLength3(number[0], number[1], number[2]) << std::endl; 
+		}else if (opperation == "4VectorLength")
+		{
+			std::cout << "A = (a,b,c,d) : find |A|" << std::endl;
+			std::vector<double> number = readInNumbers(4);
+			std::cout << "A = (" << number[0] << "," << number[1] << "," << number[2] << "," << number[3] << ") : |A| = " << vectorDotProductSqrt4(number[0],number[1],number[2],number[3],number[0],number[1],number[2],number[3]) <<std::endl;
 		}else if (opperation == "help")
 		{
 			//help statement
 			printHelp();
+			first = true;
 		}else{
 			std::cout << "Operator not recognised"<<std::endl;
 			err = 2;

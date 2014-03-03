@@ -103,36 +103,42 @@ int main()
 			continue;
 		}
 
-		if (opperation == "+")
+		switch(opperation)
 		{
-			//addition
-			std::vector<double> number = readInNumbers(2);
-			std::cout << "a + b = " << addition(number[0],number[1]) <<std::endl;  
-		}else if (opperation == "-")
-		{
-			//subtraction
-			std::vector<double> number = readInNumbers(2);
-			std::cout << "a - b = " << subtraction(number[0],number[1]) <<std::endl; 
-		}else if (opperation == "/")
-		{
-			//division
-			std::vector<double> number = readInNumbers(2);
-			if (number[1] == 0)
-			{
-				std::cout << "Cannot divide by 0!" << std::endl;
-				err = 3;
-				continue;
-			}
-			std::cout << "a / b = " << divide(number[0],number[1]) <<std::endl; 	
-		}else if (opperation == "*")
-		{
-			//multiplication
-			std::vector<double> number = readInNumbers(2);
-			std::cout << "a * b = " << multiply(number[0],number[1]) <<std::endl; 
-		}else{
-			std::cout << "Operator not recognised"<<std::endl;
-			err = 2;
-			continue;
+			case "+":
+				//addtion
+				std::cout << "a + b = ?" << std::endl;
+				std::vector<double> number = readInNumbers(2);
+				std::cout << number[0] << " + " << number[1] << " = " << addition(number[0],number[1]) <<std::endl;
+				break;
+			case "-":
+				//subtraction
+				std::cout << "a - b = ?" std::endl; 
+				std::vector<double> number = readInNumbers(2);
+				std::cout << number[0] << " - " << number[1] << " = " << subtraction(number[0],number[1]) <<std::endl;
+				break;
+			case "/":
+				//division
+				std::cout << "a / b = ?"
+				std::vector<double> number = readInNumbers(2);
+				if (number[1] == 0)
+				{
+					std::cout << "Cannot divide by 0!" << std::endl;
+					err = 3;
+					break;
+				}
+				std::cout << number[0] << " / " << number[1] << " = " << divide(number[0],number[1]) <<std::endl;
+				break;
+			case "*":
+				//multiplication
+				std::cout << "a * b = ?"
+				std::vector<double> number = readInNumbers(2);
+				std::cout << number[0] << " * " << number[1] << " = " << multiply(number[0],number[1]) <<std::endl;
+				break;
+			default:
+				std::cout << "Operator not recognised"<<std::endl;
+				err = 2;
+				break;
 		}
 
 	}

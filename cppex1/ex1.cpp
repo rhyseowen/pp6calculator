@@ -43,6 +43,11 @@ double solveQuadraticN(double a, double b, double c)
 	return (-b - sqrt(b*b - 4*a*c))/(2*a);
 }
 
+double vectorLength3(double i, double j, double k)
+{
+	return sqrt(i*i+j*j+k*k);
+}
+
 std::vector<double> readInNumbers(int numbers)
 {
 	std::vector<double> in_numbers;
@@ -78,6 +83,7 @@ void printHelp()
 	std::cout << "* : Simple multiplication of two numbers" << std::endl;
 	std::cout << "solveAxis : Find the x-intercept of a straigt line" << std::endl;
 	std::cout << "solveQuadratic : find the real roots of a quadratic equation" << std::endl;
+	std::cout << "3VectorLength : find the length of a 3 vector" << std::endl;
 }
 
 int main()
@@ -182,6 +188,11 @@ int main()
 				continue;
 			}
 			std::cout << "0 = " <<  number[0] << "x^2 + " << number[1] << "x + " << number[2] << " : x = " << solveQuadraticP(number[0], number[1], number[2]) << " or " << solveQuadraticN(number[0], number[1], number[2]) << std::endl;
+		}else if (opperation == "3VectorLength")
+		{
+			std::cout << "v = ai + bj + ck : calculate |v|" << std::endl;
+			std::vector<double> number = readInNumbers(3);
+			std::cout << "v = " << number[0] << "i + " << number[1] << "j + " << number[2] << "k : |v| = " << vectorLength3(number[0], number[1], number[2]) << std::endl; 
 		}else if (opperation == "help")
 		{
 			//help statement

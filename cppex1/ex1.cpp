@@ -69,6 +69,17 @@ std::vector<double> readInNumbers(int numbers)
 	return in_numbers;
 }
 
+void printHelp()
+{
+	std::cout << "Available operations: " << std::endl;
+	std::cout << "+ : Simple addition of two numbers" << std::endl;
+	std::cout << "- : Simple subtraction of two numbers" << std::endl;
+	std::cout << "/ : Simple division of two numbers" << std::endl;
+	std::cout << "* : Simple multiplication of two numbers" << std::endl;
+	std::cout << "solveAxis : Find the x-intercept of a straigt line" << std::endl;
+	std::cout << "solveQuadratic : find the real roots of a quadratic equation" << std::endl;
+}
+
 int main()
 {
 
@@ -109,7 +120,7 @@ int main()
 		first =false;
 
 
-		std::cout << "Which Operation would you like to perform (+,-,/,*,solveAxis,solveQuadratic)" << std::endl;
+		std::cout << "Which Operation would you like to perform ('help' for a list of suported opperations)" << std::endl;
 		std::cout << ": ";
 
 		std::string opperation;
@@ -166,11 +177,15 @@ int main()
 			//check discriminant is positive
 			if ((number[1]*number[1]-4*number[0]*number[2]) < 0)
 			{
-				std::cout << "No roots try again!" << std::endl;
+				std::cout << "No real roots try again!" << std::endl;
 				err = 4;
 				continue;
 			}
 			std::cout << "0 = " <<  number[0] << "x^2 + " << number[1] << "x + " << number[2] << " : x = " << solveQuadraticP(number[0], number[1], number[2]) << " or " << solveQuadraticN(number[0], number[1], number[2]) << std::endl;
+		}else if (opperation == "help")
+		{
+			//help statement
+			printHelp();
 		}else{
 			std::cout << "Operator not recognised"<<std::endl;
 			err = 2;

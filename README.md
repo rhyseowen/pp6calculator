@@ -1,5 +1,5 @@
-pp6calculator - A Simple command line calculator
-=================================================
+# pp6calculator - A Simple command line calculator
+
 
 ### Authors
 
@@ -9,8 +9,8 @@ pp6calculator - A Simple command line calculator
 
 - download files
 
-cppex1/ex1.cpp
-==============
+## cppex1/ex1.cpp
+
 
 Simple example to perform an operation on two numbers
 

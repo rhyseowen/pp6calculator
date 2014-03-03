@@ -1,6 +1,52 @@
 #include <iostream>
 #include <string>
 #include <climits>
+#include <vector>
+
+double multiply(double number1, double number2)
+{
+	return number1 * number2;
+}
+
+double divide(double number1, double number2)
+{
+	return number1 / number2;
+}
+
+double addition(double number1, double number2)
+{
+	return number1 + number2;
+}
+
+double subtraction(double number1, double number2)
+{
+	return number1 - number2;
+}
+
+std::vector<double> readInNumbers(int numbers)
+{
+	std::vector<double> in_numbers;
+
+	for (int i = 0; i < numbers; ++i)
+	{
+		double number;
+		std::cout << "Set number " << i+1 << std::endl << ": ";
+		std::cin >> number;
+
+		if (!std::cin)
+		{
+			std::cout << "Number not recognised" << std::endl;
+			std::cin.clear();
+			std::cin.ignore(INT_MAX, '\n');
+			--i;
+			continue;
+		}
+
+		in_numbers.push_back(number);
+
+	}
+	return in_numbers;
+}
 
 int main()
 {
@@ -45,37 +91,6 @@ int main()
 		first =false;
 
 
-		double a = 12;
-		double b = 10;
-
-		std::cout << "Set first number" << std::endl << ": ";
-		std::cin >> a;
-
-		if (!std::cin)
-		{
-			std::cout << "Number not recognised" << std::endl;
-			std::cin.clear();
-			std::cin.ignore(INT_MAX, '\n'); 
-			err = 1;
-			continue;
-		}
-
-		std::cout << "Set second number" << std::endl << ": ";
-		std::cin >> b;
-		
-		if (!std::cin)
-		{
-			std::cout << "Number not recognised" << std::endl;
-			std::cin.clear();
-			std::cin.ignore(INT_MAX, '\n');
-			err = 1; 
-			continue;
-		}
-
-
-		std::cout << "a = " << a << std::endl;
-		std::cout << "b = " << b << std::endl;
-
 		std::cout << "Which Operation would you like to perform (+,-,/,*)" << std::endl;
 		std::cout << ": ";
 
@@ -94,25 +109,29 @@ int main()
 		if (opperation == "+")
 		{
 			//addition
-			std::cout << "a + b = " << addition(a,b) <<std::endl;  
+			std::vector<double> number = readInNumbers(2);
+			std::cout << "a + b = " << addition(number[0],number[1]) <<std::endl;  
 		}else if (opperation == "-")
 		{
 			//subtraction
-			std::cout << "a - b = " << subtraction(a,b) <<std::endl; 
+			std::vector<double> number = readInNumbers(2);
+			std::cout << "a - b = " << subtraction(number[0],number[1]) <<std::endl; 
 		}else if (opperation == "/")
 		{
 			//division
-			if (b == 0)
+			std::vector<double> number = readInNumbers(2);
+			if (number[1] == 0)
 			{
 				std::cout << "Cannot divide by 0!" << std::endl;
 				err = 3;
 				continue;
 			}
-			std::cout << "a / b = " << division(a,b) <<std::endl; 	
+			std::cout << "a / b = " << divide(number[0],number[1]) <<std::endl; 	
 		}else if (opperation == "*")
 		{
 			//multiplication
-			std::cout << "a * b = " << multiply(a,b) <<std::endl; 
+			std::vector<double> number = readInNumbers(2);
+			std::cout << "a * b = " << multiply(number[0],number[1]) <<std::endl; 
 		}else{
 			std::cout << "Operator not recognised"<<std::endl;
 			err = 2;
@@ -122,23 +141,4 @@ int main()
 	}
 
 	return 0;
-}
-double multiply(double number1, double number2)
-{
-	return number1 * number2
-}
-
-double divide(double number1, double number2)
-{
-	return number1 / number2
-}
-
-double addition(double number1, double number2)
-{
-	return number1 + number2
-}
-
-double subtraction(double number1, double number2)
-{
-	return number1 - number2
 }

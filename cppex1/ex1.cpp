@@ -50,9 +50,6 @@ std::vector<double> readInNumbers(int numbers)
 
 int main()
 {
-	// comment
-	/* This is a 
-	   Multiline comment*/
 
 	bool first = true;
 	int err = 0;

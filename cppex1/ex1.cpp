@@ -30,7 +30,8 @@ std::vector<double> readInNumbers(int numbers)
 	for (int i = 0; i < numbers; ++i)
 	{
 		double number;
-		std::cout << "Set number " << i+1 << std::endl << ": ";
+		char charlist[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
+		std::cout << "Set variable " << charlist[i] << std::endl << ": ";
 		std::cin >> number;
 
 		if (!std::cin)
@@ -106,16 +107,19 @@ int main()
 		if (opperation == "+")
 		{
 			//addition
+			std::cout << "a + b = ?" << std::endl;
 			std::vector<double> number = readInNumbers(2);
-			std::cout << "a + b = " << addition(number[0],number[1]) <<std::endl;  
+			std::cout << number[0] << " + " << number[1] << " = " << addition(number[0],number[1]) <<std::endl;  
 		}else if (opperation == "-")
 		{
 			//subtraction
+			std::cout << "a - b = ?" << std::endl;
 			std::vector<double> number = readInNumbers(2);
-			std::cout << "a - b = " << subtraction(number[0],number[1]) <<std::endl; 
+			std::cout << number[0] << " - " << number[1] << " = " << subtraction(number[0],number[1]) <<std::endl; 
 		}else if (opperation == "/")
 		{
 			//division
+			std::cout << "a / b = ?" << std::endl;
 			std::vector<double> number = readInNumbers(2);
 			if (number[1] == 0)
 			{
@@ -123,12 +127,13 @@ int main()
 				err = 3;
 				continue;
 			}
-			std::cout << "a / b = " << divide(number[0],number[1]) <<std::endl; 	
+			std::cout << number[0] <<  " / " << number[1] << " = " << divide(number[0],number[1]) <<std::endl; 	
 		}else if (opperation == "*")
 		{
 			//multiplication
+			std::cout << "a * b = ?" <<std::endl;
 			std::vector<double> number = readInNumbers(2);
-			std::cout << "a * b = " << multiply(number[0],number[1]) <<std::endl; 
+			std::cout << number[0] << " * " << number[1] << " = " << multiply(number[0],number[1]) <<std::endl; 
 		}else{
 			std::cout << "Operator not recognised"<<std::endl;
 			err = 2;

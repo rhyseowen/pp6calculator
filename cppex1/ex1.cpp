@@ -23,6 +23,13 @@ double subtraction(double number1, double number2)
 	return number1 - number2;
 }
 
+double solveXaxis(double m, double c)
+{
+	// y = mc + c @y=0
+	// x = -c/m
+	return -c / m;
+}
+
 std::vector<double> readInNumbers(int numbers)
 {
 	std::vector<double> in_numbers;
@@ -89,7 +96,7 @@ int main()
 		first =false;
 
 
-		std::cout << "Which Operation would you like to perform (+,-,/,*)" << std::endl;
+		std::cout << "Which Operation would you like to perform (+,-,/,*,solveAxis)" << std::endl;
 		std::cout << ": ";
 
 		std::string opperation;
@@ -133,7 +140,12 @@ int main()
 			//multiplication
 			std::cout << "a * b = ?" <<std::endl;
 			std::vector<double> number = readInNumbers(2);
-			std::cout << number[0] << " * " << number[1] << " = " << multiply(number[0],number[1]) <<std::endl; 
+			std::cout << number[0] << " * " << number[1] << " = " << multiply(number[0],number[1]) <<std::endl;
+		}else if (opperation == "solveAxis")
+		{
+			std::cout << " y = ax + b: find x intercept" << std::endl;
+			std::vector<double> number = readInNumbers(2);
+			std::cout << " y = " << number[0] << "x + " << number[1] << ": x intercept = " << solveXaxis(number[0], number[1]) << std::endl;
 		}else{
 			std::cout << "Operator not recognised"<<std::endl;
 			err = 2;

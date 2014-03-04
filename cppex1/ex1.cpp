@@ -92,47 +92,16 @@ void printHelp()
 	std::cout << "3VectorLength : find the length of a 3 vector" << std::endl;
 	std::cout << "4VectorLength : find the length of a 4 vector" << std::endl;
 	std::cout << "invarientMass : find the invarient mass of a momentum 4 vector" << std::endl;
+	std::cout << "quit : exit the calculator" << std::endl;
 }
 
 int main()
 {
 
-	bool first = true;
 	int err = 0;
 
 	while (true)
 	{
-
-		if (!first)
-		{
-
-			std::string repeat; 
-			std::cout << "Would you like to continue? (y/n)" << std::endl << ": ";
-			std::cin >> repeat;
-
-			if (!std::cin)
-			{
-			std::cin.clear();
-			std::cin.ignore(INT_MAX, '\n'); 
-			std::cout << "Please answer y or n" << std::endl;
-			continue;
-			}
-
-			if (repeat == "n" || repeat == "no" || repeat == "q")
-			{
-				return err;
-			}else if (repeat == "y" || repeat == "yes")
-			{
-				//cary on with loop
-				err =0;
-			}else{
-				std::cout << "Please answer y or n" << std::endl;
-				continue;
-			}
-
-		}
-		first =false;
-
 
 		std::cout << "Which Operation would you like to perform ('help' for a list of suported opperations)" << std::endl;
 		std::cout << ": ";
@@ -217,7 +186,9 @@ int main()
 		{
 			//help statement
 			printHelp();
-			first = true;
+		}else if (opperation == "quit" || opperation == "q")
+		{
+			return err;
 		}else{
 			std::cout << "Operator not recognised"<<std::endl;
 			err = 2;

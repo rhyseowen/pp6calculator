@@ -20,10 +20,10 @@ Simple example to perform an operation on two numbers
 
 On running the program it will propt you for an opperation to perform the available options are: 
 
-+ : Simple addition of two numbers
-- : Simple subtraction of two numbers
-/ : Simple division of two numbers
-* : Simple multiplication of two numbers
+'+' : Simple addition of two numbers
+'-' : Simple subtraction of two numbers
+'/' : Simple division of two numbers
+'*' : Simple multiplication of two numbers
 solveAxis : Find the x-intercept of a straigt line
 solveQuadratic : find the real roots of a quadratic equation
 3VectorLength : find the length of a 3 vector

@@ -21,14 +21,23 @@ Simple example to perform an operation on two numbers
 On running the program it will propt you for an opperation to perform the available options are: 
 
 '+' : Simple addition of two numbers
+
 '-' : Simple subtraction of two numbers
+
 '/' : Simple division of two numbers
+
 '*' : Simple multiplication of two numbers
+
 solveAxis : Find the x-intercept of a straigt line
+
 solveQuadratic : find the real roots of a quadratic equation
+
 3VectorLength : find the length of a 3 vector
+
 4VectorLength : find the length of a 4 vector
+
 invarientMass : find the invarient mass of a momentum 4 vector
+
 quit : exit the calculator
 
 This message can be shown by typing help in the program.

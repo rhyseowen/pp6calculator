@@ -1,3 +1,9 @@
+#include <iostream>
+#include <climits>
+#include <vector>
+#include <cmath>
+#include "PP6Math.hpp"
+
 void swap(double& number1, double& number2)
 {
 	int temp = number1;

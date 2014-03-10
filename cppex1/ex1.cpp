@@ -27,9 +27,26 @@ bool bubbleSort(double *array, int size)
 		}
 		sorted = !swapNeeded;
 	}
-
 	return sorted;
+}
 
+bool bubbleSort(std::vector<double>& array)
+{
+	bool sorted = false;
+
+	while(!sorted){
+		bool swapNeeded = false;
+		for (unsigned int i = 0; i < (array.size() -1); ++i)
+		{
+			if (array[i] < array[i+1])
+			{
+				swap(array[i], array[i+1]);
+				swapNeeded = true;
+			}
+		}
+		sorted = !swapNeeded;
+	}
+	return sorted;
 }
 
 
@@ -135,6 +152,8 @@ void printHelp()
 	std::cout << "4VectorLength : find the length of a 4 vector" << std::endl;
 	std::cout << "invarientMass : find the invarient mass of a momentum 4 vector" << std::endl;
 	std::cout << "swap : swap 2 numbers" << std::endl;
+	std::cout << "sort : sort 8 numbers" << std::endl;
+	std::cout << "vectorSort : sort 8 numbers (using a vector instead of an array)" << std::endl;
 	std::cout << "quit : exit the calculator" << std::endl;
 }
 
@@ -241,6 +260,21 @@ int main()
 			std::vector<double> number = readInNumbers(8);
 			double *p_array = &number[0];
 			bubbleSort(p_array,8);
+
+			std::cout << "Sorted list: " ;
+
+			for (int i = 0; i < 8; ++i)
+			{
+				std::cout << number[i] << ", ";
+			}
+
+			std::cout << std::endl;
+
+		}else if (opperation == "vectorSort"){
+			std::cout << "Sort 8 numbers" << std::endl;
+			std::vector<double> number = readInNumbers(8);
+			
+			bubbleSort(number);
 
 			std::cout << "Sorted list: " ;
 

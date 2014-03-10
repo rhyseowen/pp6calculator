@@ -11,7 +11,7 @@ int topMenu()
 	int err = 0;
 
 	while(true){
-		std::cout << "Which menu would you like? " << std::endl;
+		std::cout << "Which menu would you like? (help to show available menus) " << std::endl;
 		std::cout << ": ";
 
 		std::string opperation;
@@ -50,7 +50,7 @@ int topMenu()
 void topMenuPrintHelp()
 {
 	std::cout << "Available menus: " << std::endl;
-	std::cout << "1 : week one" << std::endl;
-	std::cout << "2 : week two" << std::endl;
+	std::cout << "1 : week one (arithmatic)" << std::endl;
+	std::cout << "2 : week two (data operations)" << std::endl;
 	std::cout << "quit : exit the calculator" << std::endl;
 }

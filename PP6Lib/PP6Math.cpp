@@ -140,20 +140,4 @@ std::vector<double> readInNumbers(int numbers)
 	return in_numbers;
 }
 
-void printHelp()
-{
-	std::cout << "Available operations: " << std::endl;
-	std::cout << "+ : Simple addition of two numbers" << std::endl;
-	std::cout << "- : Simple subtraction of two numbers" << std::endl;
-	std::cout << "/ : Simple division of two numbers" << std::endl;
-	std::cout << "* : Simple multiplication of two numbers" << std::endl;
-	std::cout << "solveAxis : Find the x-intercept of a straigt line" << std::endl;
-	std::cout << "solveQuadratic : find the real roots of a quadratic equation" << std::endl;
-	std::cout << "3VectorLength : find the length of a 3 vector" << std::endl;
-	std::cout << "4VectorLength : find the length of a 4 vector" << std::endl;
-	std::cout << "invarientMass : find the invarient mass of a momentum 4 vector" << std::endl;
-	std::cout << "swap : swap 2 numbers" << std::endl;
-	std::cout << "sort : sort 8 numbers" << std::endl;
-	std::cout << "vectorSort : sort 8 numbers (using a vector instead of an array)" << std::endl;
-	std::cout << "quit : exit the calculator" << std::endl;
-}
+

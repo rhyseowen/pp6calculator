@@ -19,15 +19,17 @@ endif()
 
 #include directories
 include_directories(PP6Lib)
+include_directories(PP6Menu)
 
 #add subdirectory contining instructions for pp6lib 
 add_subdirectory(PP6Lib)
+add_subdirectory(PP6Menu)
 
 #define execuatable
 add_executable(pp6calculator pp6calculator.cpp)
 
 #link executable to library
-target_link_libraries(pp6calculator pp6lib)
+target_link_libraries(pp6calculator pp6menu)
 
 # Install pp6calculator to the bin subdirectory of CMAKE_INSTALL_PREFIX
 install(TARGETS pp6calculator DESTINATION bin)

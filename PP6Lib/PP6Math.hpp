@@ -16,7 +16,6 @@ double solveQuadraticN(double a, double b, double c);
 bool solveQuadratic(double a, double b, double c, double& result1, double& result2);
 double vectorLength3(double i, double j, double k);
 double vectorDotProductSqrt4(double a0, double a1, double a2, double a3, double b0, double b1, double b2, double b3);
-std::vector<double> readInNumbers(int numbers);
 bool doubleZeroCheck(double number);
 double invarientMass(double E1, double px1, double py1, double pz1, double E2, double px2, double py2, double pz2);
 

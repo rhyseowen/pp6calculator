@@ -5,6 +5,7 @@
 
 #include "weekOneMenu.hpp"
 #include "PP6Math.hpp"
+#include "pp6menu.hpp"
 
 int weekOneMenu()
 {

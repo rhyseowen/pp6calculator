@@ -31,7 +31,7 @@ add_subdirectory(FileReader-1.0.0)
 add_executable(pp6calculator pp6calculator.cpp)
 
 #link executable to library
-target_link_libraries(pp6calculator pp6menu)
+target_link_libraries(pp6calculator topMenu)
 
 # Install pp6calculator to the bin subdirectory of CMAKE_INSTALL_PREFIX
 install(TARGETS pp6calculator DESTINATION bin)

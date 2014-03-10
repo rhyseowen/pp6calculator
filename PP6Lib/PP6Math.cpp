@@ -115,31 +115,7 @@ double vectorDotProductSqrt4(double a0, double a1, double a2, double a3, double 
 	return sqrt(std::abs( a0*b0 - a1*b1 -a2*b2 - a3*b3));
 }
 
-std::vector<double> readInNumbers(int numbers)
-{
-	std::vector<double> in_numbers;
 
-	for (int i = 0; i < numbers; ++i)
-	{
-		double number;
-		char charlist[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
-		std::cout << "Set variable " << charlist[i] << std::endl << ": ";
-		std::cin >> number;
-
-		if (!std::cin)
-		{
-			std::cout << "Number not recognised" << std::endl;
-			std::cin.clear();
-			std::cin.ignore(INT_MAX, '\n');
-			--i;
-			continue;
-		}
-
-		in_numbers.push_back(number);
-
-	}
-	return in_numbers;
-}
 
 bool doubleZeroCheck(double number)
 {

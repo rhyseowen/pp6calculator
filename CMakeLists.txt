@@ -7,5 +7,11 @@ project(pp6calculator)
 #include directories
 include_directories(PP6Lib)
 
+#add pp6lib as a library
+add_library(pp6lib PP6Lib/PP6Math.cpp PP6Lib/PP6Math.hpp) 
+
 #define execuatable
-add_executable(pp6calculator pp6calculator.cpp PP6Lib/PP6Math.cpp PP6Lib/PP6Math.hpp)
+add_executable(pp6calculator pp6calculator.cpp)
+
+#link executable to library
+target_link_libraries(pp6calculator pp6lib)

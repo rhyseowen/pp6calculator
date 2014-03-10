@@ -36,6 +36,9 @@ int weekTwoMenu()
 		}else if (opperation == "vectorSort"){
 			wk2_vectorSort();
 
+		}else if (opperation == "generateMuons")
+		{
+			wk2_generateMuons();
 		}else if (opperation == "help")
 		{
 			//help statement
@@ -57,6 +60,7 @@ void weekTwoPrintHelp()
 	std::cout << "swap : swap 2 numbers" << std::endl;
 	std::cout << "sort : sort 8 numbers" << std::endl;
 	std::cout << "vectorSort : sort 8 numbers (using a vector instead of an array)" << std::endl;
+	std::cout << "generateMuons : Generate 100 random muons" << std::endl;
 	std::cout << "quit : exit the calculator" << std::endl;
 }
 
@@ -104,3 +108,10 @@ int wk2_vectorSort()
 
 	return 0;
 }
+
+int wk2_generateMuons()
+{
+	std::cout << "Generate 100 random muons" << std::endl;
+	return 0;
+}
+

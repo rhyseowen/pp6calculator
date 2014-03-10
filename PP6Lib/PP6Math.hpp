@@ -5,6 +5,7 @@
 
 void swap(double& number1, double& number2);
 bool bubbleSort(double *array, int size);
+bool bubbleSort(double *array, double *results, int size);
 bool bubbleSort(std::vector<double>& array);
 double multiply(double number1, double number2);
 double divide(double number1, double number2);

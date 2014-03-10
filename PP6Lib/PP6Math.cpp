@@ -31,6 +31,30 @@ bool bubbleSort(double *array, int size)
 	return sorted;
 }
 
+bool bubbleSort(double *array, double *results, int size)
+{
+	bool sorted = false;
+
+	for (int i = 0; i < size; ++i)
+	{
+		results[i] = i;
+	}
+
+	while(!sorted){
+		bool swapNeeded = false;
+		for (int i = 0; i < (size -1); ++i)
+		{
+			if (array[results[i]] < array[results[i+1]])
+			{
+				swap(results[i], results[i+1]);
+				swapNeeded = true;
+			}
+		}
+		sorted = !swapNeeded;
+	}
+	return sorted;
+}
+
 bool bubbleSort(std::vector<double>& array)
 {
 	bool sorted = false;

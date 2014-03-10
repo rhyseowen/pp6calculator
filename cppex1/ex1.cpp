@@ -37,6 +37,7 @@ bool bubbleSort(std::vector<double>& array)
 	while(!sorted){
 		bool swapNeeded = false;
 		for (unsigned int i = 0; i < (array.size() -1); ++i)
+		//unsigned int used to suppress compiler warnings
 		{
 			if (array[i] < array[i+1])
 			{

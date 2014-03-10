@@ -121,9 +121,13 @@ int wk2_generateMuons()
 
 	generateMuons(numberOffMuons, E, px, py, pz);
 
-	for (int muon = 0; muon < numberOffMuons; ++muon)
+	int results[numberOffMuons];
+
+	bubbleSort(E, results, numberOffMuons);
+
+	for (int i = 0; i < numberOffMuons; ++i)
 	{
-		std::cout << E[muon] << " " << px[muon] << " " << py[muon] << " " << pz[muon] << std::endl;
+		std::cout << "E= " << E[results[i]] << " px= " << px[results[i]] << " py= " << py[results[i]] << " pz= " << pz[results[i]] << std::endl;
 	}
 
 

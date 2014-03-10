@@ -20,10 +20,12 @@ endif()
 #include directories
 include_directories(PP6Lib)
 include_directories(PP6Menu)
+include_directories(FileReader-1.0.0)
 
 #add subdirectory contining instructions for pp6lib 
 add_subdirectory(PP6Lib)
 add_subdirectory(PP6Menu)
+add_subdirectory(FileReader-1.0.0)
 
 #define execuatable
 add_executable(pp6calculator pp6calculator.cpp)

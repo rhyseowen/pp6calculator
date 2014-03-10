@@ -3,9 +3,18 @@
 #include <vector>
 #include <cmath>
 #include <cfloat>
+#include <cstdlib>
+
 #include "PP6Math.hpp"
 
 void swap(double& number1, double& number2)
+{
+	double temp = number1;
+	number1 = number2;
+	number2 = temp;
+}
+
+void swap(int& number1, int& number2)
 {
 	int temp = number1;
 	number1 = number2;
@@ -31,7 +40,7 @@ bool bubbleSort(double *array, int size)
 	return sorted;
 }
 
-bool bubbleSort(double *array, double *results, int size)
+bool bubbleSort(double *array, int *results, int size)
 {
 	bool sorted = false;
 

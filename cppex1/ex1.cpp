@@ -50,6 +50,19 @@ double solveQuadraticN(double a, double b, double c)
 	return (-b - sqrt(b*b - 4*a*c))/(2*a);
 }
 
+bool solveQuadratic(double a, double b, double c, double& result1, double& result2)
+{
+	if ((b*b-4*a*c) < 0)
+	{
+		return false;
+	}else{
+		result1 = solveQuadraticP(a,b,c);
+		result2 = solveQuadraticN(a,b,c);
+
+		return true;
+	}
+}
+
 double vectorLength3(double i, double j, double k)
 {
 	return sqrt(i*i+j*j+k*k);
@@ -165,14 +178,17 @@ int main()
 		{
 			std::cout << "0 = ax^2 + bx +c: solve for x" << std::endl;
 			std::vector<double> number = readInNumbers(3);
-			//check discriminant is positive
-			if ((number[1]*number[1]-4*number[0]*number[2]) < 0)
+
+			double solution1 = 0;
+			double solution2 = 0;
+
+			if (solveQuadratic(number[0],number[1],number[2],solution1,solution2))
 			{
+				std::cout << "0 = " <<  number[0] << "x^2 + " << number[1] << "x + " << number[2] << " : x = " << solution1 << " or " << solution2 << std::endl;
+			}else{
 				std::cout << "No real roots try again!" << std::endl;
 				err = 4;
-				continue;
 			}
-			std::cout << "0 = " <<  number[0] << "x^2 + " << number[1] << "x + " << number[2] << " : x = " << solveQuadraticP(number[0], number[1], number[2]) << " or " << solveQuadraticN(number[0], number[1], number[2]) << std::endl;
 		}else if (opperation == "3VectorLength")
 		{
 			std::cout << "v = ai + bj + ck : calculate |v|" << std::endl;

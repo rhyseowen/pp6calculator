@@ -5,8 +5,16 @@ cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 project(pp6calculator)
 
 #add custom compiler flags
-if(CMAKE_COMPILER_IS_GNUCXX)
-	set(CMAKE_CXX_FLAGS "-std=c++98 -pedantic-errors -Wall -Wextra -Werror -Wfatal-errors -Wwrite-strings -Woverloaded-virtual -fno-nonansi-builtins -fno-gnu-keywords -fstrict-aliasing")
+include(CheckCXXCompilerFlag)
+if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+	check_cxx_compiler_flag(-std=c++11 HAS_GNUSTYLE_CPP11)
+	if(HAS_GNUSTYLE_CPP11)
+		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+	else()
+		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++98")
+	endif()
+
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pedantic-errors -Wall -Wextra -Werror -Wfatal-errors -Wwrite-strings -Woverloaded-virtual -fno-nonansi-builtins -fno-gnu-keywords -fstrict-aliasing")
 endif()
 
 #include directories

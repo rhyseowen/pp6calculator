@@ -137,6 +137,13 @@ int wk1_solveAxis()
 {
 	std::cout << " y = ax + b: find x intercept" << std::endl;
 	std::vector<double> number = readInNumbers(2);
+
+	if (doubleZeroCheck(number[0]))
+	{
+		std::cout << "a cannot be 0" << std::endl;
+		return 3;
+	}
+
 	std::cout << " y = " << number[0] << "x + " << number[1] << ": x intercept = " << solveXaxis(number[0], number[1]) << std::endl;
 
 	return 0;

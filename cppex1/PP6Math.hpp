@@ -1,4 +1,5 @@
-
+#ifndef PP6CALCULATOR_PP6MATH_HH
+#define PP6CALCULATOR_PP6MATH_HH
 
 void swap(double& number1, double& number2);
 bool bubbleSort(double *array, int size);
@@ -169,3 +170,4 @@ void printHelp()
 	std::cout << "vectorSort : sort 8 numbers (using a vector instead of an array)" << std::endl;
 	std::cout << "quit : exit the calculator" << std::endl;
 }
+#endif

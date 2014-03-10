@@ -2,5 +2,6 @@
 #define TOPMENU_HH 
 
 int topMenu();
+void topMenuPrintHelp();
 
 #endif

@@ -65,44 +65,6 @@ int weekOneMenu()
 		{
 			err = wk1_invarientMass();
 
-		}else if (opperation == "swap")
-		{
-			std::cout << " swap a and b" << std::endl;
-			std::vector<double> number = readInNumbers(2);
-			std::cout << "Swap " << number[0] << " and " << number[1] << " -> ";
-			swap(number[0],number[1]);
-			std::cout << number[0] << " and " << number[1] << std::endl;
-		}else if (opperation == "sort")
-		{
-			std::cout << "Sort 8 numbers" << std::endl;
-			std::vector<double> number = readInNumbers(8);
-			double *p_array = &number[0];
-			bubbleSort(p_array,8);
-
-			std::cout << "Sorted list: " ;
-
-			for (int i = 0; i < 8; ++i)
-			{
-				std::cout << number[i] << ", ";
-			}
-
-			std::cout << std::endl;
-
-		}else if (opperation == "vectorSort"){
-			std::cout << "Sort 8 numbers" << std::endl;
-			std::vector<double> number = readInNumbers(8);
-			
-			bubbleSort(number);
-
-			std::cout << "Sorted list: " ;
-
-			for (int i = 0; i < 8; ++i)
-			{
-				std::cout << number[i] << ", ";
-			}
-
-			std::cout << std::endl;
-
 		}else if (opperation == "help")
 		{
 			//help statement
@@ -131,9 +93,6 @@ void weekOnePrintHelp()
 	std::cout << "3VectorLength : find the length of a 3 vector" << std::endl;
 	std::cout << "4VectorLength : find the length of a 4 vector" << std::endl;
 	std::cout << "invarientMass : find the invarient mass of a momentum 4 vector" << std::endl;
-	std::cout << "swap : swap 2 numbers" << std::endl;
-	std::cout << "sort : sort 8 numbers" << std::endl;
-	std::cout << "vectorSort : sort 8 numbers (using a vector instead of an array)" << std::endl;
 	std::cout << "quit : exit the calculator" << std::endl;
 }
 

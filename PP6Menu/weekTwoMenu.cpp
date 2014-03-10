@@ -130,6 +130,9 @@ int wk2_generateMuons()
 		std::cout << "E= " << E[results[i]] << " px= " << px[results[i]] << " py= " << py[results[i]] << " pz= " << pz[results[i]] << std::endl;
 	}
 
+	//calculate mean
+
+	//calculate standard deviation
 
 	return 0;
 }

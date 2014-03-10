@@ -21,5 +21,7 @@ double vectorDotProductSqrt4(double a0, double a1, double a2, double a3, double 
 bool doubleZeroCheck(double number);
 double invarientMass(double E1, double px1, double py1, double pz1, double E2, double px2, double py2, double pz2);
 
+int generateMuons(int numberOfMuons, double *E, double *px, double *py, double *pz);
+
 
 #endif

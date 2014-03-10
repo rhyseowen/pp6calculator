@@ -112,6 +112,21 @@ int wk2_vectorSort()
 int wk2_generateMuons()
 {
 	std::cout << "Generate 100 random muons" << std::endl;
+	
+	const int numberOffMuons = 100;
+	double E[numberOffMuons];
+	double px[numberOffMuons];
+	double py[numberOffMuons];
+	double pz[numberOffMuons];
+
+	generateMuons(numberOffMuons, E, px, py, pz);
+
+	for (int muon = 0; muon < numberOffMuons; ++muon)
+	{
+		std::cout << E[muon] << " " << px[muon] << " " << py[muon] << " " << pz[muon] << std::endl;
+	}
+
+
 	return 0;
 }
 

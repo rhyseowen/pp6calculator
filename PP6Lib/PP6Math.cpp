@@ -168,3 +168,18 @@ double invarientMass(double E1, double px1, double py1, double pz1, double E2, d
 	return m2;
 }
 
+int generateMuons(int numberOfMuons, double *E, double *px, double *py, double *pz)
+{
+	for (int muon = 0; muon < numberOfMuons; ++muon)
+	{
+		double muonMass = 0.1; 
+		//generate an on shell muon with random momentum
+		px[muon] = (rand()%1000 -500)*0.1;
+		py[muon] = (rand()%1000 -500)*0.1;
+		pz[muon] = (rand()%1000 -500)*0.1;
+
+		E[muon] = muonMass*muonMass + px[muon]*px[muon] + py[muon]*py[muon] + pz[muon]*pz[muon];
+	}
+	return 0;
+}
+

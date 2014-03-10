@@ -1,5 +1,6 @@
 #include <iostream>
 #include <climits>
+#include <cmath>
 #include <vector>
 
 #include "weekOneMenu.hpp"
@@ -192,11 +193,13 @@ int wk1_4VectorLength()
 }
 int wk1_invarientMass()
 {
-	std::cout << "m^2 = A1*A2 = (a,b,c,d)*(e,f,g,h) : find |m|" << std::endl;
+	std::cout << "m^2 = (A1+A2)^2 = ((a,b,c,d)+(e,f,g,h))^2 : find |m|" << std::endl;
 	std::vector<double> number = readInNumbers(8);
 	std::cout << "A1 = (" << number[0] << "," << number[1] << "," << number[2] << "," << number[3] << ")" << std::endl;
 	std::cout << "A2 = (" << number[4] << "," << number[5] << "," << number[6] << "," << number[7] << ")" << std::endl;
-	std::cout << "m = " << vectorDotProductSqrt4(number[0],number[1],number[2],number[3],number[4],number[5],number[6],number[7]) << std::endl;
+	std::cout << "m = " << vectorDotProductSqrt4(number[0]+number[4],number[1]+number[5],number[2]+number[6],number[3]+number[7],number[0]+number[4],number[1]+number[5],number[2]+number[6],number[3]+number[7]) << std::endl;
+
+	// std::cout << "m = " << sqrt(invarientMass(number[0],number[1],number[2],number[3],number[4],number[5],number[6],number[7])) << std::endl;
 
 	return 0;
 }

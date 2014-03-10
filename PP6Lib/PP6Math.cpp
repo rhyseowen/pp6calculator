@@ -152,3 +152,10 @@ bool doubleZeroCheck(double number)
 	}
 }
 
+double invarientMass(double E1, double px1, double py1, double pz1, double E2, double px2, double py2, double pz2)
+{
+	double m2 = 0;
+	m2 = (E1 + E2)*(E1 + E2) - (px1+px2)*(px1+px2) - (py1+py2)*(py1+py2) - (pz1+pz2)*(pz1+pz2);
+	return m2;
+}
+

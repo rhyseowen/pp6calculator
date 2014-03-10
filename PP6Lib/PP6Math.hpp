@@ -17,6 +17,7 @@ bool solveQuadratic(double a, double b, double c, double& result1, double& resul
 double vectorLength3(double i, double j, double k);
 double vectorDotProductSqrt4(double a0, double a1, double a2, double a3, double b0, double b1, double b2, double b3);
 std::vector<double> readInNumbers(int numbers);
+bool doubleZeroCheck(double number);
 
 
 #endif

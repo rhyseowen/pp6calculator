@@ -2,6 +2,7 @@
 #include <climits>
 #include <vector>
 #include <cmath>
+#include <cfloat>
 #include "PP6Math.hpp"
 
 void swap(double& number1, double& number2)
@@ -140,4 +141,14 @@ std::vector<double> readInNumbers(int numbers)
 	return in_numbers;
 }
 
+bool doubleZeroCheck(double number)
+{
+	if ( (fabs(number - 0.0)) <=  DBL_EPSILON)
+	{
+		//number is probably 0
+		return true;
+	}else{
+		return false;
+	}
+}
 

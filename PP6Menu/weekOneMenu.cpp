@@ -115,7 +115,7 @@ int wk1_division()
 {
 	std::cout << "a / b = ?" << std::endl;
 	std::vector<double> number = readInNumbers(2);
-	if (number[1] == 0)
+	if (doubleZeroCheck(number[1]))
 	{
 		std::cout << "Cannot divide by 0!" << std::endl;
 		return 3;

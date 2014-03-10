@@ -11,6 +11,28 @@ void swap(double& number1, double& number2)
 	number2 = temp;
 }
 
+bool bubbleSort(double *array, int size)
+{
+	bool sorted = false;
+
+	while(!sorted){
+		bool swapNeeded = false;
+		for (int i = 0; i < (size -1); ++i)
+		{
+			if (array[i] < array[i+1])
+			{
+				swap(array[i], array[i+1]);
+				swapNeeded = true;
+			}
+		}
+		sorted = !swapNeeded;
+	}
+
+	return sorted;
+
+}
+
+
 double multiply(double number1, double number2)
 {
 	return number1 * number2;
@@ -213,6 +235,22 @@ int main()
 			std::cout << "Swap " << number[0] << " and " << number[1] << " -> ";
 			swap(number[0],number[1]);
 			std::cout << number[0] << " and " << number[1] << std::endl;
+		}else if (opperation == "sort")
+		{
+			std::cout << "Sort 8 numbers" << std::endl;
+			std::vector<double> number = readInNumbers(8);
+			double *p_array = &number[0];
+			bubbleSort(p_array,8);
+
+			std::cout << "Sorted list: " ;
+
+			for (int i = 0; i < 8; ++i)
+			{
+				std::cout << number[i] << ", ";
+			}
+
+			std::cout << std::endl;
+
 		}else if (opperation == "help")
 		{
 			//help statement

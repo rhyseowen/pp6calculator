@@ -4,6 +4,13 @@
 #include <vector>
 #include <cmath>
 
+void swap(double& number1, double& number2)
+{
+	int temp = number1;
+	number1 = number2;
+	number2 = temp;
+}
+
 double multiply(double number1, double number2)
 {
 	return number1 * number2;
@@ -92,6 +99,7 @@ void printHelp()
 	std::cout << "3VectorLength : find the length of a 3 vector" << std::endl;
 	std::cout << "4VectorLength : find the length of a 4 vector" << std::endl;
 	std::cout << "invarientMass : find the invarient mass of a momentum 4 vector" << std::endl;
+	std::cout << "swap : swap 2 numbers" << std::endl;
 	std::cout << "quit : exit the calculator" << std::endl;
 }
 
@@ -182,6 +190,13 @@ int main()
 			std::cout << "A1 = (" << number[0] << "," << number[1] << "," << number[2] << "," << number[3] << ")" << std::endl;
 			std::cout << "A2 = (" << number[4] << "," << number[5] << "," << number[6] << "," << number[7] << ")" << std::endl;
 			std::cout << "m = " << vectorDotProductSqrt4(number[0],number[1],number[2],number[3],number[4],number[5],number[6],number[7]) << std::endl;
+		}else if (opperation == "swap")
+		{
+			std::cout << " swap a and b" << std::endl;
+			std::vector<double> number = readInNumbers(2);
+			std::cout << "Swap " << number[0] << " and " << number[1] << " -> ";
+			swap(number[0],number[1]);
+			std::cout << number[0] << " and " << number[1] << std::endl;
 		}else if (opperation == "help")
 		{
 			//help statement

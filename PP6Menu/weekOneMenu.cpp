@@ -146,6 +146,14 @@ int wk1_solveQuadratic()
 	std::cout << "0 = ax^2 + bx +c: solve for x" << std::endl;
 	std::vector<double> number = readInNumbers(3);
 
+	//check a isnt 0 to prevent divide 0 errors
+
+	if (doubleZeroCheck(number[0]))	
+	{
+		std::cout << "a cannot be 0" << std::endl;
+		return 3;
+	}
+
 	double solution1 = 0;
 	double solution2 = 0;
 

@@ -1,17 +1,14 @@
-#include "pp6menu.hpp"
+/** \file pp6menu.cpp
+ *  \brief A library for menu related helper functions
+ *  
+ *  A general library of helper functions for the menu system. In an object orented progrm would probably be a superclass to other menu objects.
+ */
 
-/*
-Nominal "superclass" for menus for helpfull functions which arent "math"
-*/
+#include "pp6menu.hpp"
 
 
 std::vector<double> readInNumbers(int numbers)
 {
-	/*
-		Function to read in a variable number of doubles from std::cin. Maximum number is 8 
-		dictated by the length of the charlist
-
-	*/
 	std::vector<double> in_numbers;
 
 	for (int i = 0; i < numbers; ++i)

@@ -22,6 +22,10 @@ For Linux OS
 	$ cmake ../pp6calculator.git
 	$ make
 
+If `doxygen` is installed documentation can be generated with
+
+	$make doc
+
 Run With
 
 	$./pp6Calculator

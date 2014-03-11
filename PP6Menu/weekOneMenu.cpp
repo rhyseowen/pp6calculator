@@ -10,6 +10,7 @@
 int weekOneMenu()
 {
 	int err = 0;
+	weekOnePrintHelp();
 	while (true)
 	{
 
@@ -28,52 +29,55 @@ int weekOneMenu()
 			continue;
 		}
 
-		if (opperation == "+")
+		if (opperation == "+" || opperation == "1")
 		{
 			//addition
 			err = wk1_addition();
   
-		}else if (opperation == "-")
+		}else if (opperation == "-" || opperation == "2" )
 		{
 			//subtraction
 			err = wk1_subtraction();
-		}else if (opperation == "/")
+		}else if (opperation == "/" || opperation == "3" )
 		{
 			//division
 			err = wk1_division();
 
-		}else if (opperation == "*")
+		}else if (opperation == "*" || opperation == "4" )
 		{
 			//multiplication
 			err = wk1_multiplication();
 
-		}else if (opperation == "solveAxis")
+		}else if (opperation == "solveAxis" || opperation == "5" )
 		{
 			err = wk1_solveAxis();
 
-		}else if (opperation == "solveQuadratic")
+		}else if (opperation == "solveQuadratic" || opperation == "6" )
 		{
 			err = wk1_solveQuadratic();
 
-		}else if (opperation == "3VectorLength")
+		}else if (opperation == "3VectorLength" || opperation == "7" )
 		{
 			err = wk1_3VectorLength();
 
-		}else if (opperation == "4VectorLength")
+		}else if (opperation == "4VectorLength" || opperation == "8" )
 		{
 			err = wk1_4VectorLength();
 
-		}else if (opperation == "invarientMass")
+		}else if (opperation == "invarientMass" || opperation == "9" )
 		{
 			err = wk1_invarientMass();
 
-		}else if (opperation == "help")
+		}else if (opperation == "help" || opperation == "h" )
 		{
 			//help statement
 			weekOnePrintHelp();
-		}else if (opperation == "quit" || opperation == "q")
+		}else if (opperation == "up" || opperation == "u")
 		{
 			return err;
+		}else if (opperation == "quit" || opperation == "q")
+		{
+			std::exit(err);
 		}else{
 			std::cout << "Operator not recognised"<<std::endl;
 			err = 2;
@@ -85,17 +89,19 @@ int weekOneMenu()
 
 void weekOnePrintHelp()
 {
-	std::cout << "Available operations: " << std::endl;
-	std::cout << "+ : Simple addition of two numbers" << std::endl;
-	std::cout << "- : Simple subtraction of two numbers" << std::endl;
-	std::cout << "/ : Simple division of two numbers" << std::endl;
-	std::cout << "* : Simple multiplication of two numbers" << std::endl;
-	std::cout << "solveAxis : Find the x-intercept of a straigt line" << std::endl;
-	std::cout << "solveQuadratic : find the real roots of a quadratic equation" << std::endl;
-	std::cout << "3VectorLength : find the length of a 3 vector" << std::endl;
-	std::cout << "4VectorLength : find the length of a 4 vector" << std::endl;
-	std::cout << "invarientMass : find the invarient mass of a momentum 4 vector" << std::endl;
-	std::cout << "quit : exit the calculator" << std::endl;
+	std::cout << "Week One Menu : available operations: " << std::endl;
+	std::cout << "1) + : Simple addition of two numbers" << std::endl;
+	std::cout << "2) - : Simple subtraction of two numbers" << std::endl;
+	std::cout << "3) / : Simple division of two numbers" << std::endl;
+	std::cout << "4) * : Simple multiplication of two numbers" << std::endl;
+	std::cout << "5) solveAxis : Find the x-intercept of a straigt line" << std::endl;
+	std::cout << "6) solveQuadratic : find the real roots of a quadratic equation" << std::endl;
+	std::cout << "7) 3VectorLength : find the length of a 3 vector" << std::endl;
+	std::cout << "8) 4VectorLength : find the length of a 4 vector" << std::endl;
+	std::cout << "9) invarientMass : find the invarient mass of a momentum 4 vector" << std::endl;
+	std::cout << "h) help : Show this message" << std::endl;
+	std::cout << "u) up : Go up one menu level" << std::endl;
+	std::cout << "q) quit : exit the calculator" << std::endl;
 }
 
 int wk1_addition()

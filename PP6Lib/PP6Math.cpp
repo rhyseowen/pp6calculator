@@ -178,7 +178,7 @@ int generateMuons(int numberOfMuons, double *E, double *px, double *py, double *
 		py[muon] = (rand()%1000 -500)*0.1;
 		pz[muon] = (rand()%1000 -500)*0.1;
 
-		E[muon] = muonMass*muonMass + px[muon]*px[muon] + py[muon]*py[muon] + pz[muon]*pz[muon];
+		E[muon] = sqrt(muonMass*muonMass + px[muon]*px[muon] + py[muon]*py[muon] + pz[muon]*pz[muon]);
 	}
 	return 0;
 }

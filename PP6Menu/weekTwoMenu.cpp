@@ -5,6 +5,7 @@
 #include "weekTwoMenu.hpp"
 #include "PP6Math.hpp"
 #include "pp6menu.hpp"
+#include "FileReader.hpp"
 
 int weekTwoMenu()
 {
@@ -39,6 +40,9 @@ int weekTwoMenu()
 		}else if (opperation == "generateMuons")
 		{
 			wk2_generateMuons();
+		}else if (opperation == "readInMuons")
+		{
+			wk2_readInMuons();
 		}else if (opperation == "help")
 		{
 			//help statement
@@ -61,6 +65,7 @@ void weekTwoPrintHelp()
 	std::cout << "sort : sort 8 numbers" << std::endl;
 	std::cout << "vectorSort : sort 8 numbers (using a vector instead of an array)" << std::endl;
 	std::cout << "generateMuons : Generate 100 random muons" << std::endl;
+	std::cout << "readInMuons : Read in muons from file" << std::endl;
 	std::cout << "quit : exit the calculator" << std::endl;
 }
 
@@ -135,5 +140,48 @@ int wk2_generateMuons()
 	//calculate standard deviation
 
 	return 0;
+}
+
+int wk2_readInMuons()
+{
+
+
+	int number_mu_p = 0;
+	int number_mu_n = 0;
+
+	getNumberOfMuons("observedparticles.dat",number_mu_p,number_mu_n);	
+
+	std::cout << "No. mu+ = " << number_mu_p << " mu- = " << number_mu_n << std::endl;
+
+	return 0;
+}
+
+int getNumberOfMuons(std::string filename, int& number_mu_p, int& number_mu_n)
+{
+
+	//use file reader to open up file
+	FileReader f(filename);
+	// Only process if the file is open/valid
+	if (f.isValid()) {
+  		// Loop until out of lines
+		while (f.nextLine()) {
+
+    		// retrieve field 2 as a string (starting at 1)
+			std::string particle = f.getFieldAsString(2);
+
+			if (particle == "mu+")
+			{
+				++number_mu_p;
+			}else if (particle == "mu-")
+			{
+				++number_mu_n;
+			}
+
+    		// Check that input is o.k.
+			if (f.inputFailed()) break;
+		}
+	}
+	return 0;
+
 }
 

@@ -145,7 +145,16 @@ int wk2_generateMuons()
 
 	std::cout << "Mean energy = " << mean_E << std::endl;
 
-	//calculate standard deviation
+	double stdDeviation = 0;
+
+	for (int i = 0; i < numberOffMuons; ++i)
+	{
+		stdDeviation += ((E[i] - mean_E)*(E[i] - mean_E))/((double)numberOffMuons);
+	}
+
+	stdDeviation = sqrt(stdDeviation);
+
+	std::cout << "Standard deviation = " << stdDeviation << std::endl;
 
 	return 0;
 }

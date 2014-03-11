@@ -12,6 +12,8 @@ int weekTwoMenu()
 {
 	int err = 0;
 
+	weekTwoPrintHelp();
+
 	while(true){
 		std::cout << "Which Operation would you like to perform " << std::endl;
 		std::cout << ": ";
@@ -28,29 +30,33 @@ int weekTwoMenu()
 			continue;
 		}
 
-		if (opperation == "swap")
+		if (opperation == "swap" || opperation == "1")
 		{
 			wk2_swap();
-		}else if (opperation == "sort")
+		}else if (opperation == "sort" || opperation == "2")
 		{
 			wk2_sort();
 
-		}else if (opperation == "vectorSort"){
+		}else if (opperation == "vectorSort" || opperation == "3"){
 			wk2_vectorSort();
 
-		}else if (opperation == "generateMuons")
+		}else if (opperation == "generateMuons" || opperation == "4")
 		{
 			wk2_generateMuons();
-		}else if (opperation == "readInMuons")
+		}else if (opperation == "readInMuons" || opperation == "5")
 		{
 			wk2_readInMuons();
-		}else if (opperation == "help")
+		}else if (opperation == "help" || opperation == "h")
 		{
 			//help statement
 			weekTwoPrintHelp();
-		}else if (opperation == "quit" || opperation == "q")
+		}else if (opperation == "up" || opperation == "u")
 		{
 			return err;
+		}
+		else if (opperation == "quit" || opperation == "q")
+		{
+			std::exit(err);
 		}else{
 			std::cout << "Operator not recognised"<<std::endl;
 			err = 2;
@@ -61,13 +67,15 @@ int weekTwoMenu()
 
 void weekTwoPrintHelp()
 {
-	std::cout << "Available operations: " << std::endl;
-	std::cout << "swap : swap 2 numbers" << std::endl;
-	std::cout << "sort : sort 8 numbers" << std::endl;
-	std::cout << "vectorSort : sort 8 numbers (using a vector instead of an array)" << std::endl;
-	std::cout << "generateMuons : Generate 100 random muons" << std::endl;
-	std::cout << "readInMuons : Read in muons from file" << std::endl;
-	std::cout << "quit : exit the calculator" << std::endl;
+	std::cout << "Week Two Menu: available operations: " << std::endl;
+	std::cout << "1) swap : swap 2 numbers" << std::endl;
+	std::cout << "2) sort : sort 8 numbers" << std::endl;
+	std::cout << "3) vectorSort : sort 8 numbers (using a vector instead of an array)" << std::endl;
+	std::cout << "4) generateMuons : Generate 100 random muons" << std::endl;
+	std::cout << "5) readInMuons : Read in muons from file" << std::endl;
+	std::cout << "h) help : Print this Message" << std::endl;
+	std::cout << "u) up : Go up one menu level" << std::endl;
+	std::cout << "q) quit : exit the calculator" << std::endl;
 }
 
 int wk2_swap()

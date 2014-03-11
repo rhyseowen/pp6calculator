@@ -10,6 +10,8 @@ int topMenu()
 {
 	int err = 0;
 
+	topMenuPrintHelp();
+
 	while(true){
 		std::cout << "Which menu would you like? (help to show available menus) " << std::endl;
 		std::cout << ": ";
@@ -26,13 +28,13 @@ int topMenu()
 			continue;
 		}
 
-		if (opperation == "1")
+		if (opperation == "1" || opperation == "weekone")
 		{
 			err = weekOneMenu();
-		}else if (opperation == "2")
+		}else if (opperation == "2" || opperation == "weektwo")
 		{
 			err = weekTwoMenu();
-		}else if (opperation == "help")
+		}else if (opperation == "help" || opperation == "h")
 		{
 			//help statement
 			topMenuPrintHelp();
@@ -49,8 +51,9 @@ int topMenu()
 
 void topMenuPrintHelp()
 {
-	std::cout << "Available menus: " << std::endl;
-	std::cout << "1 : week one (arithmatic)" << std::endl;
-	std::cout << "2 : week two (data operations)" << std::endl;
-	std::cout << "quit : exit the calculator" << std::endl;
+	std::cout << "Top Menu : available menus: " << std::endl;
+	std::cout << "1) weekone : week one (arithmatic)" << std::endl;
+	std::cout << "2) weektwo : week two (data operations)" << std::endl;
+	std::cout << "h) help : Show this message" << std::endl;
+	std::cout << "q) quit : exit the calculator" << std::endl;
 }

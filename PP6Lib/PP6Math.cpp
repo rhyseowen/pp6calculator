@@ -1,9 +1,3 @@
-/** \file PP6Math.cpp 
- *	\brief PP6 Maths Library
- *	
- * 	A Library to provide mathamatical functions for the pp6calculator
- */
-
 #include <iostream>
 #include <climits>
 #include <vector>
@@ -32,18 +26,23 @@ void swap(int& number1, int& number2)
 
 bool bubbleSort(double *array, int size)
 {
+	//list starts unsorted
 	bool sorted = false;
 
 	while(!sorted){
+		//see if we needed a swap this itteration
 		bool swapNeeded = false;
 		for (int i = 0; i < (size -1); ++i)
 		{
+			//if a number is small than its neighbor to the right swap them
 			if (array[i] < array[i+1])
 			{
 				swap(array[i], array[i+1]);
 				swapNeeded = true;
 			}
 		}
+
+		//if no swaps were needed the list is now soted and the while can finish
 		sorted = !swapNeeded;
 	}
 	return sorted;
@@ -189,7 +188,7 @@ int generateMuons(int numberOfMuons, double *E, double *px, double *py, double *
 		px[muon] = (rand()%2000 -1000)*0.001;
 		py[muon] = (rand()%2000 -1000)*0.001;
 		pz[muon] = (rand()%2000 -1000)*0.001;
-
+		//in natural unit E^2 = m^2 + p^2
 		E[muon] = sqrt(muonMass*muonMass + px[muon]*px[muon] + py[muon]*py[muon] + pz[muon]*pz[muon]);
 	}
 	return 0;

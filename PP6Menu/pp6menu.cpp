@@ -1,9 +1,3 @@
-/** \file pp6menu.cpp
- *  \brief A library for menu related helper functions
- *  
- *  A general library of helper functions for the menu system. In an object orented progrm would probably be a superclass to other menu objects.
- */
-
 #include "pp6menu.hpp"
 
 

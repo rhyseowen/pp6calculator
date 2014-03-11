@@ -166,23 +166,55 @@ int wk2_readInMuons()
 	double mu_p_py[128] = {0};
 	double mu_p_pz[128] = {0};
 	double mu_p_E[128] = {0};
+	int mu_p_evt[128] = {0};
 
 	double mu_n_px[128] = {0};
 	double mu_n_py[128] = {0};
 	double mu_n_pz[128] = {0};
 	double mu_n_E[128] = {0};
+	int mu_n_evt[128] = {0};
 
-	getMuonInformation("observedparticles.dat", 105.7, mu_p_px, mu_p_py, mu_p_pz, mu_p_E, mu_n_px, mu_n_py, mu_n_pz, mu_n_E);
+	getMuonInformation("observedparticles.dat", 0.1057, mu_p_px, mu_p_py, mu_p_pz, mu_p_E, mu_p_evt, mu_n_px, mu_n_py, mu_n_pz, mu_n_E, mu_n_evt);
 
-	for (int i = 0; i < 128; ++i)
+	double invarientMuonMass[128*128] = {0};
+
+	for (int mu_p = 0; mu_p < number_mu_p; ++mu_p)
 	{
-		std::cout << mu_p_px[i] << std::endl;
+		for (int mu_n = 0; mu_n < number_mu_n; ++mu_n)
+		{
+			/* generate adress for invarient mass array using the mu_p concatonated to mu_n
+			   results in a 14 bit number accesing a 16384 element array
+			   mu_p can be recovered using mu_p = address>>7
+			   mu_n can be recovered using mu_n = address&0x7F
+			*/
+			//start by shifting mu_p left 7 places
+			int address = mu_p<<7;
+			//OR mu_n into the 7 zeros left by mu_p
+			address = address|mu_n;
+			invarientMuonMass[address] = invarientMass(mu_p_E[mu_p], mu_p_px[mu_p], mu_p_py[mu_p], mu_p_pz[mu_p], mu_n_E[mu_n], mu_n_px[mu_n], mu_n_py[mu_n], mu_n_pz[mu_n]);
+			// std::cout<<address << " " << invarientMuonMass[address] <<std::endl;
+		}
+	}
+
+	int sortResults[128*128] = {0};
+
+	std::cout << "Sorting invarient masses" << std::endl;
+
+	bubbleSort(invarientMuonMass, sortResults, 128*128);
+
+	std::cout << "Top 10 invarient masses:" <<std::endl; 
+
+	for (int i = 0; i < 10; ++i)
+	{
+		std::cout << "Invarient mass = " << invarientMuonMass[sortResults[i]] << " mu+ = " << mu_p_evt[(sortResults[i]>>7)] << " mu- = " << mu_n_evt[(sortResults[i]&0x7F)] << std::endl;
+		// std::cout << mu_p_E[(sortResults[i]>>7)] << " " << mu_p_px[(sortResults[i]>>7)] << " " << mu_p_py[(sortResults[i]>>7)] << " " << mu_p_pz[(sortResults[i]>>7)] << std::endl;
+		// std::cout << mu_n_E[(sortResults[i]&0x7F)] << " " << mu_n_px[(sortResults[i]&0x7F)] << " " << mu_n_py[(sortResults[i]&0x7F)] << " " << mu_n_pz[(sortResults[i]&0x7F)] << std::endl <<std::endl;
 	}
 
 	return 0;
 }
 
-int getMuonInformation(std::string filename, double muonMass, double *mu_p_px, double *mu_p_py, double *mu_p_pz, double *mu_p_E, double *mu_n_px, double *mu_n_py, double *mu_n_pz, double *mu_n_E)
+int getMuonInformation(std::string filename, double muonMass, double *mu_p_px, double *mu_p_py, double *mu_p_pz, double *mu_p_E, int *mu_p_evt, double *mu_n_px, double *mu_n_py, double *mu_n_pz, double *mu_n_E, int *mu_n_evt)
 {
 	int number_mu_p = 0;
 	int number_mu_n = 0;
@@ -198,6 +230,7 @@ int getMuonInformation(std::string filename, double muonMass, double *mu_p_px, d
 
 			if (particle == "mu+")
 			{
+				mu_p_evt[number_mu_p] = f.getFieldAsInt(1);
 				mu_p_px[number_mu_p] = f.getFieldAsDouble(3);
 				mu_p_py[number_mu_p] = f.getFieldAsDouble(4);
 				mu_p_pz[number_mu_p] = f.getFieldAsDouble(5);
@@ -206,6 +239,7 @@ int getMuonInformation(std::string filename, double muonMass, double *mu_p_px, d
 				++number_mu_p;
 			}else if (particle == "mu-")
 			{
+				mu_n_evt[number_mu_n] = f.getFieldAsInt(1);
 				mu_n_px[number_mu_n] = f.getFieldAsDouble(3);
 				mu_n_py[number_mu_n] = f.getFieldAsDouble(4);
 				mu_n_pz[number_mu_n] = f.getFieldAsDouble(5);

@@ -1,3 +1,9 @@
+/** \file PP6Math.cpp 
+ *	\brief PP6 Maths Library
+ *	
+ * 	A Library to provide mathamatical functions for the pp6calculator
+ */
+
 #include <iostream>
 #include <climits>
 #include <vector>
@@ -6,6 +12,9 @@
 #include <cstdlib>
 
 #include "PP6Math.hpp"
+
+
+
 
 void swap(double& number1, double& number2)
 {

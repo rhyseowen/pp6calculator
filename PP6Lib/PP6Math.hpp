@@ -1,8 +1,20 @@
+/** \file PP6Math.hpp 
+ *	\brief PP6 Maths Library
+ *	
+ * 	A Library to provide mathamatical functions for the pp6calculator
+ */
 #ifndef PP6CALCULATOR_PP6MATH_HH
 #define PP6CALCULATOR_PP6MATH_HH
 
 #include <vector>
 
+/**
+ * @brief Swap Two Number
+ * @details Sipmle swap algorithm to swap two numbers
+ * 
+ * @param number1 
+ * @param number2 
+ */
 void swap(double& number1, double& number2);
 void swap(int& number1, int& number2);
 bool bubbleSort(double *array, int size);

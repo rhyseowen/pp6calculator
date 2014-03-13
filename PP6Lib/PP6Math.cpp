@@ -183,7 +183,7 @@ int generateMuons(int numberOfMuons, double *E, double *px, double *py, double *
 
 	for (int muon = 0; muon < numberOfMuons; ++muon)
 	{
-		double muonMass = 0.1057; // Muon Mass MeV 
+		double muonMass = 0.1057; // Muon Mass GeV 
 		//generate an on shell muon with random momentum
 		px[muon] = (rand()%2000 -1000)*0.001;
 		py[muon] = (rand()%2000 -1000)*0.001;

@@ -206,7 +206,7 @@ double invarientMass(double E1, double px1, double py1, double pz1, double E2, d
 
 /**
  * @brief Generate Muons
- * @details Generates a list of muons with random momenta and an energy based on the random momenta and the muon mass
+ * @details Generates a list of muons with random momenta and an energy based on the random momenta and the muon mass. Units of GeV.
  * 
  * @param numberOfMuons Number of muons to generate
  * @param E Array to fill with energies

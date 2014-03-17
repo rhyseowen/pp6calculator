@@ -216,3 +216,8 @@ double lorentzGamma(double v)
 	return 1.0/(sqrt(1-(v/1)*(v/1)))
 }
 
+double interval(double a0, double a1, double a2, double a3)
+{
+	return vectorDotProduct4(a0,a1,a2,a3,a0,a1,a2,a3);
+}
+

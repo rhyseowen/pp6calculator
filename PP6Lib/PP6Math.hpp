@@ -255,5 +255,16 @@ int fourVectorZBoost(double& a0, double& a1,double& a2, double& a3, double vz );
  */
 double lorentzGamma(double v);
 
+/**
+ * @brief Calculate interval of a four vector
+ * 
+ * @param a0 a0
+ * @param a1 a1
+ * @param a2 a2
+ * @param a3 a3
+ * @return interval squared
+ */
+double interval(double a0, double a1, double a2, double a3);
+
 
 #endif

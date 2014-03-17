@@ -233,5 +233,27 @@ double invarientMass(double E1, double px1, double py1, double pz1, double E2, d
  */
 int generateMuons(int numberOfMuons, double *E, double *px, double *py, double *pz);
 
+/**
+ * @brief Boost the components along the Z axis
+ * @details Calculate the boosted values along the z axis for a four vector, using natural units C = 1 
+ * 
+ * @param a0 a0
+ * @param a1 a1
+ * @param a2 a2
+ * @param a3 a3
+ * @param vz z velocity of the boos
+ * @return Success code (0= success)
+ */
+int fourVectorZBoost(double& a0, double& a1,double& a2, double& a3, double vz );
+
+/**
+ * @brief Lorentz Gamma
+ * @details Gamma function for use in reletivistic calculations. \f$ \frac{1}{\sqrt{1-\frac{v}{c}^2}}
+ * 
+ * @param v velocity
+ * @return gamma
+ */
+double lorentzGamma(double v);
+
 
 #endif

@@ -89,9 +89,9 @@ class FourVector{
 
 };
 
-		FourVector operator+(const FourVector& lhs, const FourVector& rhs);
+FourVector operator+(const FourVector& lhs, const FourVector& rhs);
 
-		FourVector operator-(const FourVector& lhs, const FourVector& rhs);
+FourVector operator-(const FourVector& lhs, const FourVector& rhs);
 
 
 

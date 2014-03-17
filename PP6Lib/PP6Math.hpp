@@ -246,7 +246,7 @@ int fourVectorZBoost(double& a0, double& a3, double vz );
 
 /**
  * @brief Lorentz Gamma
- * @details Gamma function for use in reletivistic calculations. \f$ \frac{1}{\sqrt{1-\frac{v}{c}^2}}
+ * @details Gamma function for use in reletivistic calculations. \f$ \frac{1}{\sqrt{1-\frac{v}{c}^2}}\f$
  * 
  * @param v velocity
  * @return gamma

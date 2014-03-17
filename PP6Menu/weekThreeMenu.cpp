@@ -32,7 +32,11 @@ int weekThreeMenu()
 		if (opperation == "interval" || opperation == "1")
 		{
 			err = wk3_interval();
-		}else if (opperation == "help" || opperation == "h")
+		}if (opperation == "boost_z" || opperation == "2")
+		{
+			err = wk3_boostZ();
+		}
+		else if (opperation == "help" || opperation == "h")
 		{
 			//help statement
 			weekThreePrintHelp();

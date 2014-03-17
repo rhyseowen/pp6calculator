@@ -238,8 +238,6 @@ int generateMuons(int numberOfMuons, double *E, double *px, double *py, double *
  * @details Calculate the boosted values along the z axis for a four vector, using natural units C = 1 
  * 
  * @param a0 a0
- * @param a1 a1
- * @param a2 a2
  * @param a3 a3
  * @param vz z velocity of the boos
  * @return Success code (0= success)

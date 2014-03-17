@@ -63,6 +63,15 @@ class FourVector{
 
 		double getInterval() const; 
 
+		FourVector& operator+=(const FourVector& rhs);
+
+		FourVector& operator-=(const FourVector& rhs);
+
+		FourVector& operator=(const FourVector& rhs);
+
+
+
+
 	private:
 		/**
 		 * @brief Calcualte interval	
@@ -80,7 +89,9 @@ class FourVector{
 
 };
 
+		FourVector operator+(const FourVector& lhs, const FourVector& rhs);
 
+		FourVector operator-(const FourVector& lhs, const FourVector& rhs);
 
 
 

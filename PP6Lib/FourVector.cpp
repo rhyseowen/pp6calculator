@@ -72,3 +72,56 @@ double FourVector::getInterval() const
 {
 	return interval_;
 }
+
+FourVector& FourVector::operator+=(const FourVector& rhs)
+{
+	a0 += rhs.getA0();
+	a1 += rhs.getA1();
+	a2 += rhs.getA2();
+	a3 += rhs.getA3();
+
+	this->intervalV();
+
+	return *this;
+}
+
+FourVector& FourVector::operator-=(const FourVector& rhs)
+{
+	a0 -= rhs.getA0();
+	a1 -= rhs.getA1();
+	a2 -= rhs.getA2();
+	a3 -= rhs.getA3();
+
+	this->intervalV();
+
+	return *this;
+}
+
+FourVector& FourVector::operator=(const FourVector& rhs)
+{
+	if (&rhs != this)
+	{
+		a0 = rhs.getA0();
+		a1 = rhs.getA1();
+		a2 = rhs.getA2();
+		a3 = rhs.getA3();
+
+		interval_ = rhs.getInterval();
+	}
+	return *this;
+}
+
+FourVector operator+(const FourVector& lhs, const FourVector& rhs)
+{
+	FourVector temp(lhs);
+	temp += rhs;
+	return temp;
+}
+
+
+FourVector operator-(const FourVector& lhs, const FourVector& rhs)
+{
+	FourVector temp(lhs);
+	temp -= rhs;
+	return temp;
+}

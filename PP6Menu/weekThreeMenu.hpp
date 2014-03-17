@@ -19,5 +19,7 @@ void weekThreePrintHelp();
 
 int wk3_interval();
 
+int wk3_boostZ();
+
 
 #endif

@@ -39,6 +39,16 @@ FourVector* boost_z(FourVector* vector, double v)
 	return p;
 }
 
+double FourVectorInerval(FourVector* v)
+{
+	if (v)
+	{
+		return interval(v->a0,v->a1,v->a2,v->a3);
+	}
+	return 0;
+}
+
+
 void destroyFourVector(FourVector *&p)
 {
 	if (p)

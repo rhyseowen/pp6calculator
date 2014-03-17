@@ -11,6 +11,8 @@ FourVector* createFourVector(FourVector* initial);
 
 FourVector* boost_z(FourVector* vector,double v);
 
+double FourVectorInerval(FourVector* v);
+
 void destroyFourVector(FourVector *&q);
 
 #endif

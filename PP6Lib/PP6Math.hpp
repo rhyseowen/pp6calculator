@@ -244,7 +244,7 @@ int generateMuons(int numberOfMuons, double *E, double *px, double *py, double *
  * @param vz z velocity of the boos
  * @return Success code (0= success)
  */
-int fourVectorZBoost(double& a0, double& a1,double& a2, double& a3, double vz );
+int fourVectorZBoost(double& a0, double& a3, double vz );
 
 /**
  * @brief Lorentz Gamma

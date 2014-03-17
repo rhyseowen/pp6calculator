@@ -153,7 +153,12 @@ double vectorLength3(double i, double j, double k)
 double vectorDotProductSqrt4(double a0, double a1, double a2, double a3, double b0, double b1, double b2, double b3)
 {
 	//calculate the dot product between two four vectors a and b then square root it
-	return sqrt(std::abs( a0*b0 - a1*b1 -a2*b2 - a3*b3));
+	return sqrt(std::abs( vectorDotProduct4(a0,a1,a2,a3,b0,b1,b2,b3)));
+}
+
+double vectorDotProduct4(double a0, double a1, double a2, double a3, double b0, double b1, double b2, double b3)
+{
+	return ( a0*b0 - a1*b1 -a2*b2 - a3*b3);
 }
 
 

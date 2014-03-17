@@ -180,6 +180,22 @@ double vectorLength3(double i, double j, double k);
 double vectorDotProductSqrt4(double a0, double a1, double a2, double a3, double b0, double b1, double b2, double b3);
 
 /**
+ * @brief Madnitude of two four vectors
+ * @details Returns the dot product of two 4-vectors
+ * 
+ * @param a0 
+ * @param a1 
+ * @param a2 
+ * @param a3 
+ * @param b0 
+ * @param b1 
+ * @param b2 
+ * @param b3 
+ * @return length
+ */
+double vectorDotProduct4(double a0, double a1, double a2, double a3, double b0, double b1, double b2, double b3);
+
+/**
  * @brief Check if a double is zero
  * @details Performs a sensible check if a double is zero
  * 

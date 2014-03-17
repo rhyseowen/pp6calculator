@@ -2,27 +2,14 @@
 #include "PP6Math.hpp"
 
 
-// static FourVector* FourVector::createFourVector(){
-// 	return new FourVector();
-// }
+FourVector::FourVector(double a0_in, double a1_in, double a2_in, double a3_in)
+	: a0(a0_in), a1(a1_in), a2(a2_in), a3(a3_in)
+{}
 
-// static FourVector* FourVector::createFourVector(double a0, double a1, double a2, double a3)
-// {
-// 	FourVector * p = new FourVector();
-// 	p->a0 = a0;
-// 	p->a1 = a1;
-// 	p->a2 = a2;
-// 	p->a3 = a3;
+FourVector::FourVector(const FourVector& other)
+	: a0(other.a0), a1(other.a1), a2(other.a2), a3(other.a3)
+{}
 
-// 	return p;
-// }
-
-// static FourVector* FourVector::createFourVector(FourVector* initial)
-// {
-// 	FourVector * p = createFourVector(initial->a0, initial->a1, initial->a2, initial->a3);
-// 	return p;
-
-// }
 
 void FourVector::boost_z(const double v)
 {
@@ -36,12 +23,5 @@ double FourVector::FourVectorInerval() const
 		return interval(a0,a1,a2,a3);
 }
 
-
-// void FourVector::destroyFourVector(FourVector *&p)
-// {
-// 	if (p)
-// 	{
-// 		delete p;
-// 		p =0;
-// 	}
-// }
+FourVector::~FourVector()
+{}

@@ -4,12 +4,17 @@
 
 class FourVector{
 	public:
-		// static FourVector* createFourVector();
-		// static FourVector* createFourVector(double a0, double a1, double a2, double a3);
-		// static FourVector* createFourVector(FourVector* initial);
+		//ctors
+		FourVector() {a0 = 0; a1 = 0; a2 = 0; a3 = 0;}
+		FourVector(double a0, double a1, double a2, double a3);
+		FourVector(const FourVector& other);
+
+
 		void boost_z(const double v);
 		double FourVectorInerval() const;
-		// void destroyFourVector(FourVector *&q);
+
+		//dtor
+		~FourVector();
 
 		double a0;
 		double a1;

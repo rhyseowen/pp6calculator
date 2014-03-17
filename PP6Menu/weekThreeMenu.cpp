@@ -65,8 +65,15 @@ void weekThreePrintHelp()
 int wk3_interval()
 {
 	std::vector<double> number = readInNumbers(4);
-	FourVector* vect = createFourVector(number[0],number[1],number[2],number[3]);
-	std::cout << "Interval = " << FourVectorInerval(vect) << std::endl;
-	destroyFourVector(vect);
+	FourVector* vect = new FourVector();
+	vect->a0 = number[0];
+	vect->a1 = number[1];
+	vect->a2 = number[2];
+	vect->a3 = number[3];
+	std::cout << "Interval = " << vect->FourVectorInerval() << std::endl;
+
+	delete vect;
+	vect = 0;
+
 	return 0;
 }

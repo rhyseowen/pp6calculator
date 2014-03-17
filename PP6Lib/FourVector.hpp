@@ -9,7 +9,7 @@ class FourVector{
 		/**
 		 * @brief Default Constructor
 		 */
-		FourVector() {a0 = 0; a1 = 0; a2 = 0; a3 = 0;}
+		FourVector() {a0 = 0; a1 = 0; a2 = 0; a3 = 0; interval_ =0;}
 
 		/**
 		 * @brief Initalised Constructor
@@ -36,12 +36,6 @@ class FourVector{
 		 */
 		void boost_z(const double v);
 
-		/**
-		 * @brief Calcualte interval	
-		 * @details Caluculate the interval (\f$length^2\f$) of the four vector
-		 * @return interval
-		 */
-		double interval() const;
 
 		//dtor
 		/**
@@ -59,20 +53,29 @@ class FourVector{
 
 		double getA3() const;
 
-		double setA0(double a0_in);
+		void setA0(double a0_in);
 
-		double setA1(double a1_in);
+		void setA1(double a1_in);
 
-		double setA2(double a2_in);
+		void setA2(double a2_in);
 
-		double setA3(double a3_in);
+		void setA3(double a3_in);
+
+		double getInterval() const; 
 
 	private:
+		/**
+		 * @brief Calcualte interval	
+		 * @details Caluculate the interval (\f$length^2\f$) of the four vector
+		 * @return interval
+		 */
+		void intervalV();
+
 		double a0;
 		double a1;
 		double a2;
 		double a3;
-
+		double interval_;
 	
 
 };

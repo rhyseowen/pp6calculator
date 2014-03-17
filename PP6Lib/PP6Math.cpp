@@ -199,12 +199,12 @@ int generateMuons(int numberOfMuons, double *E, double *px, double *py, double *
 	return 0;
 }
 
-int fourVectorZBoost(double& a0, double& a1,double& a2, double& a3, double vz )
+int fourVectorZBoost(double& a0, double& a3, double vz )
 {
-	 double a0Prime = lorentzGamma(v)*(a0 - v*a3);
+	 double a0Prime = lorentzGamma(vz)*(a0 - vz*a3);
 	//a1 is unchanged
 	//a2 is unchanged
-	double a3Prime = lorentzGamma(v)*(a3 - v*a0);
+	double a3Prime = lorentzGamma(vz)*(a3 - vz*a0);
 
 	a0 = a0Prime;
 	a3 = a3Prime;
@@ -213,7 +213,7 @@ int fourVectorZBoost(double& a0, double& a1,double& a2, double& a3, double vz )
 
 double lorentzGamma(double v)
 {
-	return 1.0/(sqrt(1-(v/1)*(v/1)))
+	return 1.0/(sqrt(1-(v/1)*(v/1)));
 }
 
 double interval(double a0, double a1, double a2, double a3)

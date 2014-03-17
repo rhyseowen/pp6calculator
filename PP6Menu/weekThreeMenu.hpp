@@ -17,4 +17,7 @@ int weekThreeMenu();
  */
 void weekThreePrintHelp();
 
+int wk3_interval();
+
+
 #endif

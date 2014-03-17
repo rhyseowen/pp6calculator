@@ -4,6 +4,8 @@
 #include <cmath>
 
 #include "weekThreeMenu.hpp"
+#include "pp6menu.hpp"
+#include "FourVector.hpp"
 
 int weekThreeMenu()
 {
@@ -27,9 +29,9 @@ int weekThreeMenu()
 			continue;
 		}
 
-		if (opperation == "swap" || opperation == "1")
+		if (opperation == "interval" || opperation == "1")
 		{
-			//wk2_swap();
+			err = wk3_interval();
 		}else if (opperation == "help" || opperation == "h")
 		{
 			//help statement
@@ -54,8 +56,17 @@ int weekThreeMenu()
 void weekThreePrintHelp()
 {
 	std::cout << "Week Two Menu: available operations: " << std::endl;
-	std::cout << "1) swap : swap 2 numbers" << std::endl;
+	std::cout << "1) interval : Calculate the interval of a 4 vector" << std::endl;
 	std::cout << "h) help : Print this Message" << std::endl;
 	std::cout << "u) up : Go up one menu level" << std::endl;
 	std::cout << "q) quit : exit the calculator" << std::endl;
+}
+
+int wk3_interval()
+{
+	std::vector<double> number = readInNumbers(4);
+	FourVector* vect = createFourVector(number[0],number[1],number[2],number[3]);
+	std::cout << "Interval = " << FourVectorInerval(vect) << std::endl;
+	destroyFourVector(vect);
+	return 0;
 }

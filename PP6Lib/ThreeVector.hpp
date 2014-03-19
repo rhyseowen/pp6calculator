@@ -21,6 +21,8 @@ class ThreeVector{
 		double getY() const;
 		double getZ() const;
 
+		double getLengthSquared() const;
+
 		void setX(double x);
 		void setY(double y);
 		void setZ(double z);

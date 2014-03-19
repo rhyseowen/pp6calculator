@@ -37,6 +37,8 @@ class ThreeVector{
 		ThreeVector& operator/=(const double& rhs);
 		ThreeVector& operator/=(const float& rhs);
 
+		std::ostream& operator<<(std::ostream& stream,const ThreeVector& v);
+
 		bool operator==(const ThreeVector& rhs);
 		bool operator!=(const ThreeVector& rhs);
 
@@ -60,8 +62,6 @@ class ThreeVector{
 
 		friend ThreeVector operator/(const ThreeVector& lhs, const float& rhs);
 		friend ThreeVector operator/(const float& lhs, const ThreeVector& rhs);
-
-		//@todo stream operators
 
 };
 

@@ -38,6 +38,14 @@ void ThreeVector::crossProduct(const ThreeVector& rhs)
 	z_ = zPrime;
 }
 
+ThreeVector ThreeVector::crossProduct(const ThreeVector& lhs, const ThreeVector& rhs)
+{
+	ThreeVector temp(lhs);
+	temp.crossProduct(rhs);
+
+	return temp;
+}
+
 double ThreeVector::getX() const
 {
 	return x_;

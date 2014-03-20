@@ -1,15 +1,31 @@
 #ifndef FOURVECTOR_HH
 #define FOURVECTOR_HH
 
+#include "ThreeVector.hpp"
 
 class FourVector{
+	private:
+		/**
+		 * @brief Calcualte interval	
+		 * @details Caluculate the interval (\f$length^2\f$) of the four vector
+		 * @return interval
+		 */
+		void calculateInterval();
+		double lorentzGamma(const double& v) const;
+
+		double a0;
+
+		ThreeVector spaceLike_;
+
+		double interval_;
+	
 	public:
 		//ctors
 
 		/**
 		 * @brief Default Constructor
 		 */
-		FourVector() {a0 = 0; a1 = 0; a2 = 0; a3 = 0; interval_ =0;}
+		FourVector() {a0 = 0; interval_ =0;}
 
 		/**
 		 * @brief Initalised Constructor
@@ -34,7 +50,7 @@ class FourVector{
 		 * 
 		 * @param v velocity in natural units
 		 */
-		void boost_z(const double v);
+		void boost_z(const double& v);
 
 
 		//dtor
@@ -92,6 +108,7 @@ class FourVector{
 		 */
 		double getInterval() const; 
 
+
 		/**
 		 * @brief Add another FourVector component wise
 		 * 
@@ -107,28 +124,6 @@ class FourVector{
 
 		friend FourVector operator-(const FourVector& lhs, const FourVector& rhs);
 
-
-	private:
-		/**
-		 * @brief Calcualte interval	
-		 * @details Caluculate the interval (\f$length^2\f$) of the four vector
-		 * @return interval
-		 */
-		void intervalV();
-
-		double a0;
-		double a1;
-		double a2;
-		double a3;
-		double interval_;
-	
-
 };
-
-
-
-
-
-
 
 #endif

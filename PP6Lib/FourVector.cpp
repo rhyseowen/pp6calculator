@@ -1,28 +1,36 @@
+#include <cmath>
+
 #include "FourVector.hpp"
 #include "PP6Math.hpp"
 
 
 FourVector::FourVector(double a0_in, double a1_in, double a2_in, double a3_in)
-: a0(a0_in), a1(a1_in), a2(a2_in), a3(a3_in), interval_(0)
+: a0(a0_in), spaceLike_(a1_in, a2_in, a3_in), interval_(0)
 {
-	intervalV();
+	calculateInterval();
 }
 
 FourVector::FourVector(const FourVector& other)
-: a0(other.getA0()), a1(other.getA1()), a2(other.getA2()), a3(other.getA3()), interval_(other.getInterval())
+: a0(other.getA0()), spaceLike_(other.spaceLike_), interval_(other.getInterval())
 {}
 
 
-void FourVector::boost_z(const double v)
+void FourVector::boost_z(const double& v)
 {
 
-	fourVectorZBoost(a0, a3, v);
+	double a0Prime = lorentzGamma(v)*(getA0() - v*getA3());
+	//a1 is unchanged
+	//a2 is unchanged
+	double a3Prime = lorentzGamma(v)*(getA3() - v*getA0());
+
+	setA0(a0Prime);
+	setA3(a3Prime);
 }
 
-void FourVector::intervalV()
+void FourVector::calculateInterval()
 {
 
-	interval_ = interval(a0,a1,a2,a3);
+	interval_ = interval(a0,spaceLike_.getX(),spaceLike_.getY(),spaceLike_.getZ());
 }
 
 FourVector::~FourVector()
@@ -35,17 +43,17 @@ double FourVector::getA0() const
 
 double FourVector::getA1() const
 {
-	return a1;
+	return spaceLike_.getX();
 }
 
 double FourVector::getA2() const
 {
-	return a2;
+	return spaceLike_.getY();
 }
 
 double FourVector::getA3() const
 {
-	return a3;
+	return spaceLike_.getZ();
 }
 
 void FourVector::setA0(double a0_in)
@@ -55,17 +63,17 @@ void FourVector::setA0(double a0_in)
 
 void FourVector::setA1(double a1_in)
 {
-	a1 = a1_in;
+	spaceLike_.setX(a1_in);
 }
 
 void FourVector::setA2(double a2_in)
 {
-	a2 = a2_in;
+	spaceLike_.setY(a2_in);
 }
 
 void FourVector::setA3(double a3_in)
 {
-	a3 = a3_in;
+	spaceLike_.setZ(a3_in);
 }
 
 double FourVector::getInterval() const
@@ -75,24 +83,25 @@ double FourVector::getInterval() const
 
 FourVector& FourVector::operator+=(const FourVector& rhs)
 {
-	a0 += rhs.getA0();
-	a1 += rhs.getA1();
-	a2 += rhs.getA2();
-	a3 += rhs.getA3();
 
-	this->intervalV();
+	setA0(getA0() + rhs.getA0());
+	setA0(getA1() + rhs.getA1());
+	setA0(getA2() + rhs.getA2());
+	setA0(getA3() + rhs.getA3());
+
+	calculateInterval();
 
 	return *this;
 }
 
 FourVector& FourVector::operator-=(const FourVector& rhs)
 {
-	a0 -= rhs.getA0();
-	a1 -= rhs.getA1();
-	a2 -= rhs.getA2();
-	a3 -= rhs.getA3();
+	setA0(getA0() - rhs.getA0());
+	setA0(getA1() - rhs.getA1());
+	setA0(getA2() - rhs.getA2());
+	setA0(getA3() - rhs.getA3());
 
-	this->intervalV();
+	calculateInterval();
 
 	return *this;
 }
@@ -101,12 +110,12 @@ FourVector& FourVector::operator=(const FourVector& rhs)
 {
 	if (&rhs != this)
 	{
-		a0 = rhs.getA0();
-		a1 = rhs.getA1();
-		a2 = rhs.getA2();
-		a3 = rhs.getA3();
+		setA0(rhs.getA0());
+		setA1(rhs.getA1());
+		setA2(rhs.getA2());
+		setA3(rhs.getA3());
 
-		interval_ = rhs.getInterval();
+		calculateInterval();
 	}
 	return *this;
 }
@@ -124,4 +133,9 @@ FourVector operator-(const FourVector& lhs, const FourVector& rhs)
 	FourVector temp(lhs);
 	temp -= rhs;
 	return temp;
+}
+
+double FourVector::lorentzGamma(const double& v)const
+{
+	return 1.0/(sqrt(1-(v/1)*(v/1)));
 }

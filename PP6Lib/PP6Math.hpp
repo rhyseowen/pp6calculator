@@ -264,5 +264,16 @@ double lorentzGamma(double v);
  */
 double interval(double a0, double a1, double a2, double a3);
 
+/**
+ * @brief Double Conpare
+ * @details Perform a sensible equality comparison on two doubles taking account for relative erro
+ * 
+ * @param a lhs double
+ * @param b rhs double
+ * 
+ * @return true if equal
+ */
+bool doubleCompare(const double& a, const double& b);
+
 
 #endif

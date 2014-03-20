@@ -221,3 +221,17 @@ double interval(double a0, double a1, double a2, double a3)
 	return vectorDotProduct4(a0,a1,a2,a3,a0,a1,a2,a3);
 }
 
+bool doubleCompare(const double& a, const double& b)
+{
+	if (a == b)
+	{
+		return true;
+	}
+	double error = fabs(a-b)/ (a > b ? a :b);
+	if (error <= DBL_EPSILON)
+	{
+		return true;
+	}
+	return false;
+}
+

@@ -61,13 +61,10 @@ class ThreeVector{
 		friend ThreeVector operator*(const float& lhs, const ThreeVector& rhs);
 
 		friend ThreeVector operator/(const ThreeVector& lhs, const int& rhs);
-		friend ThreeVector operator/(const int& lhs, const ThreeVector& rhs);
 
 		friend ThreeVector operator/(const ThreeVector& lhs, const double& rhs);
-		friend ThreeVector operator/(const double& lhs, const ThreeVector& rhs);
 
 		friend ThreeVector operator/(const ThreeVector& lhs, const float& rhs);
-		friend ThreeVector operator/(const float& lhs, const ThreeVector& rhs);
 
 };
 

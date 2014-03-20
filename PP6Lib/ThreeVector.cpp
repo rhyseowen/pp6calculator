@@ -210,3 +210,75 @@ std::ostream& operator<<(std::ostream& stream,const ThreeVector& v)
 	return stream;
 
 }
+
+ThreeVector operator+(const ThreeVector& lhs, const ThreeVector& rhs)
+{
+	ThreeVector temp(lhs);
+	temp += rhs;
+	return temp;
+}
+
+ThreeVector operator-(const ThreeVector& lhs, const ThreeVector& rhs)
+{
+	ThreeVector temp(lhs);
+	temp -= rhs;
+	return temp;
+}
+
+ThreeVector operator*(const ThreeVector& lhs, const int& rhs)
+{
+	ThreeVector temp(lhs);
+	temp *= rhs;
+	return temp;
+}
+
+ThreeVector operator*(const int& lhs, const ThreeVector& rhs)
+{
+	return rhs*lhs;
+}
+
+ThreeVector operator*(const ThreeVector& lhs, const double& rhs)
+{
+	ThreeVector temp(lhs);
+	temp *= rhs;
+	return temp;
+}
+
+ThreeVector operator*(const double& lhs, const ThreeVector& rhs)
+{
+	return rhs*lhs;
+}
+
+ThreeVector operator*(const ThreeVector& lhs, const float& rhs)
+{
+	ThreeVector temp(lhs);
+	temp *= rhs;
+	return temp;
+}
+
+ThreeVector operator*(const float& lhs, const ThreeVector& rhs)
+{
+	return rhs*lhs;
+}
+
+ThreeVector operator/(const ThreeVector& lhs, const int& rhs)
+{
+	ThreeVector temp(lhs);
+	temp /= rhs;
+	return temp;
+}
+
+ThreeVector operator/(const ThreeVector& lhs, const double& rhs)
+{
+	ThreeVector temp(lhs);
+	temp /= rhs;
+	return temp;
+}
+
+ThreeVector operator/(const ThreeVector& lhs, const float& rhs)
+{
+	ThreeVector temp(lhs);
+	temp /= rhs;
+	return temp;
+}
+

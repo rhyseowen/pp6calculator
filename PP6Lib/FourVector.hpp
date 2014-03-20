@@ -13,7 +13,7 @@ class FourVector{
 		void calculateInterval();
 		double lorentzGamma(const double& v) const;
 
-		double a0;
+		double a0_;
 
 		ThreeVector spaceLike_;
 
@@ -25,7 +25,7 @@ class FourVector{
 		/**
 		 * @brief Default Constructor
 		 */
-		FourVector() {a0 = 0; interval_ =0;}
+		FourVector() {a0_ = 0; interval_ =0;}
 
 		/**
 		 * @brief Initalised Constructor

@@ -5,13 +5,13 @@
 
 
 FourVector::FourVector(double a0_in, double a1_in, double a2_in, double a3_in)
-: a0(a0_in), spaceLike_(a1_in, a2_in, a3_in), interval_(0)
+: a0_(a0_in), spaceLike_(a1_in, a2_in, a3_in), interval_(0)
 {
 	calculateInterval();
 }
 
 FourVector::FourVector(const FourVector& other)
-: a0(other.getA0()), spaceLike_(other.spaceLike_), interval_(other.getInterval())
+: a0_(other.getA0()), spaceLike_(other.spaceLike_), interval_(other.getInterval())
 {}
 
 
@@ -30,7 +30,7 @@ void FourVector::boost_z(const double& v)
 void FourVector::calculateInterval()
 {
 
-	interval_ = interval(a0,spaceLike_.getX(),spaceLike_.getY(),spaceLike_.getZ());
+	interval_ = interval(a0_,spaceLike_.getX(),spaceLike_.getY(),spaceLike_.getZ());
 }
 
 FourVector::~FourVector()
@@ -38,7 +38,7 @@ FourVector::~FourVector()
 
 double FourVector::getA0() const
 {
-	return a0;
+	return a0_;
 }
 
 double FourVector::getA1() const
@@ -58,7 +58,7 @@ double FourVector::getA3() const
 
 void FourVector::setA0(double a0_in)
 {
-	a0 = a0_in;
+	a0_ = a0_in;
 }
 
 void FourVector::setA1(double a1_in)

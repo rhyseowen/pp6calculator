@@ -1,6 +1,8 @@
 #ifndef THREEVECTOR_HH
 #define THREEVECTOR_HH 
 
+#include <iostream>
+
 class ThreeVector{
 	private:
 		double x_;
@@ -9,12 +11,14 @@ class ThreeVector{
 
 		double lengthSquared_;
 
+		void calculateLengthSquared();
+
 	public:
 		ThreeVector();
 		ThreeVector(double x, double y, double z);
 		ThreeVector(const ThreeVector& other);
 
-		void dotProduct(const ThreeVector& rhs);
+		double dotProduct(const ThreeVector& rhs) const;
 		void crossProduct(const ThreeVector& rhs);
 
 		double getX() const;
@@ -39,10 +43,10 @@ class ThreeVector{
 		ThreeVector& operator/=(const double& rhs);
 		ThreeVector& operator/=(const float& rhs);
 
-		std::ostream& operator<<(std::ostream& stream,const ThreeVector& v);
-
 		bool operator==(const ThreeVector& rhs);
 		bool operator!=(const ThreeVector& rhs);
+
+		friend std::ostream& operator<<(std::ostream& stream,const ThreeVector& v);
 
 		friend ThreeVector operator+(const ThreeVector& lhs, const ThreeVector& rhs);
 		friend ThreeVector operator-(const ThreeVector& lhs, const ThreeVector& rhs);

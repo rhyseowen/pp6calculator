@@ -1,16 +1,20 @@
+#include <cmath>
+
 #include "Particle.hpp"
 
 Particle::Particle()
-:ParticleName_("NONE"), charge_(0), FourMomentum_(0,0,0,0)
+:ParticleName_("NONE"), charge_(0), mass_(0), FourMomentum_(0,0,0,0)
 {}
 
 Particle::Particle(const Particle& other)
-:ParticleName_(other.getParticleName()), charge_(other.getCharge()), FourMomentum_(other.getFourMomentum())
+:ParticleName_(other.getParticleName()), charge_(other.getCharge()), mass_(other.getMass()), FourMomentum_(other.getFourMomentum())
 {}
 
 Particle::Particle(const std::string& ParticleName, const double& charge, const double& E, const double& px, const double& py, const double& pz)
-:ParticleName_(ParticleName), charge_(charge), FourMomentum_(E,px,py,pz)
-{}
+:ParticleName_(ParticleName), charge_(charge), mass_(0), FourMomentum_(E,px,py,pz)
+{
+	mass_ = sqrt(getFourMomentum().getInterval());
+}
 
 double Particle::getCharge() const
 {
@@ -44,6 +48,11 @@ bool Particle::setFourMomentum(const FourVector& FourMomentum)
 	//add check for sensible 4 Momenta reject and return false if not physical
 	return true;
 
+}
+
+double Particle::getMass() const
+{
+	return mass_;
 }
 
 Particle::~Particle()

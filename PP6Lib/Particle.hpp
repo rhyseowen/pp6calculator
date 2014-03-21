@@ -8,6 +8,7 @@ class Particle{
 	private:
 		std::string ParticleName_;
 		double charge_;
+		double mass_;
 		FourVector FourMomentum_;
 	public:
 		//Constructors
@@ -21,7 +22,7 @@ class Particle{
 		std::string getParticleName() const;
 		void setParticleName(const std::string& ParticleName);
 
-
+		double getMass() const;
 
 		FourVector getFourMomentum() const;
 		bool setFourMomentum(const FourVector& FourMomentum);

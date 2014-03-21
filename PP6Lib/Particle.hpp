@@ -29,10 +29,6 @@ class Particle{
 
 		double getCharge() const;
 		void setCharge(const double& charge);
-		std::string getParticleName();
-
-
-
 
 };
 

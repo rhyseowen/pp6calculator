@@ -164,3 +164,11 @@ double FourVector::lorentzGamma(const double& v)const
 {
 	return 1.0/(sqrt(1-(v/1)*(v/1)));
 }
+
+std::ostream& operator<<(std::ostream& stream,const FourVector& v)
+{
+	stream << "[";
+	stream << v.getA0() << "," << v.getThreeVector();
+	stream << "]";
+	return stream;
+}

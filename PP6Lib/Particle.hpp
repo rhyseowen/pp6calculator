@@ -2,6 +2,8 @@
 #define PARTICLE_HH 
 
 #include <string>
+#include <iostream>
+
 #include "FourVector.hpp"
 
 class Particle{
@@ -29,6 +31,8 @@ class Particle{
 
 		double getCharge() const;
 		void setCharge(const double& charge);
+
+		friend std::ostream& operator<<(std::ostream& stream,const Particle& p);
 
 };
 

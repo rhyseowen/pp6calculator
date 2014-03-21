@@ -1,6 +1,8 @@
 #ifndef FOURVECTOR_HH
 #define FOURVECTOR_HH
 
+#include <iostream>
+
 #include "ThreeVector.hpp"
 
 /**
@@ -151,6 +153,9 @@ class FourVector{
 		friend FourVector operator+(const FourVector& lhs, const FourVector& rhs);
 
 		friend FourVector operator-(const FourVector& lhs, const FourVector& rhs);
+
+		friend std::ostream& operator<<(std::ostream& stream,const FourVector& v);
+
 
 };
 

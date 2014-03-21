@@ -60,3 +60,11 @@ double Particle::getMass() const
 
 Particle::~Particle()
 {}
+
+std::ostream& operator<<(std::ostream& stream,const Particle& p)
+{
+	stream << "[";
+	stream << p.getParticleName() << "," << p.getFourMomentum();
+	stream << "]";
+	return stream;
+}

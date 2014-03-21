@@ -113,6 +113,21 @@ class FourVector{
 		 */
 		double getInterval() const; 
 
+		/**
+		 * @brief Get the three vector of the four vector 
+		 * @details Returns \f$\vec{v}\f$ from \f$A^{\mu}=(A^0,\vec{v})\f$
+		 * @return ThreeVector
+		 */
+		ThreeVector getThreeVector() const;
+
+		/**
+		 * @brief Set the three vector component
+		 * @details Sets \f$\vec{v}\f$ from \f$A^{\mu}=(A^0,\vec{v})\f$
+		 * 
+		 * @param newVector \f$\vec{v}\f$
+		 */
+		void setThreeVector(const ThreeVector& newVector);
+
 
 		/**
 		 * @brief Add another FourVector component wise

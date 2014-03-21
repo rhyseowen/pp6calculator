@@ -81,6 +81,17 @@ double FourVector::getInterval() const
 	return interval_;
 }
 
+ThreeVector FourVector::getThreeVector() const
+{
+	return spaceLike_;
+}
+
+void FourVector::setThreeVector( const ThreeVector& newVector)
+{
+	spaceLike_ = newVector;
+	calculateInterval();
+}
+
 FourVector& FourVector::operator+=(const FourVector& rhs)
 {
 

@@ -111,13 +111,16 @@ ThreeVector& ThreeVector::operator-=(const ThreeVector& rhs)
 
 ThreeVector& ThreeVector::operator=(const ThreeVector& rhs)
 {
-	x_ = rhs.x_;
-	y_ = rhs.y_;
-	z_ = rhs.z_;
+	if (&rhs != this)
+	{
+		x_ = rhs.x_;
+		y_ = rhs.y_;
+		z_ = rhs.z_;
 
-	calculateLengthSquared();
+		calculateLengthSquared();
 
-	return *this ;
+	}
+	return *this ;		
 }
 
 ThreeVector& ThreeVector::operator*=(const int& rhs)

@@ -128,6 +128,14 @@ class FourVector{
 		 */
 		void setThreeVector(const ThreeVector& newVector);
 
+		enum FourVectorType{
+			SPACELIKE, 
+			TIMELIKE,
+			NULLVECTOR
+		};
+
+		FourVector::FourVectorType getFourVectorType() const;
+
 
 		/**
 		 * @brief Add another FourVector component wise

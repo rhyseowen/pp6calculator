@@ -92,6 +92,20 @@ void FourVector::setThreeVector( const ThreeVector& newVector)
 	calculateInterval();
 }
 
+FourVector::FourVectorType FourVector::getFourVectorType() const
+{
+	double sqrtInterval = sqrt(fabs(interval_));
+
+	if (sqrtInterval < 0)
+	{
+		return SPACELIKE;
+	}else if (sqrtInterval > 0)
+	{
+		return TIMELIKE;
+	}
+	return NULLVECTOR;
+}
+
 FourVector& FourVector::operator+=(const FourVector& rhs)
 {
 

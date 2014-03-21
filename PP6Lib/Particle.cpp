@@ -44,9 +44,12 @@ FourVector Particle::getFourMomentum() const
 
 bool Particle::setFourMomentum(const FourVector& FourMomentum)
 {
-	FourMomentum_ = FourMomentum;
-	//add check for sensible 4 Momenta reject and return false if not physical
-	return true;
+	if (FourMomentum.getFourVectorType() == FourVector::TIMELIKE)
+	{
+		FourMomentum_ = FourMomentum;
+		return true;
+	}
+	return false;
 
 }
 

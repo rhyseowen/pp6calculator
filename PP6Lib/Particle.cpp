@@ -8,6 +8,10 @@ Particle::Particle(const Particle& other)
 :ParticleName_(other.getParticleName()), charge_(other.getCharge()), FourMomentum_(other.getFourMomentum())
 {}
 
+Particle::Particle(const std::string& ParticleName, const double& charge, const double& E, const double& px, const double& py, const double& pz)
+:ParticleName_(ParticleName), charge_(charge), FourMomentum_(E,px,py,pz)
+{}
+
 double Particle::getCharge() const
 {
 	return charge_;
@@ -34,8 +38,11 @@ FourVector Particle::getFourMomentum() const
 	return FourMomentum_;
 }
 
-void Particle::setFourMomentum(const FourVector& FourMomentum)
+bool Particle::setFourMomentum(const FourVector& FourMomentum)
 {
 	FourMomentum_ = FourMomentum;
+	//add check for sensible 4 Momenta reject and return false if not physical
+	return true;
+
 }
 

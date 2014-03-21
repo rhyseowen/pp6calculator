@@ -14,13 +14,15 @@ class Particle{
 		Particle();
 		Particle(const Particle& other);
 
+		Particle(const std::string& ParticleName, const double& charge, const double& E, const double& px, const double& py, const double& pz);
+
 		std::string getParticleName() const;
 		void setParticleName(const std::string& ParticleName);
 
 
 
 		FourVector getFourMomentum() const;
-		void setFourMomentum(const FourVector& FourMomentum);
+		bool setFourMomentum(const FourVector& FourMomentum);
 
 		double getCharge() const;
 		void setCharge(const double& charge);

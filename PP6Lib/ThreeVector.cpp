@@ -17,6 +17,9 @@ ThreeVector::ThreeVector(const ThreeVector& other)
 : x_(other.x_), y_(other.y_), z_(other.z_), lengthSquared_(other.lengthSquared_)
 {}
 
+ThreeVector::~ThreeVector()
+{}
+
 void ThreeVector::calculateLengthSquared()
 {
 	lengthSquared_ = x_*x_ + y_*y_ + z_*z_;

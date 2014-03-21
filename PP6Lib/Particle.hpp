@@ -16,6 +16,8 @@ class Particle{
 
 		Particle(const std::string& ParticleName, const double& charge, const double& E, const double& px, const double& py, const double& pz);
 
+		~Particle();
+
 		std::string getParticleName() const;
 		void setParticleName(const std::string& ParticleName);
 

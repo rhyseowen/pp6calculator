@@ -42,6 +42,11 @@ class ThreeVector{
 		 */
 		ThreeVector(const ThreeVector& other);
 
+		/**
+		 * @brief Basic destructor
+		 */
+		~ThreeVector();
+
 
 		/**
 		 * @brief Calcuate dot product

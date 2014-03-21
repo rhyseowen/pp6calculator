@@ -46,3 +46,5 @@ bool Particle::setFourMomentum(const FourVector& FourMomentum)
 
 }
 
+Particle::~Particle()
+{}

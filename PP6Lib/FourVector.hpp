@@ -3,6 +3,11 @@
 
 #include "ThreeVector.hpp"
 
+/**
+ * @brief Four Vector Class
+ * @details A class to contain a reletevistic four vector as well as providing mathmatical opperations
+ * the spacelike component is stored as a ThreeVector object
+ */
 class FourVector{
 	private:
 		/**

@@ -3,6 +3,10 @@
 
 #include <iostream>
 
+/**
+ * @brief A Three Vector Class
+ * @details An object to provide a three vector and assosiated mathmatical operations
+ */
 class ThreeVector{
 	private:
 		double x_;

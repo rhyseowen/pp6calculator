@@ -6,3 +6,6 @@ target_link_libraries(ThreeVector pp6lib)
 
 add_library(FourVector STATIC FourVector.cpp FourVector.hpp)
 target_link_libraries(FourVector ThreeVector)
+
+add_library(Particle STATIC Particle.cpp Particle.hpp)
+target_link_libraries(Particle FourVector)

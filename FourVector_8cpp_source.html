@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>pp6calculator: /home/rhys/Work/cppTutorial/mpagspp6/pp6calculator.git/PP6Lib/FourVector.cpp Source File</title>
+<title>pp6calculator: PP6Lib/FourVector.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -75,7 +75,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -86,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68b53dba32457358475f720ac2ab6e18.html">pp6calculator.git</a></li><li class="navelem"><a class="el" href="dir_0ebb1c55c4c8022efc42c5a9051114ac.html">PP6Lib</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_ad314cd4b361de359d9e3929abc2d022.html">PP6Lib</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -188,18 +188,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    calculateInterval();</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;FourVector::FourVectorType FourVector::getFourVectorType()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<a class="code" href="classFourVector.html#a43049b7f53702020516f611266ba5154">FourVector::FourVectorType</a> FourVector::getFourVectorType()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">double</span> sqrtInterval = sqrt(fabs(interval_));</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">if</span> (sqrtInterval &lt; 0)</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> SPACELIKE;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFourVector.html#a43049b7f53702020516f611266ba5154a401523fb4ab0b1f472a863e5a71e14c6">SPACELIKE</a>;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (sqrtInterval &gt; 0)</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">return</span> TIMELIKE;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFourVector.html#a43049b7f53702020516f611266ba5154a101f89a0c4481b91a7c9e6e0ec133bf6">TIMELIKE</a>;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">return</span> NULLVECTOR;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFourVector.html#a43049b7f53702020516f611266ba5154a0dc5f89a9470af446f3acd8a4a571a4a">NULLVECTOR</a>;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
 <div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classFourVector.html#a49f25d00147ad80f68cb73d40f3c8d85">  109</a></span>&#160;<a class="code" href="classFourVector.html">FourVector</a>&amp; <a class="code" href="classFourVector.html#a49f25d00147ad80f68cb73d40f3c8d85">FourVector::operator+=</a>(<span class="keyword">const</span> <a class="code" href="classFourVector.html">FourVector</a>&amp; rhs)</div>
@@ -269,6 +269,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">return</span> stream;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;}</div>
 <div class="ttc" id="classThreeVector_html_a928501667eea4803378d9e2eb7d9a17f"><div class="ttname"><a href="classThreeVector.html#a928501667eea4803378d9e2eb7d9a17f">ThreeVector::setY</a></div><div class="ttdeci">void setY(double y)</div><div class="ttdoc">Set y value. </div><div class="ttdef"><b>Definition:</b> <a href="ThreeVector_8cpp_source.html#l00078">ThreeVector.cpp:78</a></div></div>
+<div class="ttc" id="classFourVector_html_a43049b7f53702020516f611266ba5154a0dc5f89a9470af446f3acd8a4a571a4a"><div class="ttname"><a href="classFourVector.html#a43049b7f53702020516f611266ba5154a0dc5f89a9470af446f3acd8a4a571a4a">FourVector::NULLVECTOR</a></div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8hpp_source.html#l00142">FourVector.hpp:142</a></div></div>
 <div class="ttc" id="classFourVector_html_a0aa2173c6e35df561a5e700c9d07ae9a"><div class="ttname"><a href="classFourVector.html#a0aa2173c6e35df561a5e700c9d07ae9a">FourVector::getA3</a></div><div class="ttdeci">double getA3() const </div><div class="ttdoc">get a3 </div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8cpp_source.html#l00054">FourVector.cpp:54</a></div></div>
 <div class="ttc" id="classFourVector_html_a49f25d00147ad80f68cb73d40f3c8d85"><div class="ttname"><a href="classFourVector.html#a49f25d00147ad80f68cb73d40f3c8d85">FourVector::operator+=</a></div><div class="ttdeci">FourVector &amp; operator+=(const FourVector &amp;rhs)</div><div class="ttdoc">Add another FourVector component wise. </div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8cpp_source.html#l00109">FourVector.cpp:109</a></div></div>
 <div class="ttc" id="classFourVector_html_a5b0b84ece06f7e2ba01a341c4f74b4a4"><div class="ttname"><a href="classFourVector.html#a5b0b84ece06f7e2ba01a341c4f74b4a4">FourVector::getInterval</a></div><div class="ttdeci">double getInterval() const </div><div class="ttdoc">Get the four vector interval. </div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8cpp_source.html#l00079">FourVector.cpp:79</a></div></div>
@@ -282,6 +283,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classThreeVector_html_a0e64b992f326311950b66a9c7d08dba3"><div class="ttname"><a href="classThreeVector.html#a0e64b992f326311950b66a9c7d08dba3">ThreeVector::getZ</a></div><div class="ttdeci">double getZ() const </div><div class="ttdoc">Get vector z component. </div><div class="ttdef"><b>Definition:</b> <a href="ThreeVector_8cpp_source.html#l00062">ThreeVector.cpp:62</a></div></div>
 <div class="ttc" id="classThreeVector_html_a7fb9b5934fb4537cca5d302146fd84f3"><div class="ttname"><a href="classThreeVector.html#a7fb9b5934fb4537cca5d302146fd84f3">ThreeVector::getX</a></div><div class="ttdeci">double getX() const </div><div class="ttdoc">Get vector x component. </div><div class="ttdef"><b>Definition:</b> <a href="ThreeVector_8cpp_source.html#l00052">ThreeVector.cpp:52</a></div></div>
 <div class="ttc" id="classFourVector_html_a4ed070cb59f9205ded23e97428a0187e"><div class="ttname"><a href="classFourVector.html#a4ed070cb59f9205ded23e97428a0187e">FourVector::getThreeVector</a></div><div class="ttdeci">ThreeVector getThreeVector() const </div><div class="ttdoc">Get the three vector of the four vector. </div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8cpp_source.html#l00084">FourVector.cpp:84</a></div></div>
+<div class="ttc" id="classFourVector_html_a43049b7f53702020516f611266ba5154"><div class="ttname"><a href="classFourVector.html#a43049b7f53702020516f611266ba5154">FourVector::FourVectorType</a></div><div class="ttdeci">FourVectorType</div><div class="ttdoc">Describes the spacetime type of the four vector. </div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8hpp_source.html#l00136">FourVector.hpp:136</a></div></div>
 <div class="ttc" id="classThreeVector_html_af6a5374bfb944e49f4e0e0b5f1249b5a"><div class="ttname"><a href="classThreeVector.html#af6a5374bfb944e49f4e0e0b5f1249b5a">ThreeVector::setX</a></div><div class="ttdeci">void setX(double x)</div><div class="ttdoc">Set x value. </div><div class="ttdef"><b>Definition:</b> <a href="ThreeVector_8cpp_source.html#l00072">ThreeVector.cpp:72</a></div></div>
 <div class="ttc" id="classFourVector_html_a40426117fa75c194ffe115f53757afa1"><div class="ttname"><a href="classFourVector.html#a40426117fa75c194ffe115f53757afa1">FourVector::setA3</a></div><div class="ttdeci">void setA3(double a3_in)</div><div class="ttdoc">set a3 component </div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8cpp_source.html#l00074">FourVector.cpp:74</a></div></div>
 <div class="ttc" id="classFourVector_html_a08a134c4c4285475053c62531df5b857"><div class="ttname"><a href="classFourVector.html#a08a134c4c4285475053c62531df5b857">FourVector::setA0</a></div><div class="ttdeci">void setA0(double a0_in)</div><div class="ttdoc">set a0 component </div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8cpp_source.html#l00059">FourVector.cpp:59</a></div></div>
@@ -289,9 +291,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classFourVector_html_a192425644af56c5f440354dedb9000fa"><div class="ttname"><a href="classFourVector.html#a192425644af56c5f440354dedb9000fa">FourVector::setA2</a></div><div class="ttdeci">void setA2(double a2_in)</div><div class="ttdoc">set a2 component </div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8cpp_source.html#l00069">FourVector.cpp:69</a></div></div>
 <div class="ttc" id="classFourVector_html_a9bed9abca6b57df801e057d7f2f45967"><div class="ttname"><a href="classFourVector.html#a9bed9abca6b57df801e057d7f2f45967">FourVector::boost_z</a></div><div class="ttdeci">void boost_z(const double &amp;v)</div><div class="ttdoc">Boost FourVector in z direction. </div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8cpp_source.html#l00018">FourVector.cpp:18</a></div></div>
 <div class="ttc" id="PP6Math_8hpp_html"><div class="ttname"><a href="PP6Math_8hpp.html">PP6Math.hpp</a></div><div class="ttdoc">PP6 Maths Library. </div></div>
+<div class="ttc" id="classFourVector_html_a43049b7f53702020516f611266ba5154a401523fb4ab0b1f472a863e5a71e14c6"><div class="ttname"><a href="classFourVector.html#a43049b7f53702020516f611266ba5154a401523fb4ab0b1f472a863e5a71e14c6">FourVector::SPACELIKE</a></div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8hpp_source.html#l00138">FourVector.hpp:138</a></div></div>
 <div class="ttc" id="classFourVector_html"><div class="ttname"><a href="classFourVector.html">FourVector</a></div><div class="ttdoc">Four Vector Class. </div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8hpp_source.html#l00013">FourVector.hpp:13</a></div></div>
 <div class="ttc" id="classThreeVector_html_aa346d81b283c3def50b964ddaf51341f"><div class="ttname"><a href="classThreeVector.html#aa346d81b283c3def50b964ddaf51341f">ThreeVector::setZ</a></div><div class="ttdeci">void setZ(double z)</div><div class="ttdoc">Set z value. </div><div class="ttdef"><b>Definition:</b> <a href="ThreeVector_8cpp_source.html#l00084">ThreeVector.cpp:84</a></div></div>
 <div class="ttc" id="classFourVector_html_a10824ba17b04a25b502610c8bedab970"><div class="ttname"><a href="classFourVector.html#a10824ba17b04a25b502610c8bedab970">FourVector::setA1</a></div><div class="ttdeci">void setA1(double a1_in)</div><div class="ttdoc">set a1 component </div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8cpp_source.html#l00064">FourVector.cpp:64</a></div></div>
+<div class="ttc" id="classFourVector_html_a43049b7f53702020516f611266ba5154a101f89a0c4481b91a7c9e6e0ec133bf6"><div class="ttname"><a href="classFourVector.html#a43049b7f53702020516f611266ba5154a101f89a0c4481b91a7c9e6e0ec133bf6">FourVector::TIMELIKE</a></div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8hpp_source.html#l00140">FourVector.hpp:140</a></div></div>
 <div class="ttc" id="classThreeVector_html"><div class="ttname"><a href="classThreeVector.html">ThreeVector</a></div><div class="ttdoc">A Three Vector Class. </div><div class="ttdef"><b>Definition:</b> <a href="ThreeVector_8hpp_source.html#l00010">ThreeVector.hpp:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

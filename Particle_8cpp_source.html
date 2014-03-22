@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>pp6calculator: /home/rhys/Work/cppTutorial/mpagspp6/pp6calculator.git/PP6Lib/Particle.cpp Source File</title>
+<title>pp6calculator: PP6Lib/Particle.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -75,7 +75,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -86,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68b53dba32457358475f720ac2ab6e18.html">pp6calculator.git</a></li><li class="navelem"><a class="el" href="dir_0ebb1c55c4c8022efc42c5a9051114ac.html">PP6Lib</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_ad314cd4b361de359d9e3929abc2d022.html">PP6Lib</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -140,7 +140,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">bool</span> Particle::setFourMomentum(<span class="keyword">const</span> <a class="code" href="classFourVector.html">FourVector</a>&amp; FourMomentum)</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (FourMomentum.getFourVectorType() == FourVector::TIMELIKE)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (FourMomentum.getFourVectorType() == <a class="code" href="classFourVector.html#a43049b7f53702020516f611266ba5154a101f89a0c4481b91a7c9e6e0ec133bf6">FourVector::TIMELIKE</a>)</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        FourMomentum_ = FourMomentum;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
@@ -167,6 +167,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classFourVector_html_a5b0b84ece06f7e2ba01a341c4f74b4a4"><div class="ttname"><a href="classFourVector.html#a5b0b84ece06f7e2ba01a341c4f74b4a4">FourVector::getInterval</a></div><div class="ttdeci">double getInterval() const </div><div class="ttdoc">Get the four vector interval. </div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8cpp_source.html#l00079">FourVector.cpp:79</a></div></div>
 <div class="ttc" id="classParticle_html"><div class="ttname"><a href="classParticle.html">Particle</a></div><div class="ttdef"><b>Definition:</b> <a href="Particle_8hpp_source.html#l00009">Particle.hpp:9</a></div></div>
 <div class="ttc" id="classFourVector_html"><div class="ttname"><a href="classFourVector.html">FourVector</a></div><div class="ttdoc">Four Vector Class. </div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8hpp_source.html#l00013">FourVector.hpp:13</a></div></div>
+<div class="ttc" id="classFourVector_html_a43049b7f53702020516f611266ba5154a101f89a0c4481b91a7c9e6e0ec133bf6"><div class="ttname"><a href="classFourVector.html#a43049b7f53702020516f611266ba5154a101f89a0c4481b91a7c9e6e0ec133bf6">FourVector::TIMELIKE</a></div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8hpp_source.html#l00140">FourVector.hpp:140</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -76,7 +76,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -107,16 +107,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classFourVector__coll__graph.png" border="0" usemap="#FourVector_coll__map" alt="Collaboration graph"/></div>
-<map name="FourVector_coll__map" id="FourVector_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a43049b7f53702020516f611266ba5154"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>FourVectorType</b> { <b>SPACELIKE</b>, 
-<b>TIMELIKE</b>, 
-<b>NULLVECTOR</b>
+<tr class="memitem:a43049b7f53702020516f611266ba5154"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFourVector.html#a43049b7f53702020516f611266ba5154">FourVectorType</a> { <a class="el" href="classFourVector.html#a43049b7f53702020516f611266ba5154a401523fb4ab0b1f472a863e5a71e14c6">SPACELIKE</a>, 
+<a class="el" href="classFourVector.html#a43049b7f53702020516f611266ba5154a101f89a0c4481b91a7c9e6e0ec133bf6">TIMELIKE</a>, 
+<a class="el" href="classFourVector.html#a43049b7f53702020516f611266ba5154a0dc5f89a9470af446f3acd8a4a571a4a">NULLVECTOR</a>
  }</td></tr>
+<tr class="memdesc:a43049b7f53702020516f611266ba5154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes the spacetime type of the four vector.  <a href="classFourVector.html#a43049b7f53702020516f611266ba5154">More...</a><br/></td></tr>
 <tr class="separator:a43049b7f53702020516f611266ba5154"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -180,7 +179,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:ac24a43d589c74034cbd1dd5314f08922"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the three vector component.  <a href="#ac24a43d589c74034cbd1dd5314f08922">More...</a><br/></td></tr>
 <tr class="separator:ac24a43d589c74034cbd1dd5314f08922"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20ba0d62535b70513e79179719875ff9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20ba0d62535b70513e79179719875ff9"></a>
-FourVector::FourVectorType&#160;</td><td class="memItemRight" valign="bottom"><b>getFourVectorType</b> () const </td></tr>
+<a class="el" href="classFourVector.html#a43049b7f53702020516f611266ba5154">FourVector::FourVectorType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getFourVectorType</b> () const </td></tr>
 <tr class="separator:a20ba0d62535b70513e79179719875ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49f25d00147ad80f68cb73d40f3c8d85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFourVector.html">FourVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFourVector.html#a49f25d00147ad80f68cb73d40f3c8d85">operator+=</a> (const <a class="el" href="classFourVector.html">FourVector</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a49f25d00147ad80f68cb73d40f3c8d85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add another <a class="el" href="classFourVector.html" title="Four Vector Class. ">FourVector</a> component wise.  <a href="#a49f25d00147ad80f68cb73d40f3c8d85">More...</a><br/></td></tr>
@@ -209,7 +208,43 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 <p>A class to contain a reletevistic four vector as well as providing mathmatical opperations the spacelike component is stored as a <a class="el" href="classThreeVector.html" title="A Three Vector Class. ">ThreeVector</a> object </p>
 
 <p>Definition at line <a class="el" href="FourVector_8hpp_source.html#l00013">13</a> of file <a class="el" href="FourVector_8hpp_source.html">FourVector.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a43049b7f53702020516f611266ba5154"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classFourVector.html#a43049b7f53702020516f611266ba5154">FourVector::FourVectorType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Describes the spacetime type of the four vector. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a43049b7f53702020516f611266ba5154a401523fb4ab0b1f472a863e5a71e14c6"></a>SPACELIKE</em>&#160;</td><td class="fielddoc">
+<p>space like </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a43049b7f53702020516f611266ba5154a101f89a0c4481b91a7c9e6e0ec133bf6"></a>TIMELIKE</em>&#160;</td><td class="fielddoc">
+<p>Time like </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a43049b7f53702020516f611266ba5154a0dc5f89a9470af446f3acd8a4a571a4a"></a>NULLVECTOR</em>&#160;</td><td class="fielddoc">
+<p>zero vector </p>
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="FourVector_8hpp_source.html#l00136">136</a> of file <a class="el" href="FourVector_8hpp_source.html">FourVector.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                           {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <a class="code" href="classFourVector.html#a43049b7f53702020516f611266ba5154a401523fb4ab0b1f472a863e5a71e14c6">SPACELIKE</a>, </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <a class="code" href="classFourVector.html#a43049b7f53702020516f611266ba5154a101f89a0c4481b91a7c9e6e0ec133bf6">TIMELIKE</a>,</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <a class="code" href="classFourVector.html#a43049b7f53702020516f611266ba5154a0dc5f89a9470af446f3acd8a4a571a4a">NULLVECTOR</a> </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        };</div>
+<div class="ttc" id="classFourVector_html_a43049b7f53702020516f611266ba5154a0dc5f89a9470af446f3acd8a4a571a4a"><div class="ttname"><a href="classFourVector.html#a43049b7f53702020516f611266ba5154a0dc5f89a9470af446f3acd8a4a571a4a">FourVector::NULLVECTOR</a></div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8hpp_source.html#l00142">FourVector.hpp:142</a></div></div>
+<div class="ttc" id="classFourVector_html_a43049b7f53702020516f611266ba5154a401523fb4ab0b1f472a863e5a71e14c6"><div class="ttname"><a href="classFourVector.html#a43049b7f53702020516f611266ba5154a401523fb4ab0b1f472a863e5a71e14c6">FourVector::SPACELIKE</a></div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8hpp_source.html#l00138">FourVector.hpp:138</a></div></div>
+<div class="ttc" id="classFourVector_html_a43049b7f53702020516f611266ba5154a101f89a0c4481b91a7c9e6e0ec133bf6"><div class="ttname"><a href="classFourVector.html#a43049b7f53702020516f611266ba5154a101f89a0c4481b91a7c9e6e0ec133bf6">FourVector::TIMELIKE</a></div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8hpp_source.html#l00140">FourVector.hpp:140</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a0a02e37452b01c11e45ba2057789ba1e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -463,8 +498,8 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/rhys/Work/cppTutorial/mpagspp6/pp6calculator.git/PP6Lib/<a class="el" href="FourVector_8hpp_source.html">FourVector.hpp</a></li>
-<li>/home/rhys/Work/cppTutorial/mpagspp6/pp6calculator.git/PP6Lib/<a class="el" href="FourVector_8cpp_source.html">FourVector.cpp</a></li>
+<li>PP6Lib/<a class="el" href="FourVector_8hpp_source.html">FourVector.hpp</a></li>
+<li>PP6Lib/<a class="el" href="FourVector_8cpp_source.html">FourVector.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

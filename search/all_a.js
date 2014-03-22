@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['particle',['Particle',['../classParticle.html',1,'']]],
-  ['pp6calculator_2ecpp',['pp6calculator.cpp',['../pp6calculator_8cpp.html',1,'']]],
-  ['pp6math_2ehpp',['PP6Math.hpp',['../PP6Math_8hpp.html',1,'']]],
-  ['pp6menu_2ehpp',['pp6menu.hpp',['../pp6menu_8hpp.html',1,'']]]
+  ['operator_2b_3d',['operator+=',['../classFourVector.html#a49f25d00147ad80f68cb73d40f3c8d85',1,'FourVector']]]
 ];

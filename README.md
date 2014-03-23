@@ -49,6 +49,7 @@ Currently Available menus are:
 
     1) weekone : week one (arithmatic)
     2) weektwo : week two (data operations)
+    3) weekthree : week three (Four vector manipulation)
 
 ### Week One: Arithmatic
 

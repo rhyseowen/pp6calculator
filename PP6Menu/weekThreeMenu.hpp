@@ -21,5 +21,6 @@ int wk3_interval();
 
 int wk3_boostZ();
 
+int wk3_generateMuons();
 
 #endif

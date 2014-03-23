@@ -130,10 +130,16 @@ class FourVector{
 		 */
 		void setThreeVector(const ThreeVector& newVector);
 
+		/**
+		 * @brief Describes the spacetime type of the four vector
+		 */
 		enum FourVectorType{
+			/** space like  **/
 			SPACELIKE, 
+			/** Time like **/
 			TIMELIKE,
-			NULLVECTOR
+			/** zero vector **/
+			NULLVECTOR 
 		};
 
 		FourVector::FourVectorType getFourVectorType() const;

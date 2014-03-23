@@ -122,59 +122,85 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    $./pp6Calculator</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">## Usage</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">## Provided Classes</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;On running the program you are prompted to select a menu. Operations are sorted by the week they were featured in the [c++ course](http:<span class="comment">//www2.warwick.ac.uk/fac/sci/physics/research/epp/resources/teaching/software_development_2014/)</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;Currently Available menus are:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    1) weekone : week one (arithmatic)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    2) weektwo : week two (data operations)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;The packages provides several classes <span class="keywordflow">for</span> use</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; - <a class="code" href="classParticle.html">Particle</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; - <a class="code" href="classFourVector.html">FourVector</a></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; - <a class="code" href="classThreeVector.html">ThreeVector</a></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;Detailed documentation can be found [here](http:<span class="comment">//rhyseowen.github.io/pp6calculator/)</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">### Week One: Arithmatic</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">## Usage</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;Within the week one menu available operations are:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    1) + : Simple <a class="code" href="PP6Math_8hpp.html#a61319e7836cdee8092b0d52e795bafb5">addition</a> of two numbers</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    2) - : Simple <a class="code" href="PP6Math_8hpp.html#a199c28e78c436d6655be7b7cdd8deaee">subtraction</a> of two numbers</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    3) / : Simple division of two numbers</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    4) * : Simple multiplication of two numbers</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    5) solveAxis : Find the x-intercept of a straigt line</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    6) <a class="code" href="PP6Math_8hpp.html#a1062219fe650f6939a90b2ee4488819e">solveQuadratic</a> : find the real roots of a quadratic equation</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    7) 3VectorLength : find the length of a 3 vector</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    8) 4VectorLength : find the length of a 4 vector</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    9) <a class="code" href="PP6Math_8hpp.html#aba59e5dbfc05b7b007dfd33250e40b8b">invarientMass</a> : find the invarient mass of a momentum 4 vector</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    h) help : Show <span class="keyword">this</span> message</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    u) up : Go up one menu level</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    q) quit : exit the calculator</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">### Week Two: Data Operations</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;Within the week two menu available operations are:</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    1) <a class="code" href="PP6Math_8hpp.html#a7ae7c7309599d1ee232c051ba3c4e0c3">swap</a> : <a class="code" href="PP6Math_8hpp.html#a7ae7c7309599d1ee232c051ba3c4e0c3">swap</a> 2 numbers</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    2) sort : sort 8 numbers</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    3) vectorSort : sort 8 numbers (<span class="keyword">using</span> a vector instead of an array)</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    4) <a class="code" href="PP6Math_8hpp.html#ad3b0ade388befc056f65a39f0495b3e8">generateMuons</a> : Generate 100 random muons</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    5) readInMuons : Read in muons from file</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    h) help : Print <span class="keyword">this</span> Message</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    u) up : Go up one menu level</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    q) quit : exit the calculator</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;### Return Codes</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;If the program encounters an error and is subsequently quit it will <span class="keywordflow">return</span> one of the following codes.</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    0 - Success</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    2 - Operator not recognised</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    3 - Divide by 0</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    4 - Input File contains too many muons</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;On running the program you are prompted to select a menu. Operations are sorted by the week they were featured in the [c++ course](http:<span class="comment">//www2.warwick.ac.uk/fac/sci/physics/research/epp/resources/teaching/software_development_2014/)</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;Currently Available menus are:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    1) weekone : week one (arithmatic)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    2) weektwo : week two (data operations)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">### Week One: Arithmatic</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;Within the week one menu available operations are:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    1) + : Simple <a class="code" href="PP6Math_8hpp.html#a61319e7836cdee8092b0d52e795bafb5">addition</a> of two numbers</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    2) - : Simple <a class="code" href="PP6Math_8hpp.html#a199c28e78c436d6655be7b7cdd8deaee">subtraction</a> of two numbers</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    3) / : Simple division of two numbers</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    4) * : Simple multiplication of two numbers</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    5) solveAxis : Find the x-intercept of a straigt line</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    6) <a class="code" href="PP6Math_8hpp.html#a1062219fe650f6939a90b2ee4488819e">solveQuadratic</a> : find the real roots of a quadratic equation</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    7) 3VectorLength : find the length of a 3 vector</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    8) 4VectorLength : find the length of a 4 vector</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    9) <a class="code" href="PP6Math_8hpp.html#aba59e5dbfc05b7b007dfd33250e40b8b">invarientMass</a> : find the invarient mass of a momentum 4 vector</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    h) help : Show <span class="keyword">this</span> message</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    u) up : Go up one menu level</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    q) quit : exit the calculator</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">### Week Two: Data Operations</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;Within the week two menu available operations are:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    1) <a class="code" href="PP6Math_8hpp.html#a7ae7c7309599d1ee232c051ba3c4e0c3">swap</a> : <a class="code" href="PP6Math_8hpp.html#a7ae7c7309599d1ee232c051ba3c4e0c3">swap</a> 2 numbers</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    2) sort : sort 8 numbers</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    3) vectorSort : sort 8 numbers (<span class="keyword">using</span> a vector instead of an array)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    4) <a class="code" href="PP6Math_8hpp.html#ad3b0ade388befc056f65a39f0495b3e8">generateMuons</a> : Generate 100 random muons</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    5) readInMuons : Read in muons from file</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    h) help : Print <span class="keyword">this</span> Message</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    u) up : Go up one menu level</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    q) quit : exit the calculator</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;### Week Three: Object Orientation</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;Within the week three menu available operations are:</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    1) <a class="code" href="PP6Math_8hpp.html#a426816a468046725e5a7b709be16da82">interval</a> : Calculate the <a class="code" href="PP6Math_8hpp.html#a426816a468046725e5a7b709be16da82">interval</a> of a 4 vector</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    2) boost_z : boost a four vector along the z axis</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    3) <a class="code" href="PP6Math_8hpp.html#ad3b0ade388befc056f65a39f0495b3e8">generateMuons</a>: Generate Muons and use the particle <span class="keyword">class</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    h) help : Print <span class="keyword">this</span> Message</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    u) up : Go up one menu level</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    q) quit : exit the calculator</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;### Return Codes</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;If the program encounters an error and is subsequently quit it will <span class="keywordflow">return</span> one of the following codes.</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    0 - Success</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    2 - Operator not recognised</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    3 - Divide by 0</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    4 - Input File contains too many muons</div>
+<div class="ttc" id="PP6Math_8hpp_html_a426816a468046725e5a7b709be16da82"><div class="ttname"><a href="PP6Math_8hpp.html#a426816a468046725e5a7b709be16da82">interval</a></div><div class="ttdeci">double interval(double a0, double a1, double a2, double a3)</div><div class="ttdoc">Calculate interval of a four vector. </div><div class="ttdef"><b>Definition:</b> <a href="PP6Math_8cpp_source.html#l00219">PP6Math.cpp:219</a></div></div>
 <div class="ttc" id="PP6Math_8hpp_html_ad3b0ade388befc056f65a39f0495b3e8"><div class="ttname"><a href="PP6Math_8hpp.html#ad3b0ade388befc056f65a39f0495b3e8">generateMuons</a></div><div class="ttdeci">int generateMuons(int numberOfMuons, double *E, double *px, double *py, double *pz)</div><div class="ttdoc">Generate Muons. </div><div class="ttdef"><b>Definition:</b> <a href="PP6Math_8cpp_source.html#l00184">PP6Math.cpp:184</a></div></div>
 <div class="ttc" id="PP6Math_8hpp_html_aba59e5dbfc05b7b007dfd33250e40b8b"><div class="ttname"><a href="PP6Math_8hpp.html#aba59e5dbfc05b7b007dfd33250e40b8b">invarientMass</a></div><div class="ttdeci">double invarientMass(double E1, double px1, double py1, double pz1, double E2, double px2, double py2, double pz2)</div><div class="ttdoc">Calculate invarient mass squared. </div><div class="ttdef"><b>Definition:</b> <a href="PP6Math_8cpp_source.html#l00177">PP6Math.cpp:177</a></div></div>
+<div class="ttc" id="classParticle_html"><div class="ttname"><a href="classParticle.html">Particle</a></div><div class="ttdef"><b>Definition:</b> <a href="Particle_8hpp_source.html#l00009">Particle.hpp:9</a></div></div>
+<div class="ttc" id="classFourVector_html"><div class="ttname"><a href="classFourVector.html">FourVector</a></div><div class="ttdoc">Four Vector Class. </div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8hpp_source.html#l00013">FourVector.hpp:13</a></div></div>
 <div class="ttc" id="PP6Math_8hpp_html_a199c28e78c436d6655be7b7cdd8deaee"><div class="ttname"><a href="PP6Math_8hpp.html#a199c28e78c436d6655be7b7cdd8deaee">subtraction</a></div><div class="ttdeci">double subtraction(double number1, double number2)</div><div class="ttdoc">Subtract two Numbers. </div><div class="ttdef"><b>Definition:</b> <a href="PP6Math_8cpp_source.html#l00111">PP6Math.cpp:111</a></div></div>
 <div class="ttc" id="PP6Math_8hpp_html_a7ae7c7309599d1ee232c051ba3c4e0c3"><div class="ttname"><a href="PP6Math_8hpp.html#a7ae7c7309599d1ee232c051ba3c4e0c3">swap</a></div><div class="ttdeci">void swap(double &amp;number1, double &amp;number2)</div><div class="ttdoc">Swap Two Numbers. </div><div class="ttdef"><b>Definition:</b> <a href="PP6Math_8cpp_source.html#l00013">PP6Math.cpp:13</a></div></div>
 <div class="ttc" id="PP6Math_8hpp_html_a1062219fe650f6939a90b2ee4488819e"><div class="ttname"><a href="PP6Math_8hpp.html#a1062219fe650f6939a90b2ee4488819e">solveQuadratic</a></div><div class="ttdeci">bool solveQuadratic(double a, double b, double c, double &amp;result1, double &amp;result2)</div><div class="ttdoc">Solve Quadratic. </div><div class="ttdef"><b>Definition:</b> <a href="PP6Math_8cpp_source.html#l00135">PP6Math.cpp:135</a></div></div>
 <div class="ttc" id="PP6Math_8hpp_html_a61319e7836cdee8092b0d52e795bafb5"><div class="ttname"><a href="PP6Math_8hpp.html#a61319e7836cdee8092b0d52e795bafb5">addition</a></div><div class="ttdeci">double addition(double number1, double number2)</div><div class="ttdoc">Add two numbers. </div><div class="ttdef"><b>Definition:</b> <a href="PP6Math_8cpp_source.html#l00106">PP6Math.cpp:106</a></div></div>
+<div class="ttc" id="classThreeVector_html"><div class="ttname"><a href="classThreeVector.html">ThreeVector</a></div><div class="ttdoc">A Three Vector Class. </div><div class="ttdef"><b>Definition:</b> <a href="ThreeVector_8hpp_source.html#l00010">ThreeVector.hpp:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

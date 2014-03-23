@@ -76,7 +76,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -95,6 +95,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Particle Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="classParticle.html" title="Particle Class. ">Particle</a> Class.  
+ <a href="classParticle.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Particle_8hpp_source.html">Particle.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for Particle:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -105,44 +110,344 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a24b04cb7c6f7ea4242d25c410f44ae56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24b04cb7c6f7ea4242d25c410f44ae56"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Particle</b> (const <a class="el" href="classParticle.html">Particle</a> &amp;other)</td></tr>
+<tr class="memitem:a24b04cb7c6f7ea4242d25c410f44ae56"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticle.html#a24b04cb7c6f7ea4242d25c410f44ae56">Particle</a> (const <a class="el" href="classParticle.html">Particle</a> &amp;other)</td></tr>
+<tr class="memdesc:a24b04cb7c6f7ea4242d25c410f44ae56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#a24b04cb7c6f7ea4242d25c410f44ae56">More...</a><br/></td></tr>
 <tr class="separator:a24b04cb7c6f7ea4242d25c410f44ae56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cfb94dac13563a9cd7e6880b3710e39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5cfb94dac13563a9cd7e6880b3710e39"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Particle</b> (const std::string &amp;ParticleName, const double &amp;charge, const double &amp;E, const double &amp;px, const double &amp;py, const double &amp;pz)</td></tr>
+<tr class="memitem:a5cfb94dac13563a9cd7e6880b3710e39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticle.html#a5cfb94dac13563a9cd7e6880b3710e39">Particle</a> (const std::string &amp;ParticleName, const double &amp;charge, const double &amp;E, const double &amp;px, const double &amp;py, const double &amp;pz)</td></tr>
+<tr class="memdesc:a5cfb94dac13563a9cd7e6880b3710e39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valued Constructor.  <a href="#a5cfb94dac13563a9cd7e6880b3710e39">More...</a><br/></td></tr>
 <tr class="separator:a5cfb94dac13563a9cd7e6880b3710e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26efaa9ec839c343f0eb65244e688e02"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26efaa9ec839c343f0eb65244e688e02"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getParticleName</b> () const </td></tr>
+<tr class="memitem:a26efaa9ec839c343f0eb65244e688e02"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticle.html#a26efaa9ec839c343f0eb65244e688e02">getParticleName</a> () const </td></tr>
+<tr class="memdesc:a26efaa9ec839c343f0eb65244e688e02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the particles name.  <a href="#a26efaa9ec839c343f0eb65244e688e02">More...</a><br/></td></tr>
 <tr class="separator:a26efaa9ec839c343f0eb65244e688e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1474b29447fd163aed458479352ce566"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1474b29447fd163aed458479352ce566"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setParticleName</b> (const std::string &amp;ParticleName)</td></tr>
+<tr class="memitem:a1474b29447fd163aed458479352ce566"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticle.html#a1474b29447fd163aed458479352ce566">setParticleName</a> (const std::string &amp;ParticleName)</td></tr>
+<tr class="memdesc:a1474b29447fd163aed458479352ce566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the particles name.  <a href="#a1474b29447fd163aed458479352ce566">More...</a><br/></td></tr>
 <tr class="separator:a1474b29447fd163aed458479352ce566"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab187fb04f336308ed4ee1c1644dab4de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab187fb04f336308ed4ee1c1644dab4de"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>getMass</b> () const </td></tr>
+<tr class="memitem:ab187fb04f336308ed4ee1c1644dab4de"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticle.html#ab187fb04f336308ed4ee1c1644dab4de">getMass</a> () const </td></tr>
+<tr class="memdesc:ab187fb04f336308ed4ee1c1644dab4de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the mass of the particle.  <a href="#ab187fb04f336308ed4ee1c1644dab4de">More...</a><br/></td></tr>
 <tr class="separator:ab187fb04f336308ed4ee1c1644dab4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed5ed45546b4df14830393c9c38898ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed5ed45546b4df14830393c9c38898ef"></a>
-<a class="el" href="classFourVector.html">FourVector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getFourMomentum</b> () const </td></tr>
+<tr class="memitem:aed5ed45546b4df14830393c9c38898ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFourVector.html">FourVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticle.html#aed5ed45546b4df14830393c9c38898ef">getFourMomentum</a> () const </td></tr>
+<tr class="memdesc:aed5ed45546b4df14830393c9c38898ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the particles four momentum.  <a href="#aed5ed45546b4df14830393c9c38898ef">More...</a><br/></td></tr>
 <tr class="separator:aed5ed45546b4df14830393c9c38898ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a521177c57e399c9c08560efb40f1e955"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a521177c57e399c9c08560efb40f1e955"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>setFourMomentum</b> (const <a class="el" href="classFourVector.html">FourVector</a> &amp;FourMomentum)</td></tr>
+<tr class="memitem:a521177c57e399c9c08560efb40f1e955"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticle.html#a521177c57e399c9c08560efb40f1e955">setFourMomentum</a> (const <a class="el" href="classFourVector.html">FourVector</a> &amp;FourMomentum)</td></tr>
+<tr class="memdesc:a521177c57e399c9c08560efb40f1e955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the particles four momentum.  <a href="#a521177c57e399c9c08560efb40f1e955">More...</a><br/></td></tr>
 <tr class="separator:a521177c57e399c9c08560efb40f1e955"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a943d5f10f5622cb99b5c4ff54a183031"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a943d5f10f5622cb99b5c4ff54a183031"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>getCharge</b> () const </td></tr>
+<tr class="memitem:a943d5f10f5622cb99b5c4ff54a183031"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticle.html#a943d5f10f5622cb99b5c4ff54a183031">getCharge</a> () const </td></tr>
+<tr class="memdesc:a943d5f10f5622cb99b5c4ff54a183031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Particles charge.  <a href="#a943d5f10f5622cb99b5c4ff54a183031">More...</a><br/></td></tr>
 <tr class="separator:a943d5f10f5622cb99b5c4ff54a183031"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6a84bf9bb868312888092e877f4ab71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6a84bf9bb868312888092e877f4ab71"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setCharge</b> (const double &amp;charge)</td></tr>
+<tr class="memitem:ac6a84bf9bb868312888092e877f4ab71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticle.html#ac6a84bf9bb868312888092e877f4ab71">setCharge</a> (const double &amp;charge)</td></tr>
+<tr class="memdesc:ac6a84bf9bb868312888092e877f4ab71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the charge of the particle.  <a href="#ac6a84bf9bb868312888092e877f4ab71">More...</a><br/></td></tr>
 <tr class="separator:ac6a84bf9bb868312888092e877f4ab71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a22e0c79adc21e76fd50d91a0144f6fbe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22e0c79adc21e76fd50d91a0144f6fbe"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;stream, const <a class="el" href="classParticle.html">Particle</a> &amp;p)</td></tr>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticle.html#a22e0c79adc21e76fd50d91a0144f6fbe">operator&lt;&lt;</a> (std::ostream &amp;stream, const <a class="el" href="classParticle.html">Particle</a> &amp;p)</td></tr>
+<tr class="memdesc:a22e0c79adc21e76fd50d91a0144f6fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream opperator for easy output. <br/></td></tr>
 <tr class="separator:a22e0c79adc21e76fd50d91a0144f6fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="Particle_8hpp_source.html#l00009">9</a> of file <a class="el" href="Particle_8hpp_source.html">Particle.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p><a class="el" href="classParticle.html" title="Particle Class. ">Particle</a> Class. </p>
+<p>An object to describe a particle and its properties </p>
+
+<p>Definition at line <a class="el" href="Particle_8hpp_source.html#l00013">13</a> of file <a class="el" href="Particle_8hpp_source.html">Particle.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a24b04cb7c6f7ea4242d25c410f44ae56"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Particle::Particle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classParticle.html">Particle</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="classParticle.html" title="Particle Class. ">Particle</a> to copy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="Particle_8cpp_source.html#l00009">9</a> of file <a class="el" href="Particle_8cpp_source.html">Particle.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;:ParticleName_(other.<a class="code" href="classParticle.html#a26efaa9ec839c343f0eb65244e688e02">getParticleName</a>()), charge_(other.<a class="code" href="classParticle.html#a943d5f10f5622cb99b5c4ff54a183031">getCharge</a>()), mass_(other.<a class="code" href="classParticle.html#ab187fb04f336308ed4ee1c1644dab4de">getMass</a>()), FourMomentum_(other.<a class="code" href="classParticle.html#aed5ed45546b4df14830393c9c38898ef">getFourMomentum</a>())</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{}</div>
+<div class="ttc" id="classParticle_html_aed5ed45546b4df14830393c9c38898ef"><div class="ttname"><a href="classParticle.html#aed5ed45546b4df14830393c9c38898ef">Particle::getFourMomentum</a></div><div class="ttdeci">FourVector getFourMomentum() const </div><div class="ttdoc">Gets the particles four momentum. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00040">Particle.cpp:40</a></div></div>
+<div class="ttc" id="classParticle_html_a26efaa9ec839c343f0eb65244e688e02"><div class="ttname"><a href="classParticle.html#a26efaa9ec839c343f0eb65244e688e02">Particle::getParticleName</a></div><div class="ttdeci">std::string getParticleName() const </div><div class="ttdoc">Get the particles name. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00029">Particle.cpp:29</a></div></div>
+<div class="ttc" id="classParticle_html_a943d5f10f5622cb99b5c4ff54a183031"><div class="ttname"><a href="classParticle.html#a943d5f10f5622cb99b5c4ff54a183031">Particle::getCharge</a></div><div class="ttdeci">double getCharge() const </div><div class="ttdoc">Set Particles charge. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00019">Particle.cpp:19</a></div></div>
+<div class="ttc" id="classParticle_html_ab187fb04f336308ed4ee1c1644dab4de"><div class="ttname"><a href="classParticle.html#ab187fb04f336308ed4ee1c1644dab4de">Particle::getMass</a></div><div class="ttdeci">double getMass() const </div><div class="ttdoc">Get the mass of the particle. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00056">Particle.cpp:56</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a5cfb94dac13563a9cd7e6880b3710e39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Particle::Particle </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ParticleName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>charge</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>E</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>px</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>py</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>pz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valued Constructor. </p>
+<p>Create an initalised particle object</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ParticleName</td><td>The name of the particle </td></tr>
+    <tr><td class="paramname">charge</td><td>The charge on the particle </td></tr>
+    <tr><td class="paramname">E</td><td>The energy of the particle </td></tr>
+    <tr><td class="paramname">px</td><td>momentum x component </td></tr>
+    <tr><td class="paramname">py</td><td>momentum y component </td></tr>
+    <tr><td class="paramname">pz</td><td>momentum z component </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="Particle_8cpp_source.html#l00013">13</a> of file <a class="el" href="Particle_8cpp_source.html">Particle.cpp</a>.</p>
+
+<p>References <a class="el" href="Particle_8cpp_source.html#l00040">getFourMomentum()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;:ParticleName_(ParticleName), charge_(charge), mass_(0), FourMomentum_(E,px,py,pz)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    mass_ = sqrt(<a class="code" href="classParticle.html#aed5ed45546b4df14830393c9c38898ef">getFourMomentum</a>().getInterval());</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="ttc" id="classParticle_html_aed5ed45546b4df14830393c9c38898ef"><div class="ttname"><a href="classParticle.html#aed5ed45546b4df14830393c9c38898ef">Particle::getFourMomentum</a></div><div class="ttdeci">FourVector getFourMomentum() const </div><div class="ttdoc">Gets the particles four momentum. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00040">Particle.cpp:40</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a943d5f10f5622cb99b5c4ff54a183031"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Particle::getCharge </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set Particles charge. </p>
+<dl class="section return"><dt>Returns</dt><dd>charge in units of \(e\) </dd></dl>
+
+<p>Definition at line <a class="el" href="Particle_8cpp_source.html#l00019">19</a> of file <a class="el" href="Particle_8cpp_source.html">Particle.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> charge_;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aed5ed45546b4df14830393c9c38898ef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classFourVector.html">FourVector</a> Particle::getFourMomentum </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the particles four momentum. </p>
+<dl class="section return"><dt>Returns</dt><dd>particles four momentum </dd></dl>
+
+<p>Definition at line <a class="el" href="Particle_8cpp_source.html#l00040">40</a> of file <a class="el" href="Particle_8cpp_source.html">Particle.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> FourMomentum_;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ab187fb04f336308ed4ee1c1644dab4de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Particle::getMass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the mass of the particle. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classParticle.html" title="Particle Class. ">Particle</a> mass </dd></dl>
+
+<p>Definition at line <a class="el" href="Particle_8cpp_source.html#l00056">56</a> of file <a class="el" href="Particle_8cpp_source.html">Particle.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> mass_;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a26efaa9ec839c343f0eb65244e688e02"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Particle::getParticleName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the particles name. </p>
+<dl class="section return"><dt>Returns</dt><dd>ParticleName </dd></dl>
+
+<p>Definition at line <a class="el" href="Particle_8cpp_source.html#l00029">29</a> of file <a class="el" href="Particle_8cpp_source.html">Particle.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> ParticleName_;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ac6a84bf9bb868312888092e877f4ab71"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Particle::setCharge </td>
+          <td>(</td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>charge</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the charge of the particle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">charge</td><td>carge in units of \(e\) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="Particle_8cpp_source.html#l00024">24</a> of file <a class="el" href="Particle_8cpp_source.html">Particle.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    charge_ = charge;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a521177c57e399c9c08560efb40f1e955"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Particle::setFourMomentum </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classFourVector.html">FourVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>FourMomentum</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the particles four momentum. </p>
+<p>Sets the particles four momentum with a check that it is valid</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FourMomentum</td><td>four momenta to set</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if momentum set false otherwise </dd></dl>
+
+<p>Definition at line <a class="el" href="Particle_8cpp_source.html#l00045">45</a> of file <a class="el" href="Particle_8cpp_source.html">Particle.cpp</a>.</p>
+
+<p>References <a class="el" href="FourVector_8hpp_source.html#l00140">FourVector::TIMELIKE</a>.</p>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (FourMomentum.getFourVectorType() == <a class="code" href="classFourVector.html#a43049b7f53702020516f611266ba5154a101f89a0c4481b91a7c9e6e0ec133bf6">FourVector::TIMELIKE</a>)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        FourMomentum_ = FourMomentum;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="ttc" id="classFourVector_html_a43049b7f53702020516f611266ba5154a101f89a0c4481b91a7c9e6e0ec133bf6"><div class="ttname"><a href="classFourVector.html#a43049b7f53702020516f611266ba5154a101f89a0c4481b91a7c9e6e0ec133bf6">FourVector::TIMELIKE</a></div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8hpp_source.html#l00140">FourVector.hpp:140</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a1474b29447fd163aed458479352ce566"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Particle::setParticleName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ParticleName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the particles name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ParticleName</td><td>name to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="Particle_8cpp_source.html#l00034">34</a> of file <a class="el" href="Particle_8cpp_source.html">Particle.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    ParticleName_ = ParticleName;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>PP6Lib/<a class="el" href="Particle_8hpp_source.html">Particle.hpp</a></li>
 <li>PP6Lib/<a class="el" href="Particle_8cpp_source.html">Particle.cpp</a></li>
 </ul>

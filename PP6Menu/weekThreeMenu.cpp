@@ -4,10 +4,13 @@
 #include <cmath>
 
 #include "weekThreeMenu.hpp"
+//messy dependancy tree but allows use wk two features
+#include "weekTwoMenu.hpp"
 #include "pp6menu.hpp"
 #include "PP6Math.hpp"
 #include "FourVector.hpp"
 #include "Particle.hpp"
+#include "FileReader.hpp"
 
 int weekThreeMenu()
 {
@@ -140,6 +143,87 @@ int wk3_generateMuons()
 	stdDeviation = sqrt(stdDeviation);
 
 	std::cout << "Standard deviation = " << stdDeviation << std::endl;
+
+	return 0;
+}
+
+int wk3_readInMuons()
+{
+
+
+	int number_mu_p = 0;
+	int number_mu_n = 0;
+
+	getNumberOfMuons("observedparticles.dat",number_mu_p,number_mu_n);	
+
+	std::cout << "No. mu+ = " << number_mu_p << " mu- = " << number_mu_n << std::endl;
+
+	if ((number_mu_p > 128) || (number_mu_n > 128))
+	{
+		std::cout << "Too many muons" << std::endl;
+		return 4;
+	}
+
+	//set up arrays to hold muon information
+
+	double mu_p_px[128] = {0};
+	double mu_p_py[128] = {0};
+	double mu_p_pz[128] = {0};
+	double mu_p_E[128] = {0};
+	int mu_p_evt[128] = {0};
+
+	double mu_n_px[128] = {0};
+	double mu_n_py[128] = {0};
+	double mu_n_pz[128] = {0};
+	double mu_n_E[128] = {0};
+	int mu_n_evt[128] = {0};
+
+	getMuonInformation("observedparticles.dat", 0.1057, mu_p_px, mu_p_py, mu_p_pz, mu_p_E, mu_p_evt, mu_n_px, mu_n_py, mu_n_pz, mu_n_E, mu_n_evt);
+
+	Particle MuonP[128];
+	Particle MuonN[128];
+
+	for (int i = 0; i < 128; ++i)
+	 {
+	 	MuonP[i] = Particle("mu", 1, mu_p_E[i], mu_p_px[i], mu_p_py[i], mu_p_pz[i]);
+	 	MuonN[i] = Particle("mu", -1, mu_n_E[i], mu_n_px[i], mu_n_py[i], mu_n_pz[i]);
+	 } 
+
+	double invarientMuonMass[128*128] = {0};
+
+	for (int mu_p = 0; mu_p < number_mu_p; ++mu_p)
+	{
+		for (int mu_n = 0; mu_n < number_mu_n; ++mu_n)
+		{
+			/* generate adress for invarient mass array using the mu_p concatonated to mu_n
+			   results in a 14 bit number accesing a 16384 element array
+			   mu_p can be recovered using mu_p = address>>7
+			   mu_n can be recovered using mu_n = address&0x7F
+			*/
+			//start by shifting mu_p left 7 places
+			int address = mu_p<<7;
+			//OR mu_n into the 7 zeros left by mu_p
+			address = address|mu_n;
+			// invarientMuonMass[address] = invarientMass(mu_p_E[mu_p], mu_p_px[mu_p], mu_p_py[mu_p], mu_p_pz[mu_p], mu_n_E[mu_n], mu_n_px[mu_n], mu_n_py[mu_n], mu_n_pz[mu_n]);
+			invarientMuonMass[address] = sqrt( (MuonP[mu_p].getFourMomentum() + MuonN[mu_n].getFourMomentum()).getInterval() );
+			// std::cout<<address << " " << invarientMuonMass[address] <<std::endl;
+		}
+	}
+
+	int sortResults[128*128] = {0};
+
+	std::cout << "Sorting invarient masses" << std::endl;
+
+	bubbleSort(invarientMuonMass, sortResults, 128*128);
+
+	std::cout << "Top 10 invarient masses:" <<std::endl; 
+
+	for (int i = 0; i < 10; ++i)
+	{
+		std::cout << "Invarient mass = " << invarientMuonMass[sortResults[i]] << " mu+ = " << MuonP[(sortResults[i]>>7)] << " mu- = " << MuonN[(sortResults[i]&0x7F)] << std::endl;
+		// std::cout << mu_p_E[(sortResults[i]>>7)] << " " << mu_p_px[(sortResults[i]>>7)] << " " << mu_p_py[(sortResults[i]>>7)] << " " << mu_p_pz[(sortResults[i]>>7)] << std::endl;
+		// std::cout << mu_n_E[(sortResults[i]&0x7F)] << " " << mu_n_px[(sortResults[i]&0x7F)] << " " << mu_n_py[(sortResults[i]&0x7F)] << " " << mu_n_pz[(sortResults[i]&0x7F)] << std::endl <<std::endl;
+	}
 
 	return 0;
 }

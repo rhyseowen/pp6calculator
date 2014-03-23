@@ -106,7 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="weekTwoMenu_8hpp__dep__incl.png" border="0" usemap="#PP6Menu_2weekTwoMenu_8hppdep" alt=""/></div>
 <map name="PP6Menu_2weekTwoMenu_8hppdep" id="PP6Menu_2weekTwoMenu_8hppdep">
-<area shape="rect" id="node2" href="topMenu_8cpp_source.html" title="PP6Menu/topMenu.cpp" alt="" coords="5,80,163,107"/><area shape="rect" id="node3" href="weekTwoMenu_8cpp_source.html" title="PP6Menu/weekTwoMenu.cpp" alt="" coords="187,80,383,107"/></map>
+<area shape="rect" id="node2" href="topMenu_8cpp_source.html" title="PP6Menu/topMenu.cpp" alt="" coords="5,80,163,107"/><area shape="rect" id="node3" href="weekThreeMenu_8cpp_source.html" title="PP6Menu/weekThreeMenu.cpp" alt="" coords="187,80,391,107"/><area shape="rect" id="node4" href="weekTwoMenu_8cpp_source.html" title="PP6Menu/weekTwoMenu.cpp" alt="" coords="415,80,611,107"/></map>
 </div>
 </div>
 <p><a href="weekTwoMenu_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -547,7 +547,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="week
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">int</span> number_mu_p = 0;</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordtype">int</span> number_mu_n = 0;</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="weekTwoMenu_8hpp.html#a727493a5e14e68e70ec32e59f0dffc8b">getNumberOfMuons</a>(<span class="stringliteral">&quot;observedparticles.dat&quot;</span>,number_mu_p,number_mu_n);  </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="weekThreeMenu_8hpp.html#a727493a5e14e68e70ec32e59f0dffc8b">getNumberOfMuons</a>(<span class="stringliteral">&quot;observedparticles.dat&quot;</span>,number_mu_p,number_mu_n);  </div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;No. mu+ = &quot;</span> &lt;&lt; number_mu_p &lt;&lt; <span class="stringliteral">&quot; mu- = &quot;</span> &lt;&lt; number_mu_n &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
@@ -571,7 +571,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="week
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">double</span> mu_n_E[128] = {0};</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordtype">int</span> mu_n_evt[128] = {0};</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="code" href="weekTwoMenu_8hpp.html#a94959d1bbed780ffa738cd09dd432ef5">getMuonInformation</a>(<span class="stringliteral">&quot;observedparticles.dat&quot;</span>, 0.1057, mu_p_px, mu_p_py, mu_p_pz, mu_p_E, mu_p_evt, mu_n_px, mu_n_py, mu_n_pz, mu_n_E, mu_n_evt);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="code" href="weekThreeMenu_8hpp.html#a94959d1bbed780ffa738cd09dd432ef5">getMuonInformation</a>(<span class="stringliteral">&quot;observedparticles.dat&quot;</span>, 0.1057, mu_p_px, mu_p_py, mu_p_pz, mu_p_E, mu_p_evt, mu_n_px, mu_n_py, mu_n_pz, mu_n_E, mu_n_evt);</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordtype">double</span> invarientMuonMass[128*128] = {0};</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
@@ -610,9 +610,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="week
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;}</div>
+<div class="ttc" id="weekThreeMenu_8hpp_html_a727493a5e14e68e70ec32e59f0dffc8b"><div class="ttname"><a href="weekThreeMenu_8hpp.html#a727493a5e14e68e70ec32e59f0dffc8b">getNumberOfMuons</a></div><div class="ttdeci">int getNumberOfMuons(std::string filename, int &amp;number_mu_p, int &amp;number_mu_n)</div><div class="ttdoc">Count number of muons in a file. </div><div class="ttdef"><b>Definition:</b> <a href="weekTwoMenu_8cpp_source.html#l00284">weekTwoMenu.cpp:284</a></div></div>
 <div class="ttc" id="PP6Math_8hpp_html_aba59e5dbfc05b7b007dfd33250e40b8b"><div class="ttname"><a href="PP6Math_8hpp.html#aba59e5dbfc05b7b007dfd33250e40b8b">invarientMass</a></div><div class="ttdeci">double invarientMass(double E1, double px1, double py1, double pz1, double E2, double px2, double py2, double pz2)</div><div class="ttdoc">Calculate invarient mass squared. </div><div class="ttdef"><b>Definition:</b> <a href="PP6Math_8cpp_source.html#l00177">PP6Math.cpp:177</a></div></div>
-<div class="ttc" id="weekTwoMenu_8hpp_html_a94959d1bbed780ffa738cd09dd432ef5"><div class="ttname"><a href="weekTwoMenu_8hpp.html#a94959d1bbed780ffa738cd09dd432ef5">getMuonInformation</a></div><div class="ttdeci">int getMuonInformation(std::string filename, double muonMass, double *mu_p_px, double *mu_p_py, double *mu_p_pz, double *mu_p_E, int *mu_p_evt, double *mu_n_px, double *mu_n_py, double *mu_n_pz, double *mu_n_E, int *mu_n_evt)</div><div class="ttdoc">Get muon information from file. </div><div class="ttdef"><b>Definition:</b> <a href="weekTwoMenu_8cpp_source.html#l00241">weekTwoMenu.cpp:241</a></div></div>
-<div class="ttc" id="weekTwoMenu_8hpp_html_a727493a5e14e68e70ec32e59f0dffc8b"><div class="ttname"><a href="weekTwoMenu_8hpp.html#a727493a5e14e68e70ec32e59f0dffc8b">getNumberOfMuons</a></div><div class="ttdeci">int getNumberOfMuons(std::string filename, int &amp;number_mu_p, int &amp;number_mu_n)</div><div class="ttdoc">Count number of muons in a file. </div><div class="ttdef"><b>Definition:</b> <a href="weekTwoMenu_8cpp_source.html#l00284">weekTwoMenu.cpp:284</a></div></div>
+<div class="ttc" id="weekThreeMenu_8hpp_html_a94959d1bbed780ffa738cd09dd432ef5"><div class="ttname"><a href="weekThreeMenu_8hpp.html#a94959d1bbed780ffa738cd09dd432ef5">getMuonInformation</a></div><div class="ttdeci">int getMuonInformation(std::string filename, double muonMass, double *mu_p_px, double *mu_p_py, double *mu_p_pz, double *mu_p_E, int *mu_p_evt, double *mu_n_px, double *mu_n_py, double *mu_n_pz, double *mu_n_E, int *mu_n_evt)</div><div class="ttdoc">Get muon information from file. </div><div class="ttdef"><b>Definition:</b> <a href="weekTwoMenu_8cpp_source.html#l00241">weekTwoMenu.cpp:241</a></div></div>
 <div class="ttc" id="PP6Math_8hpp_html_aa3b7fe444446154e3305864a992c4c94"><div class="ttname"><a href="PP6Math_8hpp.html#aa3b7fe444446154e3305864a992c4c94">bubbleSort</a></div><div class="ttdeci">bool bubbleSort(double *array, int size)</div><div class="ttdoc">Simple bubble sort. </div><div class="ttdef"><b>Definition:</b> <a href="PP6Math_8cpp_source.html#l00027">PP6Math.cpp:27</a></div></div>
 </div><!-- fragment -->
 </div>

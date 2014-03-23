@@ -129,12 +129,246 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>wk3_boostZ</b> ()</td>
 <tr class="memitem:ae2db53e8951824edb683b2cc40df157e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2db53e8951824edb683b2cc40df157e"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>wk3_generateMuons</b> ()</td></tr>
 <tr class="separator:ae2db53e8951824edb683b2cc40df157e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbddfc3a25beb149a34ab48ae3abeab0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="weekThreeMenu_8hpp.html#afbddfc3a25beb149a34ab48ae3abeab0">wk3_readInMuons</a> ()</td></tr>
+<tr class="memdesc:afbddfc3a25beb149a34ab48ae3abeab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute read in muon opperation.  <a href="#afbddfc3a25beb149a34ab48ae3abeab0">More...</a><br/></td></tr>
+<tr class="separator:afbddfc3a25beb149a34ab48ae3abeab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a727493a5e14e68e70ec32e59f0dffc8b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="weekThreeMenu_8hpp.html#a727493a5e14e68e70ec32e59f0dffc8b">getNumberOfMuons</a> (std::string filename, int &amp;number_mu_p, int &amp;number_mu_n)</td></tr>
+<tr class="memdesc:a727493a5e14e68e70ec32e59f0dffc8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count number of muons in a file.  <a href="#a727493a5e14e68e70ec32e59f0dffc8b">More...</a><br/></td></tr>
+<tr class="separator:a727493a5e14e68e70ec32e59f0dffc8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94959d1bbed780ffa738cd09dd432ef5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="weekThreeMenu_8hpp.html#a94959d1bbed780ffa738cd09dd432ef5">getMuonInformation</a> (std::string filename, double muonMass, double *mu_p_px, double *mu_p_py, double *mu_p_pz, double *mu_p_E, int *mu_p_evt, double *mu_n_px, double *mu_n_py, double *mu_n_pz, double *mu_n_E, int *mu_n_evt)</td></tr>
+<tr class="memdesc:a94959d1bbed780ffa738cd09dd432ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get muon information from file.  <a href="#a94959d1bbed780ffa738cd09dd432ef5">More...</a><br/></td></tr>
+<tr class="separator:a94959d1bbed780ffa738cd09dd432ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Menu of opperations for week2. </p>
 
 <p>Definition in file <a class="el" href="weekThreeMenu_8hpp_source.html">weekThreeMenu.hpp</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a94959d1bbed780ffa738cd09dd432ef5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getMuonInformation </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>muonMass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>mu_p_px</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>mu_p_py</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>mu_p_pz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>mu_p_E</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>mu_p_evt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>mu_n_px</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>mu_n_py</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>mu_n_pz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>mu_n_E</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>mu_n_evt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get muon information from file. </p>
+<p>Gets muon information from file and also calculates energy based on muon mass and momentum for mu+ and mu- and fills them into seperate arrays</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>file to read from </td></tr>
+    <tr><td class="paramname">muonMass</td><td>muon mass to use [GeV] </td></tr>
+    <tr><td class="paramname">mu_p_px</td><td>mu+ px </td></tr>
+    <tr><td class="paramname">mu_p_py</td><td>mu+ py </td></tr>
+    <tr><td class="paramname">mu_p_pz</td><td>mu+ pz </td></tr>
+    <tr><td class="paramname">mu_p_E</td><td>mu+ E </td></tr>
+    <tr><td class="paramname">mu_p_evt</td><td>mu+ Event number </td></tr>
+    <tr><td class="paramname">mu_n_px</td><td>mu- px </td></tr>
+    <tr><td class="paramname">mu_n_py</td><td>mu- py </td></tr>
+    <tr><td class="paramname">mu_n_pz</td><td>mu- pz </td></tr>
+    <tr><td class="paramname">mu_n_E</td><td>mu- E </td></tr>
+    <tr><td class="paramname">mu_n_evt</td><td>mu- Event number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code </dd></dl>
+
+<p>Definition at line <a class="el" href="weekTwoMenu_8cpp_source.html#l00241">241</a> of file <a class="el" href="weekTwoMenu_8cpp_source.html">weekTwoMenu.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;{</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordtype">int</span> number_mu_p = 0;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">int</span> number_mu_n = 0;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="comment">//use file reader to open up file</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <a class="code" href="classFileReader.html">FileReader</a> f(filename);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="comment">// Only process if the file is open/valid</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">if</span> (f.isValid()) {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="comment">// Loop until out of lines</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keywordflow">while</span> (f.nextLine()) {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <span class="comment">// retrieve field 2 as a string (starting at 1)</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            std::string particle = f.getFieldAsString(2);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordflow">if</span> (particle == <span class="stringliteral">&quot;mu+&quot;</span>)</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                mu_p_evt[number_mu_p] = f.getFieldAsInt(1);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                mu_p_px[number_mu_p] = f.getFieldAsDouble(3);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                mu_p_py[number_mu_p] = f.getFieldAsDouble(4);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                mu_p_pz[number_mu_p] = f.getFieldAsDouble(5);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                mu_p_E[number_mu_p] = sqrt(muonMass*muonMass + mu_p_px[number_mu_p]*mu_p_px[number_mu_p] + mu_p_py[number_mu_p]*mu_p_py[number_mu_p] + mu_p_pz[number_mu_p]*mu_p_pz[number_mu_p]);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                ++number_mu_p;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (particle == <span class="stringliteral">&quot;mu-&quot;</span>)</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            {</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                mu_n_evt[number_mu_n] = f.getFieldAsInt(1);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                mu_n_px[number_mu_n] = f.getFieldAsDouble(3);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                mu_n_py[number_mu_n] = f.getFieldAsDouble(4);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                mu_n_pz[number_mu_n] = f.getFieldAsDouble(5);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                mu_n_E[number_mu_n] = sqrt(muonMass*muonMass + mu_n_px[number_mu_n]*mu_n_px[number_mu_n] + mu_n_py[number_mu_n]*mu_n_py[number_mu_n] + mu_n_pz[number_mu_n]*mu_n_pz[number_mu_n]);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                ++number_mu_n;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            <span class="comment">// Check that input is o.k.</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <span class="keywordflow">if</span> (f.inputFailed()) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        }</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;}</div>
+<div class="ttc" id="classFileReader_html"><div class="ttname"><a href="classFileReader.html">FileReader</a></div><div class="ttdef"><b>Definition:</b> <a href="FileReader_8hpp_source.html#l00007">FileReader.hpp:7</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a727493a5e14e68e70ec32e59f0dffc8b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getNumberOfMuons </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>number_mu_p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>number_mu_n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Count number of muons in a file. </p>
+<p>Counts the number of mu+ and mu- found in the file</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>file to scan </td></tr>
+    <tr><td class="paramname">number_mu_p</td><td>int to fill with number of mu+ </td></tr>
+    <tr><td class="paramname">number_mu_n</td><td>int to fill with number of mu- </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code </dd></dl>
+
+<p>Definition at line <a class="el" href="weekTwoMenu_8cpp_source.html#l00284">284</a> of file <a class="el" href="weekTwoMenu_8cpp_source.html">weekTwoMenu.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;{</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="comment">//use file reader to open up file</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <a class="code" href="classFileReader.html">FileReader</a> f(filename);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="comment">// Only process if the file is open/valid</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordflow">if</span> (f.isValid()) {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="comment">// Loop until out of lines</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordflow">while</span> (f.nextLine()) {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            <span class="comment">// retrieve field 2 as a string (starting at 1)</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            std::string particle = f.getFieldAsString(2);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            <span class="keywordflow">if</span> (particle == <span class="stringliteral">&quot;mu+&quot;</span>)</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                ++number_mu_p;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (particle == <span class="stringliteral">&quot;mu-&quot;</span>)</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            {</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                ++number_mu_n;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            }</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            <span class="comment">// Check that input is o.k.</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <span class="keywordflow">if</span> (f.inputFailed()) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;}</div>
+<div class="ttc" id="classFileReader_html"><div class="ttname"><a href="classFileReader.html">FileReader</a></div><div class="ttdef"><b>Definition:</b> <a href="FileReader_8hpp_source.html#l00007">FileReader.hpp:7</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a class="anchor" id="a6d70fa8b2d272c1e856534c21dec5632"></a>
 <div class="memitem">
 <div class="memproto">
@@ -152,57 +386,166 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>wk3_generateMuons</b> 
 <p>The main loop of the week 2 menu called by the top menu. </p>
 <dl class="section return"><dt>Returns</dt><dd>error code to propergate back to exit </dd></dl>
 
-<p>Definition at line <a class="el" href="weekThreeMenu_8cpp_source.html#l00012">12</a> of file <a class="el" href="weekThreeMenu_8cpp_source.html">weekThreeMenu.cpp</a>.</p>
+<p>Definition at line <a class="el" href="weekThreeMenu_8cpp_source.html#l00015">15</a> of file <a class="el" href="weekThreeMenu_8cpp_source.html">weekThreeMenu.cpp</a>.</p>
 
-<p>References <a class="el" href="weekThreeMenu_8cpp_source.html#l00063">weekThreePrintHelp()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">int</span> err = 0;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="weekThreeMenu_8hpp.html#a863d7f7bb02acbd704935e65d932dee0">weekThreePrintHelp</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>){</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Which Operation would you like to perform &quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;: &quot;</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        std::string opperation;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        std::cin &gt;&gt; opperation;</div>
+<p>References <a class="el" href="weekThreeMenu_8cpp_source.html#l00069">weekThreePrintHelp()</a>, and <a class="el" href="weekThreeMenu_8cpp_source.html#l00154">wk3_readInMuons()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">int</span> err = 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="weekThreeMenu_8hpp.html#a863d7f7bb02acbd704935e65d932dee0">weekThreePrintHelp</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>){</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Which Operation would you like to perform &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;: &quot;</span>;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">//fail in input is broken</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">if</span> (!std::cin)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            std::cin.clear();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            std::cin.ignore(INT_MAX, <span class="charliteral">&#39;\n&#39;</span>); </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            err = 2;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;interval&quot;</span> || opperation == <span class="stringliteral">&quot;1&quot;</span>)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            err = wk3_interval();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }<span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;boost_z&quot;</span> || opperation == <span class="stringliteral">&quot;2&quot;</span>)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        std::string opperation;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        std::cin &gt;&gt; opperation;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">//fail in input is broken</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">if</span> (!std::cin)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            std::cin.clear();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            std::cin.ignore(INT_MAX, <span class="charliteral">&#39;\n&#39;</span>); </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            err = 2;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;interval&quot;</span> || opperation == <span class="stringliteral">&quot;1&quot;</span>)</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            err = wk3_boostZ();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;generateMuons&quot;</span> || opperation == <span class="stringliteral">&quot;3&quot;</span>)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            err = wk3_interval();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }<span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;boost_z&quot;</span> || opperation == <span class="stringliteral">&quot;2&quot;</span>)</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            err = wk3_generateMuons();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;help&quot;</span> || opperation == <span class="stringliteral">&quot;h&quot;</span>)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            err = wk3_boostZ();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;generateMuons&quot;</span> || opperation == <span class="stringliteral">&quot;3&quot;</span>)</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="comment">//help statement</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <a class="code" href="weekThreeMenu_8hpp.html#a863d7f7bb02acbd704935e65d932dee0">weekThreePrintHelp</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;up&quot;</span> || opperation == <span class="stringliteral">&quot;u&quot;</span>)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">return</span> err;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;quit&quot;</span> || opperation == <span class="stringliteral">&quot;q&quot;</span>)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            std::exit(err);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }<span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Operator not recognised&quot;</span>&lt;&lt;std::endl;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            err = 2;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="ttc" id="weekThreeMenu_8hpp_html_a863d7f7bb02acbd704935e65d932dee0"><div class="ttname"><a href="weekThreeMenu_8hpp.html#a863d7f7bb02acbd704935e65d932dee0">weekThreePrintHelp</a></div><div class="ttdeci">void weekThreePrintHelp()</div><div class="ttdoc">Print help. </div><div class="ttdef"><b>Definition:</b> <a href="weekThreeMenu_8cpp_source.html#l00063">weekThreeMenu.cpp:63</a></div></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            err = wk3_generateMuons();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;readInMuons&quot;</span> || opperation == <span class="stringliteral">&quot;4&quot;</span>)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            err = <a class="code" href="weekThreeMenu_8hpp.html#afbddfc3a25beb149a34ab48ae3abeab0">wk3_readInMuons</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;help&quot;</span> || opperation == <span class="stringliteral">&quot;h&quot;</span>)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="comment">//help statement</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="weekThreeMenu_8hpp.html#a863d7f7bb02acbd704935e65d932dee0">weekThreePrintHelp</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;up&quot;</span> || opperation == <span class="stringliteral">&quot;u&quot;</span>)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">return</span> err;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;quit&quot;</span> || opperation == <span class="stringliteral">&quot;q&quot;</span>)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            std::exit(err);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Operator not recognised&quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            err = 2;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="ttc" id="weekThreeMenu_8hpp_html_afbddfc3a25beb149a34ab48ae3abeab0"><div class="ttname"><a href="weekThreeMenu_8hpp.html#afbddfc3a25beb149a34ab48ae3abeab0">wk3_readInMuons</a></div><div class="ttdeci">int wk3_readInMuons()</div><div class="ttdoc">Execute read in muon opperation. </div><div class="ttdef"><b>Definition:</b> <a href="weekThreeMenu_8cpp_source.html#l00154">weekThreeMenu.cpp:154</a></div></div>
+<div class="ttc" id="weekThreeMenu_8hpp_html_a863d7f7bb02acbd704935e65d932dee0"><div class="ttname"><a href="weekThreeMenu_8hpp.html#a863d7f7bb02acbd704935e65d932dee0">weekThreePrintHelp</a></div><div class="ttdeci">void weekThreePrintHelp()</div><div class="ttdoc">Print help. </div><div class="ttdef"><b>Definition:</b> <a href="weekThreeMenu_8cpp_source.html#l00069">weekThreeMenu.cpp:69</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="afbddfc3a25beb149a34ab48ae3abeab0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wk3_readInMuons </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute read in muon opperation. </p>
+<dl class="section return"><dt>Returns</dt><dd>Error code </dd></dl>
+
+<p>Definition at line <a class="el" href="weekThreeMenu_8cpp_source.html#l00154">154</a> of file <a class="el" href="weekThreeMenu_8cpp_source.html">weekThreeMenu.cpp</a>.</p>
+
+<p>References <a class="el" href="PP6Math_8cpp_source.html#l00027">bubbleSort()</a>, <a class="el" href="weekTwoMenu_8cpp_source.html#l00241">getMuonInformation()</a>, and <a class="el" href="weekTwoMenu_8cpp_source.html#l00284">getNumberOfMuons()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;{</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">int</span> number_mu_p = 0;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">int</span> number_mu_n = 0;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <a class="code" href="weekThreeMenu_8hpp.html#a727493a5e14e68e70ec32e59f0dffc8b">getNumberOfMuons</a>(<span class="stringliteral">&quot;observedparticles.dat&quot;</span>,number_mu_p,number_mu_n);  </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;No. mu+ = &quot;</span> &lt;&lt; number_mu_p &lt;&lt; <span class="stringliteral">&quot; mu- = &quot;</span> &lt;&lt; number_mu_n &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">if</span> ((number_mu_p &gt; 128) || (number_mu_n &gt; 128))</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Too many muons&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">return</span> 4;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="comment">//set up arrays to hold muon information</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">double</span> mu_p_px[128] = {0};</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">double</span> mu_p_py[128] = {0};</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordtype">double</span> mu_p_pz[128] = {0};</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordtype">double</span> mu_p_E[128] = {0};</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">int</span> mu_p_evt[128] = {0};</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">double</span> mu_n_px[128] = {0};</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">double</span> mu_n_py[128] = {0};</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">double</span> mu_n_pz[128] = {0};</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">double</span> mu_n_E[128] = {0};</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">int</span> mu_n_evt[128] = {0};</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <a class="code" href="weekThreeMenu_8hpp.html#a94959d1bbed780ffa738cd09dd432ef5">getMuonInformation</a>(<span class="stringliteral">&quot;observedparticles.dat&quot;</span>, 0.1057, mu_p_px, mu_p_py, mu_p_pz, mu_p_E, mu_p_evt, mu_n_px, mu_n_py, mu_n_pz, mu_n_E, mu_n_evt);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="classParticle.html">Particle</a> MuonP[128];</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <a class="code" href="classParticle.html">Particle</a> MuonN[128];</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 128; ++i)</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;     {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        MuonP[i] = <a class="code" href="classParticle.html">Particle</a>(<span class="stringliteral">&quot;mu&quot;</span>, 1, mu_p_E[i], mu_p_px[i], mu_p_py[i], mu_p_pz[i]);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        MuonN[i] = <a class="code" href="classParticle.html">Particle</a>(<span class="stringliteral">&quot;mu&quot;</span>, -1, mu_n_E[i], mu_n_px[i], mu_n_py[i], mu_n_pz[i]);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;     } </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordtype">double</span> invarientMuonMass[128*128] = {0};</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> mu_p = 0; mu_p &lt; number_mu_p; ++mu_p)</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> mu_n = 0; mu_n &lt; number_mu_n; ++mu_n)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="comment">/* generate adress for invarient mass array using the mu_p concatonated to mu_n</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment">               results in a 14 bit number accesing a 16384 element array</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment">               mu_p can be recovered using mu_p = address&gt;&gt;7</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="comment">               mu_n can be recovered using mu_n = address&amp;0x7F</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="comment">            */</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="comment">//start by shifting mu_p left 7 places</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordtype">int</span> address = mu_p&lt;&lt;7;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="comment">//OR mu_n into the 7 zeros left by mu_p</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            address = address|mu_n;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="comment">// invarientMuonMass[address] = invarientMass(mu_p_E[mu_p], mu_p_px[mu_p], mu_p_py[mu_p], mu_p_pz[mu_p], mu_n_E[mu_n], mu_n_px[mu_n], mu_n_py[mu_n], mu_n_pz[mu_n]);</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            invarientMuonMass[address] = sqrt( (MuonP[mu_p].getFourMomentum() + MuonN[mu_n].getFourMomentum()).getInterval() );</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="comment">// std::cout&lt;&lt;address &lt;&lt; &quot; &quot; &lt;&lt; invarientMuonMass[address] &lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordtype">int</span> sortResults[128*128] = {0};</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Sorting invarient masses&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <a class="code" href="PP6Math_8hpp.html#aa3b7fe444446154e3305864a992c4c94">bubbleSort</a>(invarientMuonMass, sortResults, 128*128);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Top 10 invarient masses:&quot;</span> &lt;&lt;std::endl; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; ++i)</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Invarient mass = &quot;</span> &lt;&lt; invarientMuonMass[sortResults[i]] &lt;&lt; <span class="stringliteral">&quot; mu+ = &quot;</span> &lt;&lt; MuonP[(sortResults[i]&gt;&gt;7)] &lt;&lt; <span class="stringliteral">&quot; mu- = &quot;</span> &lt;&lt; MuonN[(sortResults[i]&amp;0x7F)] &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="comment">// std::cout &lt;&lt; mu_p_E[(sortResults[i]&gt;&gt;7)] &lt;&lt; &quot; &quot; &lt;&lt; mu_p_px[(sortResults[i]&gt;&gt;7)] &lt;&lt; &quot; &quot; &lt;&lt; mu_p_py[(sortResults[i]&gt;&gt;7)] &lt;&lt; &quot; &quot; &lt;&lt; mu_p_pz[(sortResults[i]&gt;&gt;7)] &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="comment">// std::cout &lt;&lt; mu_n_E[(sortResults[i]&amp;0x7F)] &lt;&lt; &quot; &quot; &lt;&lt; mu_n_px[(sortResults[i]&amp;0x7F)] &lt;&lt; &quot; &quot; &lt;&lt; mu_n_py[(sortResults[i]&amp;0x7F)] &lt;&lt; &quot; &quot; &lt;&lt; mu_n_pz[(sortResults[i]&amp;0x7F)] &lt;&lt; std::endl &lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    }</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;}</div>
+<div class="ttc" id="weekThreeMenu_8hpp_html_a727493a5e14e68e70ec32e59f0dffc8b"><div class="ttname"><a href="weekThreeMenu_8hpp.html#a727493a5e14e68e70ec32e59f0dffc8b">getNumberOfMuons</a></div><div class="ttdeci">int getNumberOfMuons(std::string filename, int &amp;number_mu_p, int &amp;number_mu_n)</div><div class="ttdoc">Count number of muons in a file. </div><div class="ttdef"><b>Definition:</b> <a href="weekTwoMenu_8cpp_source.html#l00284">weekTwoMenu.cpp:284</a></div></div>
+<div class="ttc" id="classParticle_html"><div class="ttname"><a href="classParticle.html">Particle</a></div><div class="ttdef"><b>Definition:</b> <a href="Particle_8hpp_source.html#l00009">Particle.hpp:9</a></div></div>
+<div class="ttc" id="weekThreeMenu_8hpp_html_a94959d1bbed780ffa738cd09dd432ef5"><div class="ttname"><a href="weekThreeMenu_8hpp.html#a94959d1bbed780ffa738cd09dd432ef5">getMuonInformation</a></div><div class="ttdeci">int getMuonInformation(std::string filename, double muonMass, double *mu_p_px, double *mu_p_py, double *mu_p_pz, double *mu_p_E, int *mu_p_evt, double *mu_n_px, double *mu_n_py, double *mu_n_pz, double *mu_n_E, int *mu_n_evt)</div><div class="ttdoc">Get muon information from file. </div><div class="ttdef"><b>Definition:</b> <a href="weekTwoMenu_8cpp_source.html#l00241">weekTwoMenu.cpp:241</a></div></div>
+<div class="ttc" id="PP6Math_8hpp_html_aa3b7fe444446154e3305864a992c4c94"><div class="ttname"><a href="PP6Math_8hpp.html#aa3b7fe444446154e3305864a992c4c94">bubbleSort</a></div><div class="ttdeci">bool bubbleSort(double *array, int size)</div><div class="ttdoc">Simple bubble sort. </div><div class="ttdef"><b>Definition:</b> <a href="PP6Math_8cpp_source.html#l00027">PP6Math.cpp:27</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -87,6 +87,7 @@ Within the week three menu available operations are:
 	1) interval : Calculate the interval of a 4 vector
 	2) boost_z : boost a four vector along the z axis
 	3) generateMuons: Generate Muons and use the particle class
+	4) readInMuons: Read in muons from file, use particle class
 	h) help : Print this Message
 	u) up : Go up one menu level
 	q) quit : exit the calculator

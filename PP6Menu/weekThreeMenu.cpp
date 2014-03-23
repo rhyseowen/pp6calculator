@@ -43,6 +43,9 @@ int weekThreeMenu()
 		}else if (opperation == "generateMuons" || opperation == "3")
 		{
 			err = wk3_generateMuons();
+		}else if (opperation == "readInMuons" || opperation == "4")
+		{
+			err = wk3_readInMuons();
 		}else if (opperation == "help" || opperation == "h")
 		{
 			//help statement
@@ -69,6 +72,7 @@ void weekThreePrintHelp()
 	std::cout << "1) interval : Calculate the interval of a 4 vector" << std::endl;
 	std::cout << "2) boost_z : boost a four vector along the z axis" << std::endl;
 	std::cout << "3) generateMuons: Generate Muons and use the particle class" << std::endl;
+	std::cout << "4) readInMuons: Read in muons from file, use particle class" << std::endl;
 	std::cout << "h) help : Print this Message" << std::endl;
 	std::cout << "u) up : Go up one menu level" << std::endl;
 	std::cout << "q) quit : exit the calculator" << std::endl;

@@ -62,7 +62,7 @@ int weekThreeMenu()
 
 void weekThreePrintHelp()
 {
-	std::cout << "Week Two Menu: available operations: " << std::endl;
+	std::cout << "Week Three Menu: available operations: " << std::endl;
 	std::cout << "1) interval : Calculate the interval of a 4 vector" << std::endl;
 	std::cout << "2) boost_z : boost a four vector along the z axis" << std::endl;
 	std::cout << "3) generateMuons: Generate Muons and use the particle class" << std::endl;

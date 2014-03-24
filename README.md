@@ -100,6 +100,7 @@ Within the week four menu available operations are:
 
 	1) pdg : print values from pdg database
 	2) algo : use STL algorithms
+	3) readinmuons : Read in muons from file and print out the 10 pairs with highest invarient mass
 	h) help : Print this Message
 	u) up : Go up one menu level
 	q) quit : exit the calculator

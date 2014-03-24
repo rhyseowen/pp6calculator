@@ -144,57 +144,61 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topM
 <p>top level loop of the menu system allows the user to select lower teir menus </p>
 <dl class="section return"><dt>Returns</dt><dd>Error code </dd></dl>
 
-<p>Definition at line <a class="el" href="topMenu_8cpp_source.html#l00010">10</a> of file <a class="el" href="topMenu_8cpp_source.html">topMenu.cpp</a>.</p>
+<p>Definition at line <a class="el" href="topMenu_8cpp_source.html#l00011">11</a> of file <a class="el" href="topMenu_8cpp_source.html">topMenu.cpp</a>.</p>
 
-<p>References <a class="el" href="topMenu_8cpp_source.html#l00056">topMenuPrintHelp()</a>, <a class="el" href="weekOneMenu_8cpp_source.html#l00010">weekOneMenu()</a>, <a class="el" href="weekThreeMenu_8cpp_source.html#l00015">weekThreeMenu()</a>, and <a class="el" href="weekTwoMenu_8cpp_source.html#l00011">weekTwoMenu()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">int</span> err = 0;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="topMenu_8hpp.html#a73b432cc52c17d46a8cf6d3eea98d7c9">topMenuPrintHelp</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>){</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Which menu would you like? (help to show available menus) &quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;: &quot;</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        std::string opperation;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        std::cin &gt;&gt; opperation;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">//fail in input is broken</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">if</span> (!std::cin)</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            std::cin.clear();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            std::cin.ignore(INT_MAX, <span class="charliteral">&#39;\n&#39;</span>); </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            err = 2;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;1&quot;</span> || opperation == <span class="stringliteral">&quot;weekone&quot;</span>)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            err = <a class="code" href="weekOneMenu_8hpp.html#a4b830af35a9ee6aba2da12860c0f288f">weekOneMenu</a>();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;2&quot;</span> || opperation == <span class="stringliteral">&quot;weektwo&quot;</span>)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            err = <a class="code" href="weekTwoMenu_8hpp.html#a7c2fb0fac099f0703ee5b9938de6d03c">weekTwoMenu</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;3&quot;</span> || opperation == <span class="stringliteral">&quot;weekthree&quot;</span>)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            err = <a class="code" href="weekThreeMenu_8hpp.html#a6d70fa8b2d272c1e856534c21dec5632">weekThreeMenu</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;help&quot;</span> || opperation == <span class="stringliteral">&quot;h&quot;</span>)</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="comment">//help statement</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <a class="code" href="topMenu_8hpp.html#a73b432cc52c17d46a8cf6d3eea98d7c9">topMenuPrintHelp</a>();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;quit&quot;</span> || opperation == <span class="stringliteral">&quot;q&quot;</span>)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">return</span> err;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }<span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Operator not recognised&quot;</span>&lt;&lt;std::endl;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            err = 2;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<p>References <a class="el" href="topMenu_8cpp_source.html#l00061">topMenuPrintHelp()</a>, <a class="el" href="weekOneMenu_8cpp_source.html#l00010">weekOneMenu()</a>, <a class="el" href="weekThreeMenu_8cpp_source.html#l00015">weekThreeMenu()</a>, and <a class="el" href="weekTwoMenu_8cpp_source.html#l00011">weekTwoMenu()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">int</span> err = 0;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="topMenu_8hpp.html#a73b432cc52c17d46a8cf6d3eea98d7c9">topMenuPrintHelp</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>){</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Which menu would you like? (help to show available menus) &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;: &quot;</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        std::string opperation;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        std::cin &gt;&gt; opperation;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment">//fail in input is broken</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">if</span> (!std::cin)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            std::cin.clear();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            std::cin.ignore(INT_MAX, <span class="charliteral">&#39;\n&#39;</span>); </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            err = 2;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;1&quot;</span> || opperation == <span class="stringliteral">&quot;weekone&quot;</span>)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            err = <a class="code" href="weekOneMenu_8hpp.html#a4b830af35a9ee6aba2da12860c0f288f">weekOneMenu</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;2&quot;</span> || opperation == <span class="stringliteral">&quot;weektwo&quot;</span>)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            err = <a class="code" href="weekTwoMenu_8hpp.html#a7c2fb0fac099f0703ee5b9938de6d03c">weekTwoMenu</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;3&quot;</span> || opperation == <span class="stringliteral">&quot;weekthree&quot;</span>)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            err = <a class="code" href="weekThreeMenu_8hpp.html#a6d70fa8b2d272c1e856534c21dec5632">weekThreeMenu</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;4&quot;</span> || opperation == <span class="stringliteral">&quot;weekfour&quot;</span>)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            err = weekFourMenu();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;help&quot;</span> || opperation == <span class="stringliteral">&quot;h&quot;</span>)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="comment">//help statement</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="topMenu_8hpp.html#a73b432cc52c17d46a8cf6d3eea98d7c9">topMenuPrintHelp</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (opperation == <span class="stringliteral">&quot;quit&quot;</span> || opperation == <span class="stringliteral">&quot;q&quot;</span>)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">return</span> err;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Operator not recognised&quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            err = 2;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
 <div class="ttc" id="weekOneMenu_8hpp_html_a4b830af35a9ee6aba2da12860c0f288f"><div class="ttname"><a href="weekOneMenu_8hpp.html#a4b830af35a9ee6aba2da12860c0f288f">weekOneMenu</a></div><div class="ttdeci">int weekOneMenu()</div><div class="ttdoc">Main week one menu loop. </div><div class="ttdef"><b>Definition:</b> <a href="weekOneMenu_8cpp_source.html#l00010">weekOneMenu.cpp:10</a></div></div>
 <div class="ttc" id="weekTwoMenu_8hpp_html_a7c2fb0fac099f0703ee5b9938de6d03c"><div class="ttname"><a href="weekTwoMenu_8hpp.html#a7c2fb0fac099f0703ee5b9938de6d03c">weekTwoMenu</a></div><div class="ttdeci">int weekTwoMenu()</div><div class="ttdoc">Main week two function. </div><div class="ttdef"><b>Definition:</b> <a href="weekTwoMenu_8cpp_source.html#l00011">weekTwoMenu.cpp:11</a></div></div>
 <div class="ttc" id="weekThreeMenu_8hpp_html_a6d70fa8b2d272c1e856534c21dec5632"><div class="ttname"><a href="weekThreeMenu_8hpp.html#a6d70fa8b2d272c1e856534c21dec5632">weekThreeMenu</a></div><div class="ttdeci">int weekThreeMenu()</div><div class="ttdoc">Main week three function. </div><div class="ttdef"><b>Definition:</b> <a href="weekThreeMenu_8cpp_source.html#l00015">weekThreeMenu.cpp:15</a></div></div>
-<div class="ttc" id="topMenu_8hpp_html_a73b432cc52c17d46a8cf6d3eea98d7c9"><div class="ttname"><a href="topMenu_8hpp.html#a73b432cc52c17d46a8cf6d3eea98d7c9">topMenuPrintHelp</a></div><div class="ttdeci">void topMenuPrintHelp()</div><div class="ttdoc">Print the help message for the top menu. </div><div class="ttdef"><b>Definition:</b> <a href="topMenu_8cpp_source.html#l00056">topMenu.cpp:56</a></div></div>
+<div class="ttc" id="topMenu_8hpp_html_a73b432cc52c17d46a8cf6d3eea98d7c9"><div class="ttname"><a href="topMenu_8hpp.html#a73b432cc52c17d46a8cf6d3eea98d7c9">topMenuPrintHelp</a></div><div class="ttdeci">void topMenuPrintHelp()</div><div class="ttdoc">Print the help message for the top menu. </div><div class="ttdef"><b>Definition:</b> <a href="topMenu_8cpp_source.html#l00061">topMenu.cpp:61</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

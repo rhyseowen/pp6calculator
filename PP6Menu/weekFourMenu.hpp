@@ -11,5 +11,7 @@ void weekFourPrintHelp();
 
 int wk4_pdg();
 
+int wk4_algo();
+
 
 #endif

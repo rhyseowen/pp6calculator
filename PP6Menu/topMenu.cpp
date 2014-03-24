@@ -5,6 +5,7 @@
 #include "weekOneMenu.hpp"
 #include "weekTwoMenu.hpp"
 #include "weekThreeMenu.hpp"
+#include "weekFourMenu.hpp"
 
 
 int topMenu()
@@ -38,7 +39,11 @@ int topMenu()
 		}else if (opperation == "3" || opperation == "weekthree")
 		{
 			err = weekThreeMenu();
-		}else if (opperation == "help" || opperation == "h")
+		}else if (opperation == "4" || opperation == "weekfour")
+		{
+			err = weekFourMenu();
+		}
+		else if (opperation == "help" || opperation == "h")
 		{
 			//help statement
 			topMenuPrintHelp();
@@ -59,6 +64,7 @@ void topMenuPrintHelp()
 	std::cout << "1) weekone : week one (arithmatic)" << std::endl;
 	std::cout << "2) weektwo : week two (data operations)" << std::endl;
 	std::cout << "3) weekthree : week three (Four vector manipulation)" << std::endl;
+	std::cout << "4) weekfour : week four (Templates)" << std::endl;
 	std::cout << "h) help : Show this message" << std::endl;
 	std::cout << "q) quit : exit the calculator" << std::endl;
 }

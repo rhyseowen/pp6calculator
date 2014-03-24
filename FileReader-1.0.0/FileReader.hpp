@@ -4,6 +4,8 @@
 #include <fstream>
 #include <string>
 
+#include <sstream>
+
 class FileReader {
  public:
   FileReader(const char* filename);
@@ -16,6 +18,9 @@ class FileReader {
   double getFieldAsDouble(const int n);
   std::string getFieldAsString(const int n);
 
+  template <typename ReadOutType>
+  ReadOutType getField(const int n);
+
   bool inputFailed() const;
   bool isValid() const;
 
@@ -25,5 +30,22 @@ class FileReader {
   std::string line;
   bool failed;
 };
+
+template <typename ReadOutType>
+ReadOutType FileReader::getField(const int n)
+{
+  failed = false;
+  std::istringstream ist(line);
+  this->skip_fields(ist, n-1);
+  ReadOutType rval;
+  ist >> rval;
+  if (ist.fail()) {
+    failed = true;
+    return ReadOutType();
+  }
+  else
+    return rval;
+}
+
 
 #endif

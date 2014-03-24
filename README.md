@@ -99,6 +99,7 @@ Within the week three menu available operations are:
 Within the week four menu available operations are:
 
 	1) pdg : print values from pdg database
+	2) algo : use STL algorithms
 	h) help : Print this Message
 	u) up : Go up one menu level
 	q) quit : exit the calculator

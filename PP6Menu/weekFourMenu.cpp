@@ -154,10 +154,12 @@ int wk4_readInMuons()
 			double px = f.getField<double>(3);
 			double py = f.getField<double>(4);
 			double pz = f.getField<double>(5);
+
+			//look up mass from database and use it to calculte E
 			double m = info.getMassGeV(info.getPDGCode(particleName));
 			double E = sqrt(m*m + px*px + py*py + pz*pz);
 
-
+			//Create particles for mu+ and mu- and push them back into their respective vectors
 			if (particleName == "mu+")
 			{
 				Particle *p = new Particle(event, particleName, info.getCharge(info.getPDGCode(particleName)), E,px,py,pz);
@@ -170,8 +172,10 @@ int wk4_readInMuons()
 
 		}
 	}
-	std::vector<std::pair<double,std::pair<Particle*,Particle*>>> invarientMass;
 
+	//vector to hold the invarient mass and the two particles which it belongs two 
+	std::vector<std::pair<double,std::pair<Particle*,Particle*>>> invarientMass;
+	//fill the vector avoiding duplicates
 	for (unsigned int i = 0; i < mu_p.size(); ++i)
 	{
 		for (unsigned int j = i; j < mu_n.size(); ++j)
@@ -182,6 +186,7 @@ int wk4_readInMuons()
 		}
 	}
 
+	//sort the vector the sortFunction only compairs the first element of the pairs (the invarient mass)
 	std::sort(invarientMass.begin(), invarientMass.end(), sortFunction);
 
 	for (int i = 0; i < 10; ++i)

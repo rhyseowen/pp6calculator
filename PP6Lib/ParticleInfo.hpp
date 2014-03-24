@@ -26,7 +26,6 @@ private:
 	std::map<int, int> PartIdCharge_;
 	std::map<int, std::string> PartIdName_;
 	std::map<int, double> PartIdMassMev_;
-	std::map<int, double> PartIdMassGev_;
 };
 
 #endif

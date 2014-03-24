@@ -39,6 +39,9 @@ ParticleInfo::ParticleInfo(const ParticleInfo& other)
 :PartNameId_(other.PartNameId_), PartIdCharge_(other.PartIdCharge_), PartIdName_(other.PartIdName_), PartIdMassMev_(other.PartIdMassMev_)
 {}
 
+ParticleInfo::~ParticleInfo()
+{}
+
 int ParticleInfo::getPDGCode(std::string& ParticleName)
 {
 	auto p = PartNameId_.find(ParticleName);

@@ -50,6 +50,7 @@ Currently Available menus are:
     1) weekone : week one (arithmatic)
     2) weektwo : week two (data operations)
     3) weekthree : week three (Four vector manipulation)
+    4) weekfour : week four (Templates)
 
 ### Week One: Arithmatic
 
@@ -93,6 +94,14 @@ Within the week three menu available operations are:
 	u) up : Go up one menu level
 	q) quit : exit the calculator
 
+### Week Four: Templates and STL
+
+Within the week four menu available operations are:
+
+	1) pdg : print values from pdg database
+	h) help : Print this Message
+	u) up : Go up one menu level
+	q) quit : exit the calculator
 
 ### Return Codes
 If the program encounters an error and is subsequently quit it will return one of the following codes.

@@ -9,3 +9,6 @@ target_link_libraries(FourVector ThreeVector)
 
 add_library(Particle STATIC Particle.cpp Particle.hpp)
 target_link_libraries(Particle FourVector)
+
+add_library(ParticleInfo STATIC ParticleInfo.cpp ParticleInfo.hpp)
+target_link_libraries(ParticleInfo FileReader)

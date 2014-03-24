@@ -155,7 +155,7 @@ int wk4_readInMuons()
 			double py = f.getField<double>(4);
 			double pz = f.getField<double>(5);
 
-			//look up mass from database and use it to calculte E
+			//look up mass from database and use it to calculte E (bit wastefull to do this everytime but only keep muons)
 			double m = info.getMassGeV(info.getPDGCode(particleName));
 			double E = sqrt(m*m + px*px + py*py + pz*pz);
 
@@ -201,10 +201,12 @@ int wk4_readInMuons()
 	for (std::vector<Particle*>::iterator i = mu_p.begin(); i != mu_p.end(); ++i)
 	{
 		delete *i;
+		*i = nullptr;
 	}
 	for (std::vector<Particle*>::iterator i = mu_n.begin(); i != mu_n.end(); ++i)
 	{
 		delete *i;
+		*i = nullptr;
 	}
 	return 0;
 

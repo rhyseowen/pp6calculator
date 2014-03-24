@@ -3,7 +3,7 @@
 #include "ParticleInfo.hpp"
 #include "FileReader.hpp"
 
-ParticleInfo::ParticleInfo(std::string& FileName)
+ParticleInfo::ParticleInfo(const std::string& FileName)
 {
 	FileReader f(FileName);
 

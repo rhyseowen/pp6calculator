@@ -9,7 +9,7 @@
 class ParticleInfo
 {
 public:
-	ParticleInfo(std::string& FileName);
+	ParticleInfo(const std::string& FileName);
 	ParticleInfo(const ParticleInfo& other);
 	~ParticleInfo();
 

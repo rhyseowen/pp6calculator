@@ -13,6 +13,6 @@ add_library(pp6menu_week_three STATIC weekThreeMenu.cpp weekThreeMenu.hpp)
 target_link_libraries(pp6menu_week_three pp6lib pp6menu FourVector Particle pp6menu_week_two FileReader)
 
 add_library(pp6menu_week_four STATIC weekFourMenu.cpp weekFourMenu.hpp)
-target_link_libraries(pp6menu_week_four FileReader)
+target_link_libraries(pp6menu_week_four FileReader ParticleInfo Particle)
 
 target_link_libraries(topMenu pp6menu_week_one pp6menu_week_two pp6menu_week_three pp6menu_week_four)

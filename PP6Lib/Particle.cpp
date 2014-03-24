@@ -11,7 +11,13 @@ Particle::Particle(const Particle& other)
 {}
 
 Particle::Particle(const std::string& ParticleName, const double& charge, const double& E, const double& px, const double& py, const double& pz)
-:ParticleName_(ParticleName), charge_(charge), mass_(0), FourMomentum_(E,px,py,pz)
+:ParticleName_(ParticleName), charge_(charge), mass_(0), FourMomentum_(E,px,py,pz), event_(0)
+{
+	mass_ = sqrt(getFourMomentum().getInterval());
+}
+
+Particle::Particle(const int event, const std::string& ParticleName, const double& charge, const double& E, const double& px, const double& py, const double& pz)
+:ParticleName_(ParticleName), charge_(charge), mass_(0), FourMomentum_(E,px,py,pz), event_(event)
 {
 	mass_ = sqrt(getFourMomentum().getInterval());
 }
@@ -60,6 +66,11 @@ double Particle::getMass() const
 
 Particle::~Particle()
 {}
+
+int Particle::getEvent()
+{
+	return event_;
+}
 
 std::ostream& operator<<(std::ostream& stream,const Particle& p)
 {

@@ -16,6 +16,7 @@ class Particle{
 		double charge_;
 		double mass_;
 		FourVector FourMomentum_;
+		int event_;
 	public:
 		//Constructors
 		Particle();
@@ -39,6 +40,8 @@ class Particle{
 		 * @param pz momentum z component 
 		 */
 		Particle(const std::string& ParticleName, const double& charge, const double& E, const double& px, const double& py, const double& pz);
+
+		Particle(const int event, const std::string& ParticleName, const double& charge, const double& E, const double& px, const double& py, const double& pz);
 
 		~Particle();
 
@@ -89,6 +92,12 @@ class Particle{
 		 * @param charge carge in units of \f$e\f$
 		 */
 		void setCharge(const double& charge);
+
+		/**
+		 * @brief Returns event number
+		 * @return event number
+		 */
+		int getEvent();
 
 		/**
 		 * @brief Stream opperator for easy output

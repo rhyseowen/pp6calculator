@@ -35,6 +35,8 @@ target_link_libraries(pp6calculator topMenu)
 
 #copy data file from source directort to build directory
 configure_file(observedparticles.dat ${CMAKE_CURRENT_BINARY_DIR}/observedparticles.dat COPYONLY)
+configure_file(pdg.dat ${CMAKE_CURRENT_BINARY_DIR}/pdg.dat COPYONLY)
+
 
 # add a target to generate API documentation with Doxygen
 find_package(Doxygen)

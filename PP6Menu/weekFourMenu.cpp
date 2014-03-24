@@ -1,6 +1,7 @@
 #include <iostream>
 #include <climits>
 #include <string>
+#include <vector>
 
 #include "weekFourMenu.hpp"
 #include "FileReader.hpp"
@@ -60,18 +61,29 @@ void weekFourPrintHelp()
 
 int wk4_pdg()
 {
-	FileReader f("observedparticles.dat");
+	FileReader f("pdg.dat");
+
+	std::vector<std::string> particleType;
+	std::vector<int> idNumber;
+	std::vector<int> charge;
+	std::vector<double> mass;
+
 	if (f.isValid())	
 	{
 		while (f.nextLine())
 		{
-			std::cout << f.getField<int>(1) << " ";
-			std::cout << f.getField<std::string>(2) << " ";
-			std::cout << f.getField<double>(3) << " ";
-			std::cout << f.getField<double>(4) << " ";
-			std::cout << f.getField<double>(5) << " ";
-			std::cout << f.getField<std::string>(6) << std::endl;
+			particleType.push_back( f.getField<std::string>(1));
+			idNumber.push_back( f.getField<int>(2));
+			charge.push_back( f.getField<int>(3));
+			mass.push_back( f.getField<double>(4));
+
 		}
+	}
+
+
+	for (unsigned int i = 0; i < particleType.size(); ++i)
+	{
+		std::cout << particleType[i] << " " << idNumber[i] << " " << charge[i] << " " << mass[i] << std::endl;
 	}
 	return 0;
 

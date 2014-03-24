@@ -6,6 +6,7 @@ var searchData=
   ['geta2',['getA2',['../classFourVector.html#a547691d492b0466580f5412556f8e252',1,'FourVector']]],
   ['geta3',['getA3',['../classFourVector.html#a0aa2173c6e35df561a5e700c9d07ae9a',1,'FourVector']]],
   ['getcharge',['getCharge',['../classParticle.html#a943d5f10f5622cb99b5c4ff54a183031',1,'Particle']]],
+  ['getevent',['getEvent',['../classParticle.html#a00efb59a9084bbc3349500d115d29f26',1,'Particle']]],
   ['getfourmomentum',['getFourMomentum',['../classParticle.html#aed5ed45546b4df14830393c9c38898ef',1,'Particle']]],
   ['getinterval',['getInterval',['../classFourVector.html#a5b0b84ece06f7e2ba01a341c4f74b4a4',1,'FourVector']]],
   ['getlengthsquared',['getLengthSquared',['../classThreeVector.html#a97ec86ab408fa3801c2ec99b81096651',1,'ThreeVector']]],

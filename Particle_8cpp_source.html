@@ -107,73 +107,85 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{}</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classParticle.html#a5cfb94dac13563a9cd7e6880b3710e39">   13</a></span>&#160;Particle::Particle(<span class="keyword">const</span> std::string&amp; ParticleName, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; charge, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; E, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; px, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; py, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; pz)</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;:ParticleName_(ParticleName), charge_(charge), mass_(0), FourMomentum_(E,px,py,pz)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;:ParticleName_(ParticleName), charge_(charge), mass_(0), FourMomentum_(E,px,py,pz), event_(0)</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    mass_ = sqrt(<a class="code" href="classParticle.html#aed5ed45546b4df14830393c9c38898ef">getFourMomentum</a>().getInterval());</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classParticle.html#a943d5f10f5622cb99b5c4ff54a183031">   19</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classParticle.html#a943d5f10f5622cb99b5c4ff54a183031">Particle::getCharge</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> charge_;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classParticle.html#ac6a84bf9bb868312888092e877f4ab71">   24</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classParticle.html#ac6a84bf9bb868312888092e877f4ab71">Particle::setCharge</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; charge)</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    charge_ = charge;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classParticle.html#a26efaa9ec839c343f0eb65244e688e02">   29</a></span>&#160;std::string <a class="code" href="classParticle.html#a26efaa9ec839c343f0eb65244e688e02">Particle::getParticleName</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> ParticleName_;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classParticle.html#a1474b29447fd163aed458479352ce566">   34</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classParticle.html#a1474b29447fd163aed458479352ce566">Particle::setParticleName</a>(<span class="keyword">const</span> std::string&amp; ParticleName)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    ParticleName_ = ParticleName;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;Particle::Particle(<span class="keyword">const</span> <span class="keywordtype">int</span> event, <span class="keyword">const</span> std::string&amp; ParticleName, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; charge, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; E, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; px, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; py, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; pz)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;:ParticleName_(ParticleName), charge_(charge), mass_(0), FourMomentum_(E,px,py,pz), event_(event)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    mass_ = sqrt(<a class="code" href="classParticle.html#aed5ed45546b4df14830393c9c38898ef">getFourMomentum</a>().getInterval());</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classParticle.html#a943d5f10f5622cb99b5c4ff54a183031">   25</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classParticle.html#a943d5f10f5622cb99b5c4ff54a183031">Particle::getCharge</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> charge_;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classParticle.html#ac6a84bf9bb868312888092e877f4ab71">   30</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classParticle.html#ac6a84bf9bb868312888092e877f4ab71">Particle::setCharge</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; charge)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    charge_ = charge;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classParticle.html#a26efaa9ec839c343f0eb65244e688e02">   35</a></span>&#160;std::string <a class="code" href="classParticle.html#a26efaa9ec839c343f0eb65244e688e02">Particle::getParticleName</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> ParticleName_;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classParticle.html#aed5ed45546b4df14830393c9c38898ef">   40</a></span>&#160;<a class="code" href="classFourVector.html">FourVector</a> <a class="code" href="classParticle.html#aed5ed45546b4df14830393c9c38898ef">Particle::getFourMomentum</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> FourMomentum_;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classParticle.html#a1474b29447fd163aed458479352ce566">   40</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classParticle.html#a1474b29447fd163aed458479352ce566">Particle::setParticleName</a>(<span class="keyword">const</span> std::string&amp; ParticleName)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    ParticleName_ = ParticleName;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classParticle.html#a521177c57e399c9c08560efb40f1e955">   45</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classParticle.html#a521177c57e399c9c08560efb40f1e955">Particle::setFourMomentum</a>(<span class="keyword">const</span> <a class="code" href="classFourVector.html">FourVector</a>&amp; FourMomentum)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (FourMomentum.getFourVectorType() == <a class="code" href="classFourVector.html#a43049b7f53702020516f611266ba5154a101f89a0c4481b91a7c9e6e0ec133bf6">FourVector::TIMELIKE</a>)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        FourMomentum_ = FourMomentum;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classParticle.html#ab187fb04f336308ed4ee1c1644dab4de">   56</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classParticle.html#ab187fb04f336308ed4ee1c1644dab4de">Particle::getMass</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> mass_;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;Particle::~Particle()</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classParticle.html#a22e0c79adc21e76fd50d91a0144f6fbe">   64</a></span>&#160;std::ostream&amp; operator&lt;&lt;(std::ostream&amp; stream,<span class="keyword">const</span> <a class="code" href="classParticle.html">Particle</a>&amp; p)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    stream &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    stream &lt;&lt; p.<a class="code" href="classParticle.html#a26efaa9ec839c343f0eb65244e688e02">getParticleName</a>() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; p.<a class="code" href="classParticle.html#aed5ed45546b4df14830393c9c38898ef">getFourMomentum</a>();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    stream &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> stream;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
-<div class="ttc" id="classParticle_html_aed5ed45546b4df14830393c9c38898ef"><div class="ttname"><a href="classParticle.html#aed5ed45546b4df14830393c9c38898ef">Particle::getFourMomentum</a></div><div class="ttdeci">FourVector getFourMomentum() const </div><div class="ttdoc">Gets the particles four momentum. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00040">Particle.cpp:40</a></div></div>
-<div class="ttc" id="classParticle_html_a521177c57e399c9c08560efb40f1e955"><div class="ttname"><a href="classParticle.html#a521177c57e399c9c08560efb40f1e955">Particle::setFourMomentum</a></div><div class="ttdeci">bool setFourMomentum(const FourVector &amp;FourMomentum)</div><div class="ttdoc">Sets the particles four momentum. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00045">Particle.cpp:45</a></div></div>
-<div class="ttc" id="classParticle_html_a26efaa9ec839c343f0eb65244e688e02"><div class="ttname"><a href="classParticle.html#a26efaa9ec839c343f0eb65244e688e02">Particle::getParticleName</a></div><div class="ttdeci">std::string getParticleName() const </div><div class="ttdoc">Get the particles name. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00029">Particle.cpp:29</a></div></div>
-<div class="ttc" id="classParticle_html_a943d5f10f5622cb99b5c4ff54a183031"><div class="ttname"><a href="classParticle.html#a943d5f10f5622cb99b5c4ff54a183031">Particle::getCharge</a></div><div class="ttdeci">double getCharge() const </div><div class="ttdoc">Set Particles charge. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00019">Particle.cpp:19</a></div></div>
-<div class="ttc" id="classParticle_html_a1474b29447fd163aed458479352ce566"><div class="ttname"><a href="classParticle.html#a1474b29447fd163aed458479352ce566">Particle::setParticleName</a></div><div class="ttdeci">void setParticleName(const std::string &amp;ParticleName)</div><div class="ttdoc">Set the particles name. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00034">Particle.cpp:34</a></div></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classParticle.html#aed5ed45546b4df14830393c9c38898ef">   46</a></span>&#160;<a class="code" href="classFourVector.html">FourVector</a> <a class="code" href="classParticle.html#aed5ed45546b4df14830393c9c38898ef">Particle::getFourMomentum</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> FourMomentum_;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classParticle.html#a521177c57e399c9c08560efb40f1e955">   51</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classParticle.html#a521177c57e399c9c08560efb40f1e955">Particle::setFourMomentum</a>(<span class="keyword">const</span> <a class="code" href="classFourVector.html">FourVector</a>&amp; FourMomentum)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span> (FourMomentum.getFourVectorType() == <a class="code" href="classFourVector.html#a43049b7f53702020516f611266ba5154a101f89a0c4481b91a7c9e6e0ec133bf6">FourVector::TIMELIKE</a>)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        FourMomentum_ = FourMomentum;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classParticle.html#ab187fb04f336308ed4ee1c1644dab4de">   62</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classParticle.html#ab187fb04f336308ed4ee1c1644dab4de">Particle::getMass</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> mass_;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;Particle::~Particle()</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classParticle.html#a00efb59a9084bbc3349500d115d29f26">   70</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classParticle.html#a00efb59a9084bbc3349500d115d29f26">Particle::getEvent</a>()</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> event_;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classParticle.html#a22e0c79adc21e76fd50d91a0144f6fbe">   75</a></span>&#160;std::ostream&amp; operator&lt;&lt;(std::ostream&amp; stream,<span class="keyword">const</span> <a class="code" href="classParticle.html">Particle</a>&amp; p)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    stream &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    stream &lt;&lt; p.<a class="code" href="classParticle.html#a26efaa9ec839c343f0eb65244e688e02">getParticleName</a>() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; p.<a class="code" href="classParticle.html#aed5ed45546b4df14830393c9c38898ef">getFourMomentum</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    stream &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> stream;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="ttc" id="classParticle_html_aed5ed45546b4df14830393c9c38898ef"><div class="ttname"><a href="classParticle.html#aed5ed45546b4df14830393c9c38898ef">Particle::getFourMomentum</a></div><div class="ttdeci">FourVector getFourMomentum() const </div><div class="ttdoc">Gets the particles four momentum. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00046">Particle.cpp:46</a></div></div>
+<div class="ttc" id="classParticle_html_a521177c57e399c9c08560efb40f1e955"><div class="ttname"><a href="classParticle.html#a521177c57e399c9c08560efb40f1e955">Particle::setFourMomentum</a></div><div class="ttdeci">bool setFourMomentum(const FourVector &amp;FourMomentum)</div><div class="ttdoc">Sets the particles four momentum. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00051">Particle.cpp:51</a></div></div>
+<div class="ttc" id="classParticle_html_a00efb59a9084bbc3349500d115d29f26"><div class="ttname"><a href="classParticle.html#a00efb59a9084bbc3349500d115d29f26">Particle::getEvent</a></div><div class="ttdeci">int getEvent()</div><div class="ttdoc">Returns event number. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00070">Particle.cpp:70</a></div></div>
+<div class="ttc" id="classParticle_html_a26efaa9ec839c343f0eb65244e688e02"><div class="ttname"><a href="classParticle.html#a26efaa9ec839c343f0eb65244e688e02">Particle::getParticleName</a></div><div class="ttdeci">std::string getParticleName() const </div><div class="ttdoc">Get the particles name. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00035">Particle.cpp:35</a></div></div>
+<div class="ttc" id="classParticle_html_a943d5f10f5622cb99b5c4ff54a183031"><div class="ttname"><a href="classParticle.html#a943d5f10f5622cb99b5c4ff54a183031">Particle::getCharge</a></div><div class="ttdeci">double getCharge() const </div><div class="ttdoc">Set Particles charge. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00025">Particle.cpp:25</a></div></div>
+<div class="ttc" id="classParticle_html_a1474b29447fd163aed458479352ce566"><div class="ttname"><a href="classParticle.html#a1474b29447fd163aed458479352ce566">Particle::setParticleName</a></div><div class="ttdeci">void setParticleName(const std::string &amp;ParticleName)</div><div class="ttdoc">Set the particles name. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00040">Particle.cpp:40</a></div></div>
 <div class="ttc" id="classParticle_html"><div class="ttname"><a href="classParticle.html">Particle</a></div><div class="ttdoc">Particle Class. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8hpp_source.html#l00013">Particle.hpp:13</a></div></div>
 <div class="ttc" id="classFourVector_html"><div class="ttname"><a href="classFourVector.html">FourVector</a></div><div class="ttdoc">Four Vector Class. </div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8hpp_source.html#l00013">FourVector.hpp:13</a></div></div>
-<div class="ttc" id="classParticle_html_ab187fb04f336308ed4ee1c1644dab4de"><div class="ttname"><a href="classParticle.html#ab187fb04f336308ed4ee1c1644dab4de">Particle::getMass</a></div><div class="ttdeci">double getMass() const </div><div class="ttdoc">Get the mass of the particle. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00056">Particle.cpp:56</a></div></div>
+<div class="ttc" id="classParticle_html_ab187fb04f336308ed4ee1c1644dab4de"><div class="ttname"><a href="classParticle.html#ab187fb04f336308ed4ee1c1644dab4de">Particle::getMass</a></div><div class="ttdeci">double getMass() const </div><div class="ttdoc">Get the mass of the particle. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00062">Particle.cpp:62</a></div></div>
 <div class="ttc" id="classFourVector_html_a43049b7f53702020516f611266ba5154a101f89a0c4481b91a7c9e6e0ec133bf6"><div class="ttname"><a href="classFourVector.html#a43049b7f53702020516f611266ba5154a101f89a0c4481b91a7c9e6e0ec133bf6">FourVector::TIMELIKE</a></div><div class="ttdef"><b>Definition:</b> <a href="FourVector_8hpp_source.html#l00140">FourVector.hpp:140</a></div></div>
-<div class="ttc" id="classParticle_html_ac6a84bf9bb868312888092e877f4ab71"><div class="ttname"><a href="classParticle.html#ac6a84bf9bb868312888092e877f4ab71">Particle::setCharge</a></div><div class="ttdeci">void setCharge(const double &amp;charge)</div><div class="ttdoc">Set the charge of the particle. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00024">Particle.cpp:24</a></div></div>
+<div class="ttc" id="classParticle_html_ac6a84bf9bb868312888092e877f4ab71"><div class="ttname"><a href="classParticle.html#ac6a84bf9bb868312888092e877f4ab71">Particle::setCharge</a></div><div class="ttdeci">void setCharge(const double &amp;charge)</div><div class="ttdoc">Set the charge of the particle. </div><div class="ttdef"><b>Definition:</b> <a href="Particle_8cpp_source.html#l00030">Particle.cpp:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

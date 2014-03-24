@@ -192,17 +192,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    1) pdg : print values from pdg database</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    2) algo : use STL algorithms</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    h) help : Print <span class="keyword">this</span> Message</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    u) up : Go up one menu level</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    q) quit : exit the calculator</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;### Return Codes</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;If the program encounters an error and is subsequently quit it will <span class="keywordflow">return</span> one of the following codes.</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    0 - Success</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    2 - Operator not recognised</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    3 - Divide by 0</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    4 - Input File contains too many muons</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    3) readinmuons : Read in muons from file and print out the 10 pairs with highest invarient mass</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    h) help : Print <span class="keyword">this</span> Message</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    u) up : Go up one menu level</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    q) quit : exit the calculator</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">### Return Codes</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor"></span>If the program encounters an error and is subsequently quit it will <span class="keywordflow">return</span> one of the following codes.</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    0 - Success</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    2 - Operator not recognised</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    3 - Divide by 0</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    4 - Input File contains too many muons</div>
 <div class="ttc" id="PP6Math_8hpp_html_a426816a468046725e5a7b709be16da82"><div class="ttname"><a href="PP6Math_8hpp.html#a426816a468046725e5a7b709be16da82">interval</a></div><div class="ttdeci">double interval(double a0, double a1, double a2, double a3)</div><div class="ttdoc">Calculate interval of a four vector. </div><div class="ttdef"><b>Definition:</b> <a href="PP6Math_8cpp_source.html#l00219">PP6Math.cpp:219</a></div></div>
 <div class="ttc" id="PP6Math_8hpp_html_ad3b0ade388befc056f65a39f0495b3e8"><div class="ttname"><a href="PP6Math_8hpp.html#ad3b0ade388befc056f65a39f0495b3e8">generateMuons</a></div><div class="ttdeci">int generateMuons(int numberOfMuons, double *E, double *px, double *py, double *pz)</div><div class="ttdoc">Generate Muons. </div><div class="ttdef"><b>Definition:</b> <a href="PP6Math_8cpp_source.html#l00184">PP6Math.cpp:184</a></div></div>
 <div class="ttc" id="PP6Math_8hpp_html_aba59e5dbfc05b7b007dfd33250e40b8b"><div class="ttname"><a href="PP6Math_8hpp.html#aba59e5dbfc05b7b007dfd33250e40b8b">invarientMass</a></div><div class="ttdeci">double invarientMass(double E1, double px1, double py1, double pz1, double E2, double px2, double py2, double pz2)</div><div class="ttdoc">Calculate invarient mass squared. </div><div class="ttdef"><b>Definition:</b> <a href="PP6Math_8cpp_source.html#l00177">PP6Math.cpp:177</a></div></div>
